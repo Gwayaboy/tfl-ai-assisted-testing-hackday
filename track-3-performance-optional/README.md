@@ -1,5 +1,11 @@
 # Track 3 — Performance & Non-Functional Testing (OPTIONAL back-pocket)
 
+> 🚧 **Work in progress (updating before 6 Oct).** The local JMeter path is ready now. We're
+> finishing the **Contoso Traders** integration as the richer cloud target and confirming
+> whether it can deploy to a **personal MSDN subscription** (so nothing touches a TfL sub). If
+> MSDN capacity/quota doesn't allow it, this track stays **local JMeter only** — the day does
+> not depend on it either way.
+
 > **Optional.** On the prep call we agreed performance is a **back-pocket** activity — TfL has
 > few dedicated performance testers, so this is for anyone who wants to go further, or a small
 > group in the afternoon. Everything else in the day works without it.

@@ -145,8 +145,14 @@ Open **http://localhost:3000** — you should see the movies app. Test login:
 
 ## Feedback
 
-At the end of the day, please fill in the feedback form (link shared on the day). It takes
-2 minutes and genuinely shapes the next hack.
+At the end of the day, please spend 2 minutes on the feedback form — it genuinely shapes the
+next hack. 🙏
+
+**📝 Form:** [forms.cloud.microsoft/r/HtPRpQYjj9](https://forms.cloud.microsoft/r/HtPRpQYjj9)
+
+<img src="./assets/feedback-qr.png" alt="QR code linking to the feedback form" width="200" />
+
+*Scan the QR code, or use the link above.*
 
 *Built for the TfL × Microsoft AI-Assisted Testing Hack Day. Adapted from the
 [Playwright Hands-On Lab](https://github.com/Gwayaboy/PlaywrightHandsOnLab).*
