@@ -91,7 +91,7 @@ stakeholder, a shrinking deadline. You don't get these up front; how you **adapt
 [Full rubric](../../docs/scoring.md#-challenge-2--messy-project-in-track-2): collaboration
 (30%) · risk-based prioritisation (25%) · handling curveballs (25%) · communication (20%).
 
-## Readout (15:15)
+## Readout (15:40)
 
 ~3–4 min: your **top 3 risks**, your **test strategy in a nutshell**, how you **handled the
 curveballs**, and your **assurance story** — safe to ship or not, and why.

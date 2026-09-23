@@ -30,7 +30,7 @@ So the centrepiece is a deliberately **messy project** you'll navigate as a team
 |------|----------|------|
 | 1 | **Framing** — what test leadership means; risk-based thinking | 15 min |
 | 2 | ⚔️ [**Messy Project challenge**](./messy-project-challenge) | most of the session |
-| 3 | **Readout** — present your test strategy & assurance story | at 15:15 |
+| 3 | **Readout** — present your test strategy & assurance story | at 15:40 |
 
 ---
 
