@@ -1,0 +1,51 @@
+name: Run Azure Load Test (manual)
+
+# Manual dispatch ONLY. Runs the JMeter plan via Azure Load Testing against a target you own.
+# Requires repo secrets for Azure OIDC login and an existing Azure Load Testing resource.
+on:
+  workflow_dispatch:
+    inputs:
+      resourceGroup:
+        description: "Resource group containing the Azure Load Testing resource"
+        required: true
+      loadTestResource:
+        description: "Azure Load Testing resource name"
+        required: true
+      targetHost:
+        description: "Target host to load (no http://), e.g. myapp.azurewebsites.net"
+        required: true
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  loadtest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Azure login (OIDC)
+        uses: azure/login@v2
+        with:
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+
+      - name: Run load test
+        uses: azure/load-testing@v1
+        with:
+          loadTestConfigFile: track-3-performance-optional/azure-load-testing/load-test.yaml
+          loadTestResource: ${{ inputs.loadTestResource }}
+          resourceGroup: ${{ inputs.resourceGroup }}
+          env: |
+            [
+              { "name": "host", "value": "${{ inputs.targetHost }}" },
+              { "name": "port", "value": "443" }
+            ]
+
+      - name: Publish results
+        uses: actions/upload-artifact@v4
+        with:
+          name: load-test-results
+          path: loadTest/

@@ -1,0 +1,14 @@
+{
+  "name": "regression-optimisation-baseline",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Deliberately slow/bloated Playwright regression suite - optimise me!",
+  "scripts": {
+    "test:baseline": "playwright test",
+    "test:report": "playwright show-report",
+    "count": "playwright test --list | find /c \"›\" || playwright test --list | grep -c '›'"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.48.0"
+  }
+}

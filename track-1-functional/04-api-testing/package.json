@@ -1,0 +1,13 @@
+{
+  "name": "hackday-track1-api-testing",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Track 1 API-testing lab — Playwright request API against the movies app",
+  "scripts": {
+    "test": "playwright test",
+    "test:report": "playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.48.0"
+  }
+}

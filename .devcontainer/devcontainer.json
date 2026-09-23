@@ -1,0 +1,33 @@
+{
+  "name": "AI-Assisted Testing Hack Day",
+  "image": "mcr.microsoft.com/devcontainers/typescript-node:20",
+  "features": {
+    "ghcr.io/devcontainers/features/dotnet:2": {
+      "version": "8.0"
+    },
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  },
+  "forwardPorts": [3000],
+  "portsAttributes": {
+    "3000": {
+      "label": "Movies App (SUT)",
+      "onAutoForward": "notify"
+    }
+  },
+  "postCreateCommand": "bash .devcontainer/post-create.sh",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "GitHub.copilot",
+        "GitHub.copilot-chat",
+        "ms-playwright.playwright",
+        "ms-dotnettools.csdevkit",
+        "cucumberopen.cucumber-official"
+      ],
+      "settings": {
+        "chat.mcp.enabled": true
+      }
+    }
+  },
+  "remoteUser": "node"
+}

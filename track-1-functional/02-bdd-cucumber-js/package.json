@@ -1,0 +1,16 @@
+{
+  "name": "hackday-track1-cucumber-js",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Track 1 BDD lab — Cucumber.js + Playwright against the movies app",
+  "type": "module",
+  "scripts": {
+    "test": "cucumber-js",
+    "test:headed": "HEADED=1 cucumber-js",
+    "test:tags": "cucumber-js --tags"
+  },
+  "devDependencies": {
+    "@cucumber/cucumber": "^11.0.1",
+    "playwright": "^1.48.0"
+  }
+}

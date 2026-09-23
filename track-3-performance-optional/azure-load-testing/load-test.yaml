@@ -1,0 +1,32 @@
+version: v0.1
+testId: movies-search
+displayName: Movies App - Search Load
+description: Load test driven by the JMeter plan in ../jmeter/movies-search-load.jmx
+testPlan: ../jmeter/movies-search-load.jmx
+testType: JMX
+
+engineInstances: 1
+
+# Pass/fail gates = your NFRs. The run FAILS if these are breached.
+# Tune to your agreed targets.
+failureCriteria:
+  - avg(response_time_ms) > 1000
+  - percentage(error) > 1
+  - p95(response_time_ms) > 1500
+
+# Pass JMeter properties through (override the .jmx defaults).
+# e.g. crank users/ramp for a real load test.
+properties:
+  userPropertyFile: ''
+
+env:
+  - name: host
+    value: 'REPLACE_WITH_TARGET_HOST'   # e.g. your deployed app host (no http://)
+  - name: port
+    value: '443'
+  - name: users
+    value: '50'
+  - name: ramp
+    value: '30'
+  - name: loops
+    value: '20'

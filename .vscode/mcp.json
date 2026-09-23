@@ -1,0 +1,9 @@
+{
+  "$schema": "https://modelcontextprotocol.io/schema",
+  "servers": {
+    "playwright": {
+      "command": "npx",
+      "args": ["@playwright/mcp@latest"]
+    }
+  }
+}

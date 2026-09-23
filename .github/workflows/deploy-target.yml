@@ -1,0 +1,54 @@
+name: Deploy optional performance target (manual)
+
+# Manual dispatch ONLY - nothing runs automatically. Use a SANDBOX / MSDN subscription.
+# Requires repo secrets: AZURE_CLIENT_ID, AZURE_TENANT_ID, AZURE_SUBSCRIPTION_ID (OIDC).
+on:
+  workflow_dispatch:
+    inputs:
+      resourceGroup:
+        description: "Resource group to deploy into (per-team, disposable)"
+        required: true
+        default: "hackday-perf-rg"
+      location:
+        description: "Azure region"
+        required: true
+        default: "uksouth"
+      appName:
+        description: "App name (leave blank to auto-generate)"
+        required: false
+        default: ""
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Azure login (OIDC)
+        uses: azure/login@v2
+        with:
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+
+      - name: Create resource group
+        run: az group create -n "${{ inputs.resourceGroup }}" -l "${{ inputs.location }}"
+
+      - name: Deploy Bicep
+        run: |
+          APP_ARG=""
+          if [ -n "${{ inputs.appName }}" ]; then APP_ARG="appName=${{ inputs.appName }}"; fi
+          az deployment group create \
+            -g "${{ inputs.resourceGroup }}" \
+            -f track-3-performance-optional/infra/main.bicep \
+            -p $APP_ARG
+
+      - name: Output target host
+        run: |
+          echo "Deployment complete. Point Azure Load Testing at the 'targetHost' output above."
+          echo "REMEMBER to delete the resource group when finished:"
+          echo "  az group delete -n ${{ inputs.resourceGroup }} --yes --no-wait"
