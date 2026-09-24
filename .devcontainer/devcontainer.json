@@ -5,7 +5,14 @@
     "ghcr.io/devcontainers/features/dotnet:2": {
       "version": "8.0"
     },
-    "ghcr.io/devcontainers/features/github-cli:1": {}
+    "ghcr.io/devcontainers/features/github-cli:1": {},
+    "ghcr.io/devcontainers/features/azure-cli:1": {
+      "installBicep": true,
+      "extensions": "load"
+    },
+    "ghcr.io/devcontainers/features/java:1": {
+      "version": "17"
+    }
   },
   "forwardPorts": [3000, 4000],
   "portsAttributes": {
@@ -26,10 +33,15 @@
         "GitHub.copilot-chat",
         "ms-playwright.playwright",
         "ms-dotnettools.csdevkit",
-        "cucumberopen.cucumber-official"
+        "cucumberopen.cucumber-official",
+        "ms-azure-load-testing.microsoft-testing",
+        "ms-vscode.azurecli",
+        "ms-azuretools.vscode-bicep",
+        "ms-azuretools.vscode-azureresourcegroups"
       ],
       "settings": {
-        "chat.mcp.enabled": true
+        "chat.mcp.enabled": true,
+        "chat.agent.enabled": true
       }
     }
   },

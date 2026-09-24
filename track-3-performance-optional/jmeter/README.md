@@ -5,6 +5,11 @@ and defining NFRs.
 
 ## Install JMeter
 
+> ✅ **In a Codespace / the devcontainer, JMeter, Java, the Azure CLI (with `az load`) and
+> Bicep are already installed** — skip this section (`jmeter --version` to confirm).
+
+Running locally instead:
+
 - Download [Apache JMeter](https://jmeter.apache.org/download_jmeter.cgi) (needs Java 8+), or
 - `brew install jmeter` (macOS) · `choco install jmeter` (Windows) · `sdk install jmeter` (SDKMAN)
 

@@ -31,9 +31,10 @@ paid plan, an Azure subscription, or any TMDB/IMDb account or API key.
 1. Open the repo: **[github.com/Gwayaboy/tfl-ai-assisted-testing-hackday](https://github.com/Gwayaboy/tfl-ai-assisted-testing-hackday)**
 2. Click the green **`< > Code`** button ▸ **Codespaces** tab ▸ **Create codespace on main**.
 3. Wait ~2–3 minutes on first build. The devcontainer automatically installs **Node, .NET 8,
-   the GitHub CLI, Playwright + Chromium**, the VS Code extensions (Copilot, Copilot Chat,
-   Playwright, C# Dev Kit, Cucumber) and the **Playwright MCP** config — and it **pre-clones
-   and builds the Movies app** for you.
+   the GitHub CLI, Java 17 + Apache JMeter, the Azure CLI (with the `az load` extension) and
+   Bicep**, Playwright + Chromium, the VS Code extensions (Copilot, Copilot Chat, Playwright,
+   C# Dev Kit, Cucumber, **Azure Load Testing, Azure CLI, Bicep, Azure Resources**) and the
+   **Playwright MCP** config — and it **pre-clones and builds the Movies app** for you.
 4. **Sign in to Copilot:** click the Copilot icon in the bottom status bar ▸ **Sign in**.
 
 > 💡 **Tip — save your quota:** when you finish, **stop** the Codespace
@@ -94,12 +95,16 @@ No extra setup — it works the moment your Codespace opens.
 
 ## 5. Track 3 — Performance (optional)
 
-- **Local JMeter learning path works in the Codespace** — the container is Linux with Java, so
-  you can build and run modest JMeter plans against the Movies app (`:3000`). See
+Your Codespace comes with everything Track 3 needs **preinstalled**: **Java 17**, the
+**Apache JMeter** CLI, the **Azure CLI** (with the `az load` extension), **Bicep**, and the
+**Azure Load Testing** VS Code extension (which adds its own MCP tools for Copilot agent mode).
+
+- **Local JMeter learning path works out of the box** — run modest JMeter plans against the
+  Movies app (`:3000`); just type `jmeter --version` to confirm. See
   [`track-3-performance-optional/jmeter`](../track-3-performance-optional/jmeter).
-- **Real distributed load / Azure Load Testing / Chaos** needs an **Azure subscription** and is
-  **out of scope for the free Codespaces path** — that's a facilitator-run, back-pocket extra.
-  You lose nothing by staying local.
+- **Real distributed load / Azure Load Testing / Chaos** needs an **Azure subscription** (sign in
+  with `az login`, then use the Azure Load Testing extension or `az load`). This is a
+  facilitator-run, back-pocket extra — you lose nothing by staying local.
 
 ---
 
