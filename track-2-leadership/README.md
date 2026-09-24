@@ -56,6 +56,39 @@ You compete on collaboration, prioritisation, handling curveballs, and communica
 
 ---
 
+## Internal roles (assign at the start)
+
+You'll move faster if each teammate **owns a lane** — it's not bureaucracy, it stops things
+falling through the cracks, and it maps straight onto the
+[scoring](../docs/scoring.md#-challenge-2--messy-project-in-track-2):
+
+| Role | Owns | Scores into |
+|------|------|-------------|
+| **Team lead** | keeps time, drives decisions, owns the readout | Communication |
+| **Requirements liaison** | works the persona stations, assembles the real picture, spots contradictions | Collaboration |
+| **Risk lead** | the prioritised risk matrix — what to test first & *why* | Prioritisation |
+| **Strategy lead** | the test strategy — functional **and** non-functional | (core deliverable) |
+| **Curveball wrangler** | catches injected changes and re-prioritises when they land | Handling curveballs |
+
+Only three of you? **Double up** — the point is that *someone* owns each lane. You still think
+together; the roles just make sure nothing gets dropped.
+
+---
+
+## Persona stations — who holds the requirements
+
+The scattered requirements live with **people, not documents**. Each persona in
+[`personas.md`](./messy-project-challenge/artifacts/personas.md) is **staffed by a facilitator**
+(a Microsoft CSA or TfL coach) running a **persona station**. To unlock what only that persona
+knows, send your **liaison** to talk to them **in role** — ask sharp questions, then cross-check
+what you hear (some of it contradicts, some is out of date). Teams that seek out the right people
+score higher.
+
+A facilitator also **floats for your cluster of teams**, dropping curveballs on a timer and
+keeping you unblocked. Not sure who holds a piece of the picture? Ask them.
+
+---
+
 ## Use AI as a thinking partner
 
 This isn't a coding exercise, but Copilot is a great **leadership co-pilot**:

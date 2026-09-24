@@ -49,6 +49,27 @@ The room spans manual testers → seasoned SDETs. Keep it from being boring **or
   [`messy-project-challenge/facilitator/curveballs.md`](../track-2-leadership/messy-project-challenge/facilitator/curveballs.md).
 - Reward teams who **talk to the right people** and re-prioritise — not just the fastest coders.
 
+### Persona stations & facilitator-per-cluster model
+
+The messy project only works if requirements come from **people, not a handout**. Run it like this:
+
+- **Staff the personas as "stations."** Give each facilitator one or two personas from
+  [`personas.md`](../track-2-leadership/messy-project-challenge/artifacts/personas.md) and have
+  them **hold that role all session**. A workable split for a small crew:
+  - **Station A** — Product Owner + Operations
+  - **Station B** — Security / Compliance + Accessibility lead
+  - The old wiki spec is a **stale trap** — seed it as a document, no station needed.
+  TfL coaches are ideal on the stations (real context); MS CSAs float and nudge AI-as-copilot use.
+- **One facilitator floats per cluster of ~2–3 teams.** They run the **curveball timer** for the
+  cluster ([`curveballs.md`](../track-2-leadership/messy-project-challenge/facilitator/curveballs.md)),
+  keep energy up, and unblock. Keep clusters small so curveballs land at the right moment.
+- **Make teams send a liaison** to the stations rather than crowding them — reward the teams that
+  ask the sharpest questions and surface the contradictions.
+- **Nudge internal team roles** (see the
+  [Track 2 README](../track-2-leadership/README.md#internal-roles-assign-at-the-start)): team lead,
+  requirements liaison, risk lead, strategy lead, curveball wrangler. If a team is flailing, it's
+  usually because nobody owns the **liaison** or **curveball** lane — assign them.
+
 ## Printable scoring sheet (per team)
 
 ```
