@@ -1,9 +1,8 @@
 # Track 2 — Test Leadership (afternoon · everyone)
 
 **Goal:** step up from *doing* testing to *leading* it. Think strategy, risk, assurance, and
-**collaboration across teams** — the gap TfL specifically wants to close (*"very few people
-see the bigger picture outside the team… that is definitely a gap we're trying to fill"* —
-Treasa, 22 Sep call).
+**collaboration across teams** — closing the gap where very few people see the bigger picture
+beyond their own team, which is exactly what this kind of leadership role is there to fix.
 
 This track is **less about code, more about thinking**. Everyone takes part.
 
@@ -11,10 +10,10 @@ This track is **less about code, more about thinking**. Everyone takes part.
 
 ## Why this track exists
 
-On the prep call, TfL were clear:
+Testing leadership is a growing need, and this track targets it head-on:
 
-- They're growing testers into **leadership** roles and need people who see beyond their own
-  team.
+- Testers are increasingly growing into **leadership** roles that need people who see beyond
+  their own team.
 - A test lead needs to understand the **non-functional** picture (performance, resilience,
   accessibility, security) enough to **drive** it — even if they don't run every test.
 - Real projects are **messy**: requirements are scattered, people are in different teams,

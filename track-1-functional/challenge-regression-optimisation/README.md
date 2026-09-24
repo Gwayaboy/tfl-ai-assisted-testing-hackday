@@ -1,8 +1,8 @@
 # ⚔️ Challenge — Regression Optimisation
 
-> This is the competitive challenge embedded in **Track 1**. It's the exact problem TfL raised
-> on the prep call: *"regression optimisation is the major problem… so many tests… which team
-> comes up with more test coverage having less execution time."*
+> This is the competitive challenge embedded in **Track 1**, and it tackles a real-world pain:
+> **regression optimisation**. When you're staring at hundreds of tests — so many that runs drag
+> on — which team can come up with **more coverage in less execution time**?
 
 You're handed a **deliberately slow, bloated regression suite**. Your mission: make it
 **faster, leaner and more reliable** — using **GitHub Copilot** — without losing meaningful

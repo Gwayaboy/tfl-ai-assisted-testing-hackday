@@ -1,8 +1,8 @@
 # Chaos & resilience (optional, advanced)
 
-Performance isn't just "how fast" — it's "does it **stay up** when things go wrong". On the prep
-call we flagged **[Azure Chaos Studio](https://learn.microsoft.com/azure/chaos-studio/)** as a
-stretch for the adventurous.
+Performance isn't just "how fast" — it's "does it **stay up** when things go wrong".
+**[Azure Chaos Studio](https://learn.microsoft.com/azure/chaos-studio/)** is a stretch goal here
+for the adventurous.
 
 > Sandbox / MSDN only, and only against a target you deployed (e.g. Contoso Traders). Never run
 > chaos experiments against anything you don't own.

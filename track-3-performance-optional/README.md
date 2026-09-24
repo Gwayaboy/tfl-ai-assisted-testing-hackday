@@ -6,9 +6,9 @@
 > MSDN capacity/quota doesn't allow it, this track stays **local JMeter only** — the day does
 > not depend on it either way.
 
-> **Optional.** On the prep call we agreed performance is a **back-pocket** activity — TfL has
-> few dedicated performance testers, so this is for anyone who wants to go further, or a small
-> group in the afternoon. Everything else in the day works without it.
+> **Optional.** Performance is a **back-pocket** activity — there are few dedicated performance
+> testers in the room, so this is for anyone who wants to go further, or a small group in the
+> afternoon. Everything else in the day works without it.
 
 **Goal:** get a feel for **load, performance and resilience** testing with **JMeter** and
 **Azure Load Testing**, and see how AI can help design and analyse tests that focus on
@@ -28,10 +28,10 @@ Most of this track can be **learned locally**. You only need cloud for *real* di
 | Load-test a deployed microservices app (Contoso Traders) | ✅ Azure |
 | Chaos / resilience experiments | ✅ Azure (Chaos Studio) |
 
-> **Facilitator note (Franck):** we're **avoiding cloud deploys** where possible. If we run the
-> cloud parts, it'll be in a **Microsoft sandbox / MSDN subscription** — not a TfL subscription
-> — and via the provided GitHub Actions + Bicep so it's seamless and disposable. See
-> [`infra/`](./infra). If no subscription is available, do the **local JMeter** parts only.
+> **Note:** this track **avoids cloud deploys** where possible. If you do run the cloud parts,
+> they go to a **Microsoft sandbox / MSDN subscription** — never a TfL subscription — via the
+> provided GitHub Actions + Bicep, so it's seamless and disposable. See [`infra/`](./infra). If
+> no subscription is available, do the **local JMeter** parts only.
 
 ---
 

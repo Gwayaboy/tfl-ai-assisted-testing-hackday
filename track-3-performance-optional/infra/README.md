@@ -3,8 +3,8 @@
 If you want a **real target** to load-test or a richer app for the performance track, use these
 notes. **Nothing here is required** — the core day runs 100% locally.
 
-> **Franck's guidance:** avoid TfL cloud. If we deploy, it's to a **Microsoft sandbox / MSDN**
-> subscription, via manual-dispatch GitHub Actions, and torn down after. Keep it disposable.
+> **Guidance:** avoid TfL cloud. If you deploy, use a **Microsoft sandbox / MSDN** subscription,
+> via manual-dispatch GitHub Actions, and tear it down after. Keep it disposable.
 
 ## Two target options
 
@@ -18,14 +18,14 @@ e-commerce app (AKS / Container Apps, Cosmos DB, Key Vault, Storage, Front Door)
 functional + performance tests and is a great **performance & resilience** playground.
 
 > ⚠️ It's **complex** and **not free** to run — only stand it up in a sandbox you control, and
-> delete it afterwards. This is exactly what we discussed keeping optional on the prep call.
+> delete it afterwards. Keep this one strictly optional.
 
 ## Deploy path (disposable)
 
 - Use the manual-dispatch workflow [`../../.github/workflows/deploy-target.yml`](../../.github/workflows)
   — it deploys the Bicep in [`main.bicep`](./main.bicep) to a resource group you specify.
 - Requires an Azure login (OIDC or a sandbox service principal) configured as repo secrets.
-- **Per-team resource group** recommended so teams don't collide (as agreed on the call).
+- **Per-team resource group** recommended so teams don't collide.
 
 ## Clean up (always)
 

@@ -1,8 +1,7 @@
 # ⚔️ Challenge — The Messy Project
 
-> The competitive challenge for **Track 2**. It's the *"messy project… with curveballs… where
-> people have to talk across teams to solve a problem"* Franck described on the prep call — made
-> real. Less code, more **test leadership**.
+> The competitive challenge for **Track 2**: a **messy project, with curveballs, where you have
+> to talk across teams to solve a problem** — made real. Less code, more **test leadership**.
 
 You and your team have just been handed a project that's already **in motion and in a mess**.
 The requirements are **scattered** across people and documents, some **contradict** each other,
