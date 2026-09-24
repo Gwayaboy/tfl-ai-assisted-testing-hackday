@@ -1,5 +1,6 @@
 <#
-  Clones (if needed) and starts the Movies app SUT on http://localhost:3000
+  Clones (if needed) and starts the Movies app SUT.
+  npm run dev starts the bundled mock API (:4000) and the Movies app (:3000) together.
 #>
 $ErrorActionPreference = "Stop"
 
@@ -11,10 +12,12 @@ if (-not (Get-Command node -ErrorAction SilentlyContinue)) {
     exit 1
 }
 
-$portInUse = Get-NetTCPConnection -LocalPort 3000 -State Listen -ErrorAction SilentlyContinue
-if ($portInUse) {
-    Write-Warning "Port 3000 is already in use. The movies app needs port 3000 exactly."
-    Write-Warning "Stop whatever is using it, then re-run this script."
+foreach ($port in 3000, 4000) {
+    $portInUse = Get-NetTCPConnection -LocalPort $port -State Listen -ErrorAction SilentlyContinue
+    if ($portInUse) {
+        Write-Warning "Port $port is already in use. The app needs 3000 (app) and 4000 (mock API) free."
+        Write-Warning "Stop whatever is using it, then re-run this script."
+    }
 }
 
 if (-not (Test-Path $AppDir)) {
@@ -23,8 +26,12 @@ if (-not (Test-Path $AppDir)) {
 }
 
 Set-Location $AppDir
-Write-Host "==> Installing dependencies (first run can take a minute)..."
+Write-Host "==> Installing dependencies (also builds the local mock API; first run can take a minute)..."
 npm install
-Write-Host "==> Starting the app on http://localhost:3000  (Ctrl+C to stop)"
-Write-Host "    Test login: me@outlook.com / 12345"
+if ((-not (Test-Path ".env")) -and (Test-Path ".env.example")) {
+    Write-Host "==> Creating .env from .env.example (sets the test login)"
+    Copy-Item ".env.example" ".env"
+}
+Write-Host "==> Starting the mock API (:4000) and the app (:3000)  (Ctrl+C to stop)"
+Write-Host "    Open http://localhost:3000   ·   Test login: me@outlook.com / 12345"
 npm run dev

@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-# Clones (if needed) and starts the Movies app SUT on http://localhost:3000
+# Clones (if needed) and starts the Movies app SUT.
+# npm run dev starts the bundled mock API (:4000) and the Movies app (:3000) together.
 set -euo pipefail
 
 APP_DIR="${MOVIES_APP_DIR:-../playwright-movies-app}"
@@ -9,10 +10,12 @@ if ! command -v node >/dev/null 2>&1; then
   echo "ERROR: Node.js is not installed. Install Node 18+ from https://nodejs.org/"; exit 1
 fi
 
-if lsof -i :3000 >/dev/null 2>&1 || (command -v netstat >/dev/null 2>&1 && netstat -an | grep -q '[:.]3000 .*LISTEN'); then
-  echo "WARNING: Port 3000 already in use. The movies app needs port 3000 exactly."
-  echo "Stop whatever is using it, then re-run this script."
-fi
+for PORT in 3000 4000; do
+  if lsof -i ":$PORT" >/dev/null 2>&1 || (command -v netstat >/dev/null 2>&1 && netstat -an | grep -q "[:.]$PORT .*LISTEN"); then
+    echo "WARNING: Port $PORT is already in use. The app needs 3000 (app) and 4000 (mock API) free."
+    echo "Stop whatever is using it, then re-run this script."
+  fi
+done
 
 if [ ! -d "$APP_DIR" ]; then
   echo "==> Cloning movies app into $APP_DIR"
@@ -20,8 +23,12 @@ if [ ! -d "$APP_DIR" ]; then
 fi
 
 cd "$APP_DIR"
-echo "==> Installing dependencies (first run can take a minute)…"
+echo "==> Installing dependencies (also builds the local mock API; first run can take a minute)…"
 npm install
-echo "==> Starting the app on http://localhost:3000  (Ctrl+C to stop)"
-echo "    Test login: me@outlook.com / 12345"
+if [ ! -f ".env" ] && [ -f ".env.example" ]; then
+  echo "==> Creating .env from .env.example (sets the test login)"
+  cp .env.example .env
+fi
+echo "==> Starting the mock API (:4000) and the app (:3000)  (Ctrl+C to stop)"
+echo "    Open http://localhost:3000   ·   Test login: me@outlook.com / 12345"
 npm run dev

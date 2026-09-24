@@ -1,6 +1,14 @@
 # Setup — detailed guide
 
-Track 1 (and most of the day) runs **entirely on your laptop**. No Azure, no cloud accounts.
+> ### ⭐ Preferred: GitHub Codespaces (nothing to install)
+> A **free personal GitHub account** is all you need — sign up at
+> [github.com/signup](https://github.com/signup) (includes **120 Codespaces core-hours +
+> 15 GB/month**). Then on the repo: **`< > Code` ▸ Codespaces ▸ Create codespace on main**.
+> Everything below is pre-installed for you, and the Movies app SUT is pre-cloned and built.
+> See [`codespaces.md`](./codespaces.md) for the full per-track walkthrough.
+
+Track 1 (and most of the day) runs **entirely locally** — no cloud, no external accounts,
+**no TMDB/IMDb sign-up and no API key**. The steps below are for a **local** setup.
 
 ## 1. Install prerequisites
 
@@ -48,6 +56,9 @@ Agent mode lets Copilot *act* — run tools, explore the app, and write files.
 
 ## 4. Start the SUT (Movies app)
 
+The Movies app is **100% local** — its data and login come from a **bundled mock API**, so
+there's **no cloud account, no TMDB/IMDb sign-up and no API key**.
+
 ```bash
 # from the repo root
 ./scripts/start-movies-app.sh      # macOS/Linux
@@ -59,23 +70,24 @@ or manually:
 ```bash
 git clone https://github.com/debs-obrien/playwright-movies-app.git
 cd playwright-movies-app
-npm install
-npm run dev
+npm install               # also builds the local mock API
+cp .env.example .env      # sets the test login (any user/pass also works)
+npm run dev               # starts the mock (:4000) and the app (:3000)
 ```
 
 Open **http://localhost:3000**.
 
-> ⚠️ **Must be port 3000.** The app's movie API is hard-wired to `localhost:3000`. Another
-> port = no data.
+> ℹ️ **Two ports:** `npm run dev` runs the **mock API on `:4000`** and the **app on `:3000`**.
+> Keep both free. You only open **:3000** in the browser — the app calls the mock for you.
 
 ### Troubleshooting
 
 | Symptom | Fix |
 |---------|-----|
-| No movies load / blank list | You're not on port 3000. Free the port and restart. |
+| No movies load / blank list | The mock API (`:4000`) isn't running. Use `npm run dev` (not `next dev`) so it starts too. |
 | `npm install` fails | Check Node is 18+. Delete `node_modules` and retry. |
 | Copilot has no Playwright tools | Agent mode not on, or MCP server not allowed. Re-check step 3. |
-| Login doesn't work | Use exactly `me@outlook.com` / `12345`. |
-| Port 3000 busy | Find & stop the process, or set `MOVIES_APP_DIR` and a freed port. |
+| Login doesn't work | Use exactly `me@outlook.com` / `12345` (or any user/pass — the mock accepts both). |
+| Port 3000 or 4000 busy | Find & stop the process, then re-run. |
 
 ✅ Ready? Go to [Track 1](../track-1-functional/README.md).

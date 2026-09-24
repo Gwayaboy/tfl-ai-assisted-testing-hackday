@@ -7,11 +7,15 @@
     },
     "ghcr.io/devcontainers/features/github-cli:1": {}
   },
-  "forwardPorts": [3000],
+  "forwardPorts": [3000, 4000],
   "portsAttributes": {
     "3000": {
       "label": "Movies App (SUT)",
       "onAutoForward": "notify"
+    },
+    "4000": {
+      "label": "Movies Mock API",
+      "onAutoForward": "silent"
     }
   },
   "postCreateCommand": "bash .devcontainer/post-create.sh",

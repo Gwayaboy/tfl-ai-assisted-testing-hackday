@@ -48,9 +48,34 @@ Each track has **guided step-by-step labs** (great if you're newer to automation
 
 ## Setup
 
-You need three things before you start Track 1. All of Track 1 runs **locally** — no cloud, no Azure.
+> ### ⭐ Preferred: open in GitHub Codespaces (zero install)
+> The **easiest** way to take part — nothing to install, works on a locked-down laptop,
+> and a **free personal GitHub account is enough**.
+>
+> 1. **Sign in / sign up** (free) at **[github.com/signup](https://github.com/signup)** — a
+>    free personal account includes **120 Codespaces core-hours + 15 GB storage per month**,
+>    plenty for the day.
+> 2. On this repo, click **`< > Code` ▸ Codespaces ▸ Create codespace on main**.
+> 3. Wait ~2–3 min. The devcontainer auto-installs Node, .NET, the GitHub CLI, Playwright +
+>    Chromium, the VS Code extensions, and the Copilot/Playwright-MCP config — and it
+>    **pre-clones and builds the Movies app SUT** for you.
+> 4. **Sign in to GitHub Copilot** in the Codespace (Copilot icon ▸ Sign in). We'll make sure
+>    everyone has Copilot access on the day; **[Copilot Free](https://github.com/copilot)** also
+>    works on personal accounts.
+> 5. Start the app and go:
+>    ```bash
+>    cd ../playwright-movies-app && npm run dev
+>    ```
+>    When VS Code offers to **open the forwarded port (3000)** in the browser, click it.
+>
+> 👉 Full Codespaces walkthrough **for every track** (including .NET and performance):
+> [`docs/codespaces.md`](./docs/codespaces.md).
 
-### 1. Prerequisites
+Prefer to run everything on your own machine? Follow the local setup below.
+
+### Local setup (alternative)
+
+#### 1. Prerequisites
 
 | Tool | Version | Check |
 |------|---------|-------|
@@ -60,23 +85,19 @@ You need three things before you start Track 1. All of Track 1 runs **locally** 
 | [GitHub Copilot](https://github.com/features/copilot) | active licence, signed in | Copilot icon in VS Code |
 | .NET SDK *(only for the C#/Reqnroll path)* | 8+ | `dotnet --version` |
 
-> **Prefer zero local install?** Open this repo in a
-> [**GitHub Codespace**](https://docs.github.com/codespaces) — the devcontainer installs
-> Node, Playwright and the Copilot/Playwright-MCP config for you. Click
-> **Code ▸ Codespaces ▸ Create codespace on main**.
-
-### 2. Clone this repo
+#### 2. Clone this repo
 
 ```bash
 git clone https://github.com/Gwayaboy/tfl-ai-assisted-testing-hackday.git
 cd tfl-ai-assisted-testing-hackday
 ```
 
-### 3. Start the System Under Test (SUT) — the Movies app
+#### 3. Start the System Under Test (SUT) — the Movies app
 
 The primary SUT is the open-source
 [**playwright-movies-app**](https://github.com/debs-obrien/playwright-movies-app). It runs
-locally on **port 3000**.
+**100% locally** — its movie data and login come from a **bundled mock API**, so there's
+**no cloud account, no TMDB/IMDb sign-up and no API key** to worry about.
 
 **Option A — helper script (recommended):**
 
@@ -94,14 +115,16 @@ locally on **port 3000**.
 ```bash
 git clone https://github.com/debs-obrien/playwright-movies-app.git
 cd playwright-movies-app
-npm install
-npm run dev
+npm install                 # also builds the local mock API
+cp .env.example .env        # sets the test login (any user/pass also works)
+npm run dev                 # starts the mock (:4000) and the app (:3000) together
 ```
 
-> ⚠️ **Port 3000 must be free.** The app's API expects `http://localhost:3000`; a
-> different port breaks the movie data.
+> ℹ️ **Two local ports:** `npm run dev` starts the **mock API on `:4000`** and the
+> **Movies app on `:3000`**. Keep both free. You only open **http://localhost:3000** in the
+> browser — the app talks to the mock for you.
 
-Open **http://localhost:3000** — you should see the movies app. Test login:
+Open **http://localhost:3000** — you should see the movies load. Test login:
 `me@outlook.com` / `12345`.
 
 ✅ **You're ready.** Head to [Track 1](./track-1-functional).
