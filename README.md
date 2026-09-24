@@ -71,6 +71,10 @@ Each track has **guided step-by-step labs** (great if you're newer to automation
 >
 > 👉 Full Codespaces walkthrough **for every track** (including .NET and performance):
 > [`docs/codespaces.md`](./docs/codespaces.md).
+>
+> 💻 **Best of both worlds:** you can connect your **local VS Code** to the Codespace — cloud
+> compute + your own editor, nothing to install locally. See
+> [Connect local VS Code to the Codespace](./docs/codespaces.md#6-best-of-both-worlds--connect-your-local-vs-code-to-the-codespace).
 
 Prefer to run everything on your own machine? Follow the local setup below.
 

@@ -108,11 +108,44 @@ Your Codespace comes with everything Track 3 needs **preinstalled**: **Java 17**
 
 ---
 
-## 6. Prefer desktop VS Code?
+## 6. Best of both worlds — connect your **local VS Code** to the Codespace
 
-You can open the same Codespace in your installed VS Code: **Codespaces** panel ▸ **…** ▸
-*Open in VS Code Desktop* (needs the **GitHub Codespaces** extension). Same environment, local
-editor.
+You don't have to choose between the browser and your own editor. A Codespace is just a
+remote dev environment, so you can **run the heavy lifting in the cloud** (compute, the
+pre-installed tools, the SUT) while **editing in your familiar local VS Code** — your own
+theme, keybindings, and extensions, no local install of Node/.NET/Java/JMeter needed.
+
+**One-time setup (local machine):**
+1. Install **[VS Code](https://code.visualstudio.com/)**.
+2. Install the **[GitHub Codespaces extension](https://marketplace.visualstudio.com/items?itemName=GitHub.codespaces)**
+   (`GitHub.codespaces`).
+3. Sign in: Command Palette (`Ctrl/Cmd+Shift+P`) ▸ **Codespaces: Sign In** and authorise GitHub.
+
+**Open the Codespace in local VS Code — two ways:**
+
+- **From a running browser Codespace:** Command Palette ▸ **Codespaces: Open in VS Code Desktop**
+  (or the ☰ menu ▸ *Open in VS Code Desktop*). The browser hands off to your local app.
+- **Straight from local VS Code:** Command Palette ▸ **Codespaces: Create New Codespace**
+  (pick `Gwayaboy/tfl-ai-assisted-testing-hackday` ▸ `main` ▸ 2-core), **or**
+  **Codespaces: Connect to Codespace…** to reopen one you already created.
+
+You're now editing locally, but the **terminal, tools, extensions and processes all run in the
+cloud container**. It should say **"Codespaces: …"** in the bottom-left status bar.
+
+**Things that just work in this mode:**
+- The terminal is the **Linux Codespace** — `node`, `dotnet`, `jmeter`, `az`, `bicep` are all there.
+- **Port forwarding is automatic:** run `npm run dev`, and VS Code forwards **3000/4000** to
+  your local machine — open **http://localhost:3000** in your *local* browser as usual.
+- **Copilot + the MCP servers** (Playwright, Azure Load Testing) run in the container; agent mode
+  behaves exactly as in the browser.
+
+> 💡 **Prefer other editors?** The same Codespace also opens in **JetBrains** (via JetBrains
+> Gateway) or over plain **SSH** with the [GitHub CLI](https://cli.github.com):
+> `gh codespace ssh`. Not needed for the day — VS Code Desktop is the smoothest.
+
+> ⏱️ **Quota still applies:** connecting locally uses the **same cloud compute**, so the codespace
+> keeps consuming your hours while it's running. **Stop** it when you're done (Command Palette ▸
+> **Codespaces: Stop Current Codespace**).
 
 ---
 
