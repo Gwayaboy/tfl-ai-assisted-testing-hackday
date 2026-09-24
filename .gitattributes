@@ -1,0 +1,6 @@
+# Keep shell scripts LF so they run in Codespaces / Linux containers
+*.sh text eol=lf
+.devcontainer/post-create.sh text eol=lf
+
+# Normalize text files
+* text=auto
