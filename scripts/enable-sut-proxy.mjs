@@ -9,6 +9,13 @@
  * it loaded from), and add a Next.js dev rewrite that proxies "/tmdb/*" to the
  * local mock API on 127.0.0.1:4000 (resolved server-side, inside the container).
  *
+ * IMPORTANT: the base URL is injected via the `env` block of next.config.ts, NOT
+ * just the monorepo-root .env — Next inlines NEXT_PUBLIC_* at build time from the
+ * app's own project dir (movies-app/), so a root .env alone does NOT reach the
+ * browser bundle. (We still set the root .env for good measure.) Verified live in
+ * a real Codespace: without the env injection the browser keeps calling
+ * 127.0.0.1:4000 and shows "An error occurred on client".
+ *
  * This also keeps working when you open http://localhost:3000 directly (local run
  * or VS Code Desktop attached to the Codespace), so one config covers every path.
  *
@@ -54,16 +61,19 @@ if (cfg.includes(`${PROXY_PREFIX}/:path*`)) {
   process.exit(0);
 }
 const anchor = "const config: NextConfig = {";
-const rewriteBlock =
-  "\n  // Hackday: proxy the SUT's API through this dev server so the app works\n" +
-  "  // through a single same-origin port (great for Codespaces browser preview).\n" +
+const injectBlock =
+  "\n  // Hackday: make the app work through a single same-origin port (great for the\n" +
+  "  // Codespaces browser preview). `env` inlines the API base into the client bundle\n" +
+  "  // (NEXT_PUBLIC_* is read at build time from here, not the monorepo-root .env);\n" +
+  "  // `rewrites` proxies that relative path to the mock API inside the container.\n" +
+  `  env: { NEXT_PUBLIC_TMDB_API_BASE_URL: '${PROXY_PREFIX}' },\n` +
   "  async rewrites() {\n" +
   `    return [{ source: '${PROXY_PREFIX}/:path*', destination: '${MOCK_TARGET}/:path*' }];\n` +
   "  },";
 if (cfg.includes(anchor)) {
-  cfg = cfg.replace(anchor, anchor + rewriteBlock);
+  cfg = cfg.replace(anchor, anchor + injectBlock);
   writeFileSync(cfgPath, cfg);
-  console.log(`[enable-sut-proxy] added rewrite ${PROXY_PREFIX}/:path* -> ${MOCK_TARGET} to next.config.ts`);
+  console.log(`[enable-sut-proxy] injected env NEXT_PUBLIC_TMDB_API_BASE_URL=${PROXY_PREFIX} + rewrite ${PROXY_PREFIX}/:path* -> ${MOCK_TARGET} into next.config.ts`);
 } else {
   console.warn("[enable-sut-proxy] could not find the config anchor in next.config.ts (upstream may have changed).");
   console.warn("[enable-sut-proxy] Movies may not load in the browser preview — see docs/codespaces.md troubleshooting.");
