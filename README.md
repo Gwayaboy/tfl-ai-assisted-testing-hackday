@@ -1,6 +1,6 @@
 # TfL × Microsoft — AI-Assisted Testing Hack Day
 
-**Monday 6 October 2026 · 2 Kingdom Street, London (2KS)**
+**Tuesday 6 October 2026 · 2 Kingdom Street, London (2KS)**
 
 Welcome! Today is about getting **hands-on** with AI-assisted testing. You'll use
 **GitHub Copilot** (agent mode + the Playwright MCP server) to explore an app, design
