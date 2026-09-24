@@ -57,6 +57,23 @@ count** — that's your baseline. Open the report:
 npx playwright show-report
 ```
 
+### ⏱️ How long should the baseline take?
+
+**Expect ~28–30 minutes** — and that's the point. It's **300 tests on a single worker**, run
+serially, stuffed with hard `waitForTimeout` sleeps, with trace + video recording on. On a
+typical laptop a clean run lands around **28 min** (the slowest file alone,
+`05-details.spec.ts`, is ~6–7 min). If yours is wildly off, check the movies app is up on
+`http://localhost:3000` and nothing else is hammering the machine.
+
+> 💡 This slow number is your **"before"**. Note it down, then see how far Copilot can push it.
+
+### What a baseline run looks like
+
+A clean baseline: **300 passed in 28.4 min** on a single worker. Screenshot your own report like
+this for the readout:
+
+![Baseline Playwright HTML report showing 300 passed in 28.4 minutes on a single worker](../../assets/baseline-report.png)
+
 ## Optimise it (with Copilot)
 
 Some high-value moves (let Copilot help, but understand each one):
