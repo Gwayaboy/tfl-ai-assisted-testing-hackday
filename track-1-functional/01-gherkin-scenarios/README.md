@@ -10,11 +10,12 @@ search cases.
 
 ## Why this shape
 
-On the [22 Sep prep call](../../docs/facilitator-guide.md) TfL were clear: the real-world
-problem is **large regression suites** — hundreds of tests, mixed value, long run-times. So we
-practise on a **realistic pack** of user journeys, the kind you'd actually maintain for a
-content/booking-style app (think: your public website, TfL Go, ticketing). The Movies app is a
-convenient stand-in that runs locally.
+In the real world, the hard part isn't writing three search tests — it's living with a **large
+regression suite**: hundreds of tests of mixed value that take an age to run. That's the problem
+actually worth practising on. So instead of toy examples, you'll build up a **realistic pack** of
+user journeys — the kind you'd genuinely maintain for a content- or booking-style app (think your
+public website, a travel app like TfL Go, or ticketing). The Movies app is just a convenient
+stand-in that runs locally.
 
 > **Bring your own:** if your team maintains a real regression suite, use *these patterns* on a
 > journey from your own app instead. Tell us how it went in the readout.
