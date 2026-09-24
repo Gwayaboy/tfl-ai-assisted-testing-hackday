@@ -64,7 +64,9 @@ Everything is local inside the Codespace.
    This starts the **mock API on `:4000`** and the **Movies app on `:3000`**.
 2. When VS Code pops **"Your application running on port 3000 is available"**, click
    **Open in Browser** (or go to the **Ports** tab and open port 3000). Login:
-   `me@outlook.com` / `12345`.
+   `me@outlook.com` / `12345`. Movies load straight away — this repo pre-configures the
+   SUT to serve its API **through the same port 3000** (see note below), so the browser
+   preview *just works* with nothing else to open or forward.
 3. In a **second terminal** (keep the app running in the first), go through the labs:
    ```bash
    cd /workspaces/tfl-ai-assisted-testing-hackday/track-1-functional
@@ -74,8 +76,16 @@ Everything is local inside the Codespace.
    - **API testing** → [`04-api-testing`](../track-1-functional/04-api-testing).
    - **Regression-optimisation challenge** → [`challenge-regression-optimisation`](../track-1-functional/challenge-regression-optimisation).
 
-> **Ports tab:** the little **Ports** panel (next to Terminal) lists every forwarded port. If
-> the browser preview looks empty, confirm **both** 3000 *and* 4000 are listed and running.
+> **Why it works in the browser preview 🧩** The Movies app fetches its data *from your
+> browser*. By default it targets `127.0.0.1:4000`, which doesn't exist on your laptop when
+> you open the `…-3000.app.github.dev` preview — so the page would show *"An error occurred on
+> client."* To avoid that, the setup points the app at the **relative path `/tmdb`** and adds a
+> tiny dev-server rewrite that proxies `/tmdb/*` to the mock on `:4000` **inside the container**.
+> Net effect: your browser only ever talks to **port 3000** (same origin), so there's **no CORS,
+> no second public port, and no `gh` port-forwarding** needed. It also still works if you open
+> `http://localhost:3000` (local run or VS Code Desktop). If you clone the SUT by hand instead of
+> using `./scripts/start-movies-app.*`, run `node scripts/enable-sut-proxy.mjs ../playwright-movies-app`
+> once to apply the same config.
 
 ---
 
@@ -153,7 +163,7 @@ cloud container**. It should say **"Codespaces: …"** in the bottom-left status
 
 | Symptom | Fix |
 |---------|-----|
-| Movies list is empty | The **mock API (`:4000`)** isn't running. Always start with `npm run dev` (not `next dev`). |
+| Movies list is empty / *"An error occurred on client"* | The SUT proxy config isn't applied. Run `node scripts/enable-sut-proxy.mjs ../playwright-movies-app` from the repo root, then restart with `npm run dev`. (The devcontainer + `start-movies-app` scripts do this automatically.) |
 | No port popup | Open the **Ports** tab, find **3000**, click the globe icon to open it. |
 | Codespace won't create | You may have hit the free quota, or the repo is owned by a *managed* (work) account — use a **personal** account. |
 | Copilot greyed out | Sign in to Copilot in the status bar; confirm your account has Copilot (or Copilot Free) enabled. |

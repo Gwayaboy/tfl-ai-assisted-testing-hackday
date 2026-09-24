@@ -3,6 +3,7 @@
 # npm run dev starts the bundled mock API (:4000) and the Movies app (:3000) together.
 set -euo pipefail
 
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 APP_DIR="${MOVIES_APP_DIR:-../playwright-movies-app}"
 REPO="https://github.com/debs-obrien/playwright-movies-app.git"
 
@@ -29,6 +30,8 @@ if [ ! -f ".env" ] && [ -f ".env.example" ]; then
   echo "==> Creating .env from .env.example (sets the test login)"
   cp .env.example .env
 fi
+echo "==> Configuring the SUT to serve its API same-origin (so it works in a Codespaces browser preview too)…"
+node "$SCRIPT_DIR/enable-sut-proxy.mjs" . || true
 echo "==> Starting the mock API (:4000) and the app (:3000)  (Ctrl+C to stop)"
 echo "    Open http://localhost:3000   ·   Test login: me@outlook.com / 12345"
 npm run dev

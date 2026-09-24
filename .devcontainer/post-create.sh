@@ -18,6 +18,8 @@ if [ -d "../playwright-movies-app" ]; then
   echo "==> Installing Playwright browsers (Chromium)…"
   npx --yes playwright install --with-deps chromium || true
   cd - >/dev/null
+  echo "==> Configuring the SUT to serve its API same-origin (works in the Codespaces browser preview)…"
+  node scripts/enable-sut-proxy.mjs ../playwright-movies-app || true
 fi
 
 # --- Track 3 (optional): Apache JMeter for local load testing ---------------

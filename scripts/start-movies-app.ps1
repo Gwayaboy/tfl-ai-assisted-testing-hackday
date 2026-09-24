@@ -4,6 +4,7 @@
 #>
 $ErrorActionPreference = "Stop"
 
+$ScriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
 $AppDir = if ($env:MOVIES_APP_DIR) { $env:MOVIES_APP_DIR } else { "../playwright-movies-app" }
 $Repo   = "https://github.com/debs-obrien/playwright-movies-app.git"
 
@@ -32,6 +33,8 @@ if ((-not (Test-Path ".env")) -and (Test-Path ".env.example")) {
     Write-Host "==> Creating .env from .env.example (sets the test login)"
     Copy-Item ".env.example" ".env"
 }
+Write-Host "==> Configuring the SUT to serve its API same-origin (so it works in a Codespaces browser preview too)..."
+node "$ScriptDir/enable-sut-proxy.mjs" .
 Write-Host "==> Starting the mock API (:4000) and the app (:3000)  (Ctrl+C to stop)"
 Write-Host "    Open http://localhost:3000   ·   Test login: me@outlook.com / 12345"
 npm run dev

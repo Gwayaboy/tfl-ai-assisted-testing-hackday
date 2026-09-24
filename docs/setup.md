@@ -59,6 +59,9 @@ Agent mode lets Copilot *act* — run tools, explore the app, and write files.
 The Movies app is **100% local** — its data and login come from a **bundled mock API**, so
 there's **no cloud account, no TMDB/IMDb sign-up and no API key**.
 
+The helper script (recommended) also configures the SUT to serve its API **same-origin**, so
+it works in a **GitHub Codespaces browser preview** with nothing else to open:
+
 ```bash
 # from the repo root
 ./scripts/start-movies-app.sh      # macOS/Linux
@@ -80,11 +83,18 @@ Open **http://localhost:3000**.
 > ℹ️ **Two ports:** `npm run dev` runs the **mock API on `:4000`** and the **app on `:3000`**.
 > Keep both free. You only open **:3000** in the browser — the app calls the mock for you.
 
+> 🧩 **Running in a Codespace (browser preview)?** Opening `http://localhost:3000` locally works
+> as-is, but the app's default `127.0.0.1:4000` data URL fails in the `…-3000.app.github.dev`
+> preview. Our `start-movies-app.*` scripts fix this automatically; if you cloned by hand, run
+> `node scripts/enable-sut-proxy.mjs ../playwright-movies-app` once (proxies the API through the
+> same port 3000). See [`codespaces.md`](./codespaces.md) for the full explanation.
+
 ### Troubleshooting
 
 | Symptom | Fix |
 |---------|-----|
-| No movies load / blank list | The mock API (`:4000`) isn't running. Use `npm run dev` (not `next dev`) so it starts too. |
+| No movies / *"An error occurred on client"* in a **Codespace preview** | Run `node scripts/enable-sut-proxy.mjs ../playwright-movies-app`, then `npm run dev`. |
+| No movies load / blank list (local) | The mock API (`:4000`) isn't running. Use `npm run dev` (not `next dev`) so it starts too. |
 | `npm install` fails | Check Node is 18+. Delete `node_modules` and retry. |
 | Copilot has no Playwright tools | Agent mode not on, or MCP server not allowed. Re-check step 3. |
 | Login doesn't work | Use exactly `me@outlook.com` / `12345` (or any user/pass — the mock accepts both). |
