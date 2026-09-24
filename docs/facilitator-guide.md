@@ -14,7 +14,7 @@ Internal-facing notes for the people **running the floor**. Participants don't n
 | Time | Facilitation notes |
 |------|--------------------|
 | 10:00 | Welcome. Get teams formed **fast** — 3–5 people, pick a name, write it on the board. Set expectations: guided labs *and* challenges; readout at the end. Cover fire exits. |
-| 10:15 | "How MS tests with AI" — Uros/Amaury/Anusha. Keep it practical, tie to what they'll do next. |
+| 10:15 | **"How can we use AI to test end to end?"** — Uros/Amaury/Anusha. Keep it practical, tie to what they'll do next. |
 | 11:15 | **Session 1 — Functional.** Everyone starts in `00-warmup-guided`. Coaches roam. Push fast movers into the **Regression Optimisation challenge**. Do a quick **check-in before lunch**. |
 | 13:30 | **Session 2 — Leadership + Messy Project.** Hand out the messy brief. Release **curveballs on a timer** (see below). Less code, more thinking. |
 | 15:00 | Break. |

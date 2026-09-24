@@ -6,7 +6,7 @@
 
 This is inspired by **Anusha Ammaluru's Agentic QA Workflow**
 ([`AgenticQAWorkflow-Playwright`](https://github.com/anu-01/AgenticQAWorkflow-Playwright),
-shown in the 10:15 "How Microsoft tests with AI" session). Instead of AI being *just* a
+shown in the 10:15 "How can we use AI to test end to end?" session). Instead of AI being *just* a
 test-code autocomplete, **AI participates across the whole QA lifecycle**.
 
 ## The 7-stage loop
