@@ -5,6 +5,12 @@ running in your browser (or desktop VS Code), so there's **nothing to install** 
 on a locked-down laptop. A **free personal GitHub account is enough** — you do **not** need a
 paid plan, an Azure subscription, or any TMDB/IMDb account or API key.
 
+> 🌐 **Can't open Codespaces either?** The Movies app (the SUT) is also **live at
+> [debs-obrien.github.io/playwright-movies-app](https://debs-obrien.github.io/playwright-movies-app/)**
+> — the same app backed by a hosted mock, with **nothing to install**. You can do all the
+> **exploratory testing** and point your Playwright tests straight at it. See
+> [**Option C** in the main README](../README.md#setup) for details and caveats.
+
 ---
 
 ## 0. One-time: get a free GitHub account + Codespaces

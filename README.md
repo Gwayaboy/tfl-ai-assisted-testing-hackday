@@ -132,6 +132,25 @@ npm run dev                 # starts the mock (:4000) and the app (:3000) togeth
 Open **http://localhost:3000** — you should see the movies load. Test login:
 `me@outlook.com` / `12345`.
 
+**Option C — no install at all: use the hosted app 🌐**
+
+Can't launch Codespaces **and** can't install locally (locked-down laptop, no admin)? The Movies
+app is also **deployed live** — same app, backed by a **hosted mock**, so search, browse, movie
+details and the theme toggle all work with **nothing to install and no local mock**:
+
+**👉 https://debs-obrien.github.io/playwright-movies-app/**
+
+Great for **exploratory testing** (point GitHub Copilot + the Playwright MCP straight at it) or as
+a **live target you point your tests at**.
+
+> ℹ️ **A couple of things to know:**
+> - The app lives under the path **`/playwright-movies-app/`** (not the domain root) — use the
+>   **full URL above** as your base URL.
+> - It's a **shared, public, read-only** demo. Perfect for search / browse / details / theme;
+>   login-based scenarios (and anything that writes state) are best on the local or Codespaces app.
+> - To run either regression baseline against it, set `BASE_URL` — see the
+>   [Regression Optimisation challenge README](./track-1-functional/challenge-regression-optimisation/README.md#how-to-run-the-baseline-get-your-before).
+
 ✅ **You're ready.** Head to [Track 1](./track-1-functional).
 
 ---

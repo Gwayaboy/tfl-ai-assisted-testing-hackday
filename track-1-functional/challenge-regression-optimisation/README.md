@@ -73,6 +73,21 @@ dotnet test
 
 Either way, **record the total time and test count** — that's your baseline.
 
+> 🌐 **No local app / no Codespaces?** Point the baseline at the **hosted** Movies app instead of
+> `localhost:3000` by setting `BASE_URL`:
+>
+> ```bash
+> # JS / TS
+> BASE_URL=https://debs-obrien.github.io/playwright-movies-app/ npm run test:baseline
+> ```
+> ```powershell
+> # C# / .NET (PowerShell)
+> $env:BASE_URL="https://debs-obrien.github.io/playwright-movies-app/"; dotnet test
+> ```
+>
+> The hosted app is backed by a **shared public mock** — fine for a one-off baseline run, but the
+> local/Codespaces app is faster and kinder to the shared instance.
+
 ### ⏱️ How long should the baseline take?
 
 **Expect ~28–30 minutes** — and that's the point. It's **300 tests on a single worker**, run

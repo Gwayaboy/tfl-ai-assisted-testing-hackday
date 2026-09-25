@@ -9,6 +9,12 @@ namespace RegressionOptimisation.Baseline;
 // ============================================================================
 public static class Helpers
 {
+    // The app under test. Override with the BASE_URL env var to point at another
+    // instance, e.g. the hosted app:
+    //   BASE_URL=https://debs-obrien.github.io/playwright-movies-app/
+    public static readonly string BaseUrl =
+        Environment.GetEnvironmentVariable("BASE_URL") ?? "http://localhost:3000";
+
     // ANTI-PATTERN: a fixed sleep. Almost never the right tool - web-first
     // assertions wait exactly as long as needed and no longer.
     public static Task Sleep(int ms = 1500) => Task.Delay(ms);
@@ -17,7 +23,7 @@ public static class Helpers
     // instead of sharing setup / using web-first waits.
     public static async Task OpenLandingPageSlowly(IPage page)
     {
-        await page.GotoAsync("/");
+        await page.GotoAsync(BaseUrl);
         await page.WaitForLoadStateAsync(LoadState.NetworkIdle);
         await Sleep(1500); // pointless extra wait
         // Over-broad "assertion" that barely checks anything.

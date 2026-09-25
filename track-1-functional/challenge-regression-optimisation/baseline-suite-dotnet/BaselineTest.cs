@@ -14,9 +14,10 @@ public class BaselineTest : PageTest
     // ANTI-PATTERN: point BaseURL at the app AND record video for every single
     // test. The helpers then re-navigate from scratch every time (no reuse),
     // and always-on video recording adds overhead to each test.
+    // (BaseURL honours the BASE_URL env var — see Helpers.BaseUrl.)
     public override BrowserNewContextOptions ContextOptions() => new()
     {
-        BaseURL = "http://localhost:3000",
+        BaseURL = Helpers.BaseUrl,
         RecordVideoDir = "videos/",
     };
 
