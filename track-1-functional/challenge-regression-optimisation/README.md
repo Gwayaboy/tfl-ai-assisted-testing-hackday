@@ -47,6 +47,14 @@ run-time and improving reliability. Then show us a **before / after**.
 
 ## How to run the baseline (get your "before")
 
+> ▶️ **First, get the Movies app running.** The baseline runs against it on
+> `http://localhost:3000`. If it isn't up yet, follow
+> **[Setup → Start the SUT (Movies app)](../../docs/setup.md#4-start-the-sut-movies-app)**
+> (or the [main README setup](../../README.md#setup)) — in short, from the repo root run
+> `./scripts/start-movies-app.sh` (macOS/Linux) or `./scripts/start-movies-app.ps1`
+> (Windows PowerShell), which clones, builds and starts it for you. No local install?
+> Point the baseline at the **hosted app** via `BASE_URL` instead (see below).
+
 Pick your language — both run against the movies app on `http://localhost:3000`.
 
 **JS / TS** ([`baseline-suite/`](./baseline-suite)):
