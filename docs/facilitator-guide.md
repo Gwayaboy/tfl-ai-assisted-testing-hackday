@@ -41,6 +41,9 @@ The room spans manual testers → seasoned SDETs. Keep it from being boring **or
 
 ## Messy Project challenge — running it
 
+- **Minute-by-minute run-sheet:**
+  [`messy-project-challenge/facilitator/run-sheet.md`](../track-2-leadership/messy-project-challenge/facilitator/run-sheet.md)
+  — the step-by-step for the day (framing → stations → curveballs → readout).
 - Brief + artifacts in
   [`track-2-leadership/messy-project-challenge`](../track-2-leadership/messy-project-challenge).
 - Requirements are **deliberately scattered** across personas/documents. Teams must
