@@ -57,6 +57,10 @@ paid plan, an Azure subscription, or any TMDB/IMDb account or API key.
    [`.vscode/mcp.json`](../.vscode/mcp.json)). Copilot can now open the running app, take an
    accessibility snapshot, and generate locators that match the *real* UI.
 
+The devcontainer installs Chrome for MCP during creation. Its workspace configuration also
+passes `--no-sandbox`, which is required because Codespaces restricts the Linux namespaces used
+by Chrome's process sandbox. MCP still runs Chrome headlessly inside the container.
+
 ---
 
 ## 3. Track 1 — Functional testing
@@ -173,4 +177,5 @@ cloud container**. It should say **"Codespaces: …"** in the bottom-left status
 | No port popup | Open the **Ports** tab, find **3000**, click the globe icon to open it. |
 | Codespace won't create | You may have hit the free quota, or the repo is owned by a *managed* (work) account — use a **personal** account. |
 | Copilot greyed out | Sign in to Copilot in the status bar; confirm your account has Copilot (or Copilot Free) enabled. |
+| Playwright MCP browser will not launch | Rebuild the container so the setup installs Chrome. Confirm [`.vscode/mcp.json`](../.vscode/mcp.json) includes `--no-sandbox`, then restart the `playwright` MCP server. |
 | Running low on hours | **Stop** the Codespace when not in use; **delete** old Codespaces from [github.com/codespaces](https://github.com/codespaces). |
