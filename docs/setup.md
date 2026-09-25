@@ -50,6 +50,10 @@ Agent mode lets Copilot *act* — run tools, explore the app, and write files.
    [Playwright Hands-On Lab](https://github.com/Gwayaboy/PlaywrightHandsOnLab#how-to-switch-to-agent-mode-and-install-playwright-mcp-server).
 4. You should now see Playwright tools (navigate, snapshot, click, etc.) available to Copilot.
 
+In Codespaces, the devcontainer installs Chrome for MCP and the repository configuration uses
+`--no-sandbox` because Chrome's process sandbox cannot create its required Linux namespaces
+inside the container. Chrome still runs in headless mode.
+
 > **What the MCP server gives you:** Copilot can open the running app, take an accessibility
 > snapshot, and read the *real* roles and names of elements — so generated locators actually
 > match your app instead of being guessed.
@@ -97,6 +101,7 @@ Open **http://localhost:3000**.
 | No movies load / blank list (local) | The mock API (`:4000`) isn't running. Use `npm run dev` (not `next dev`) so it starts too. |
 | `npm install` fails | Check Node is 18+. Delete `node_modules` and retry. |
 | Copilot has no Playwright tools | Agent mode not on, or MCP server not allowed. Re-check step 3. |
+| Playwright MCP browser will not launch in Codespaces | Rebuild the container, confirm [`.vscode/mcp.json`](../.vscode/mcp.json) includes `--no-sandbox`, and restart the `playwright` MCP server. |
 | Login doesn't work | Use exactly `me@outlook.com` / `12345` (or any user/pass — the mock accepts both). |
 | Port 3000 or 4000 busy | Find & stop the process, then re-run. |
 

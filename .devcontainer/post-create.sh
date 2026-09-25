@@ -2,6 +2,9 @@
 # Runs once when the Codespace / devcontainer is created.
 set -euo pipefail
 
+echo "==> Installing Chrome for the Playwright MCP server…"
+npx --yes playwright@latest install --with-deps chrome
+
 echo "==> Pre-cloning the Movies app SUT next to the repo…"
 if [ ! -d "../playwright-movies-app" ]; then
   git clone https://github.com/debs-obrien/playwright-movies-app.git ../playwright-movies-app || true
