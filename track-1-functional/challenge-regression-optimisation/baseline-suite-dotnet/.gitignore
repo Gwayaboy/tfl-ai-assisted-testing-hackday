@@ -1,0 +1,10 @@
+bin/
+obj/
+
+# Playwright / test run artefacts (the baseline records these on purpose)
+videos/
+traces/
+screenshots/
+TestResults/
+playwright-report/
+*.trx

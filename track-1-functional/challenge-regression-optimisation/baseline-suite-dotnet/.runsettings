@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ============================================================================
+   ⚠️  DELIBERATELY BAD run settings  ⚠️
+   The C# equivalent of the JS suite's bad playwright.config.ts. Everything
+   here is a realistic anti-pattern. Your job (with Copilot) is to FIX it.
+   See ANTIPATTERNS.md.
+  ============================================================================
+-->
+<RunSettings>
+  <Playwright>
+    <BrowserName>chromium</BrowserName>
+    <!-- ANTI-PATTERN: enormous expect timeout lets slow tests hide. -->
+    <ExpectTimeout>30000</ExpectTimeout>
+    <LaunchOptions>
+      <Headless>true</Headless>
+    </LaunchOptions>
+  </Playwright>
+
+  <NUnit>
+    <!-- ANTI-PATTERN: a single worker. The #1 reason the suite is slow.
+         Raise this (and stop forcing serial execution) to go parallel. -->
+    <NumberOfTestWorkers>1</NumberOfTestWorkers>
+  </NUnit>
+</RunSettings>

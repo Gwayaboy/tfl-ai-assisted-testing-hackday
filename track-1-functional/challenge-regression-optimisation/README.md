@@ -24,6 +24,11 @@ The `baseline-suite/` is a real Playwright suite that runs against the local Mov
 
 It **passes** (mostly green) — it's just slow and wasteful. Sound familiar? 😅
 
+> 🌐 **Two flavours, same challenge — pick your language.** The baseline ships in both
+> **JS/TS** ([`baseline-suite/`](./baseline-suite)) and **C#/.NET**
+> ([`baseline-suite-dotnet/`](./baseline-suite-dotnet)) — they mirror each other (same ~300
+> tests, same anti-patterns, same target app). Use whichever your team lives in.
+
 ## Your goal
 
 Produce an **optimised suite** that keeps (or improves) coverage while dramatically cutting
@@ -42,6 +47,10 @@ run-time and improving reliability. Then show us a **before / after**.
 
 ## How to run the baseline (get your "before")
 
+Pick your language — both run against the movies app on `http://localhost:3000`.
+
+**JS / TS** ([`baseline-suite/`](./baseline-suite)):
+
 ```bash
 cd track-1-functional/challenge-regression-optimisation/baseline-suite
 npm install
@@ -50,12 +59,19 @@ npx playwright install chromium
 npm run test:baseline
 ```
 
-This prints a summary and writes a Playwright HTML report. **Record the total time and test
-count** — that's your baseline. Open the report:
+This prints a summary and writes a Playwright HTML report. Open it with `npx playwright show-report`.
+
+**C# / .NET** ([`baseline-suite-dotnet/`](./baseline-suite-dotnet)):
 
 ```bash
-npx playwright show-report
+cd track-1-functional/challenge-regression-optimisation/baseline-suite-dotnet
+dotnet build
+pwsh bin/Debug/net8.0/playwright.ps1 install chromium
+# make sure the movies app is running on http://localhost:3000 first!
+dotnet test
 ```
+
+Either way, **record the total time and test count** — that's your baseline.
 
 ### ⏱️ How long should the baseline take?
 
