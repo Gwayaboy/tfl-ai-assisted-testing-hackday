@@ -1,3 +1,4 @@
+#!/usr/bin/env pwsh
 <#
   Clones (if needed) and starts the Movies app SUT.
   npm run dev starts the bundled mock API (:4000) and the Movies app (:3000) together.
