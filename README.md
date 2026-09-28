@@ -55,10 +55,14 @@ Each track has **guided step-by-step labs** (great if you're newer to automation
 >    free personal account includes **120 Codespaces core-hours + 15 GB storage per month**,
 >    plenty for the day.
 > 2. On this repo, click **`< > Code` ▸ Codespaces ▸ Create codespace on main**.
-> 3. Wait ~2–3 min. The devcontainer auto-installs Node, .NET, the GitHub CLI, **Java + JMeter,
->    the Azure CLI (+ `az load`) and Bicep**, Playwright + Chromium, the VS Code extensions, and
->    the Copilot/Playwright-MCP config — and it
->    **pre-clones and builds the Movies app SUT** for you.
+> 3. **Give it ~10–15 min on first creation.** It happens in two phases: the **editor opens** after
+>    ~3–5 min, then a **one-time background setup** keeps running for another ~5–10 min. It
+>    auto-installs Node, .NET, the GitHub CLI, **Java + JMeter, the Azure CLI (+ `az load`) and
+>    Bicep**, Playwright + Chromium, the VS Code extensions, and the Copilot/Playwright-MCP config —
+>    and it **pre-clones and builds the Movies app SUT** for you. The **JMeter download is the slow
+>    part**; setup is finished when the terminal prints **`Setup complete`**. If you start the app
+>    before that, let it finish first. **Tip:** create the Codespace *before* the day (or first
+>    thing) so the wait doesn't eat into hacking time.
 > 4. **Sign in to GitHub Copilot** in the Codespace (Copilot icon ▸ Sign in). We'll make sure
 >    everyone has Copilot access on the day; **[Copilot Free](https://github.com/copilot)** also
 >    works on personal accounts.

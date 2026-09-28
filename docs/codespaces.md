@@ -36,11 +36,14 @@ paid plan, an Azure subscription, or any TMDB/IMDb account or API key.
 
 1. Open the repo: **[github.com/Gwayaboy/tfl-ai-assisted-testing-hackday](https://github.com/Gwayaboy/tfl-ai-assisted-testing-hackday)**
 2. Click the green **`< > Code`** button ▸ **Codespaces** tab ▸ **Create codespace on main**.
-3. Wait ~2–3 minutes on first build. The devcontainer automatically installs **Node, .NET 8,
-   the GitHub CLI, Java 17 + Apache JMeter, the Azure CLI (with the `az load` extension) and
-   Bicep**, Playwright + Chromium, the VS Code extensions (Copilot, Copilot Chat, Playwright,
-   C# Dev Kit, Cucumber, **Azure Load Testing, Azure CLI, Bicep, Azure Resources**) and the
-   **Playwright MCP** config — and it **pre-clones and builds the Movies app** for you.
+3. **Give it ~10–15 minutes on first creation.** It happens in two phases: the **editor opens**
+   after ~3–5 min, then a **one-time background setup** (`postCreateCommand`) keeps running for
+   another ~5–10 min. It automatically installs **Node, .NET 8, the GitHub CLI, Java 17 + Apache
+   JMeter, the Azure CLI (with the `az load` extension) and Bicep**, Playwright + Chromium, the VS
+   Code extensions (Copilot, Copilot Chat, Playwright, C# Dev Kit, Cucumber, **Azure Load Testing,
+   Azure CLI, Bicep, Azure Resources**) and the **Playwright MCP** config — and it **pre-clones and
+   builds the Movies app** for you. The **Apache JMeter download is the slow part**; the terminal
+   prints **`Setup complete`** when everything is ready. **Create it ahead of the day** if you can.
 4. **Sign in to Copilot:** click the Copilot icon in the bottom status bar ▸ **Sign in**.
 
 > 💡 **Tip — save your quota:** when you finish, **stop** the Codespace
