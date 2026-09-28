@@ -34,7 +34,8 @@ Then(
   "the user should see results related to {string}",
   async function (title) {
     // Worked example: at least one result card mentions the searched title.
-    const results = this.page.locator(".movie-card, [data-testid='movie-card']");
+    // A result card is a list item labelled "movie" in the results list.
+    const results = this.page.getByRole("listitem", { name: "movie" });
     await expect(results.first()).toBeVisible();
     await expect(
       this.page.getByText(new RegExp(title, "i")).first()

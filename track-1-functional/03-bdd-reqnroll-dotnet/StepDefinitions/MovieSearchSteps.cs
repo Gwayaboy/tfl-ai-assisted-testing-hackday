@@ -38,7 +38,7 @@ public class MovieSearchSteps
     [Then("the user should see results related to {string}")]
     public async Task ThenTheUserShouldSeeResultsRelatedTo(string title)
     {
-        var results = Page.Locator(".movie-card, [data-testid='movie-card']");
+        var results = Page.GetByRole(AriaRole.Listitem, new() { NameRegex = new("movie", System.Text.RegularExpressions.RegexOptions.IgnoreCase) });
         await Assertions.Expect(results.First).ToBeVisibleAsync();
         await Assertions.Expect(
             Page.GetByText(new System.Text.RegularExpressions.Regex(title, System.Text.RegularExpressions.RegexOptions.IgnoreCase)).First
