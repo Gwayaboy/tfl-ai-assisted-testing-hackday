@@ -24,7 +24,7 @@ tests, automate them, and think like a test leader — then share what you learn
 | 15:00 | Break | |
 | 15:10 | LLM Testing Overview | Notting Hill |
 | 15:40 | Team readouts, lessons learned & prizes | Notting Hill |
-| 17:00 | Close | |
+| 17:00 | Networking  & Close | |
 
 Sessions run **consecutively** — everyone does Session 1 (Track 1) then Session 2 (Track 2).
 [**Track 3 — Performance**](./track-3-performance-optional) is an **optional** back-pocket
