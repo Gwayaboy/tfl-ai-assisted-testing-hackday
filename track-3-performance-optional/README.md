@@ -1,10 +1,11 @@
 # Track 3 — Performance & Non-Functional Testing (OPTIONAL back-pocket)
 
-> 🚧 **Work in progress (updating before 6 Oct).** The local JMeter path is ready now. We're
-> finishing the **Contoso Traders** integration as the richer cloud target and confirming
-> whether it can deploy to a **personal MSDN subscription** (so nothing touches a TfL sub). If
-> MSDN capacity/quota doesn't allow it, this track stays **local JMeter only** — the day does
-> not depend on it either way.
+> ✅ **The cloud target is live.** The **Contoso Traders** microservices app is deployed on a
+> personal **MSDN** subscription (region *swedencentral*) — nothing touches a TfL sub. For the
+> **Azure Load Testing + Chaos Studio** exercises against it, follow the focused guide:
+> **[Hack Day Track 3 — Load Testing & Chaos Studio](https://github.com/Gwayaboy/contosotraders-cloudtesting/blob/main/HACKDAY.md)**.
+> The **local JMeter** path is ready too and needs no cloud. This track stays **optional** — the
+> day does not depend on it either way.
 
 > **Optional.** Performance is a **back-pocket** activity — there are few dedicated performance
 > testers in the room, so this is for anyone who wants to go further, or a small group in the
@@ -72,9 +73,13 @@ track-3-performance-optional/
    app**. No cloud. Learn the tool, read the numbers, define NFRs.
 2. **(Optional) Azure Load Testing** ([`azure-load-testing/`](./azure-load-testing)) — take that
    same JMeter plan to real scale, *if* a sandbox is available.
-3. **(Optional) A target to test** ([`infra/`](./infra)) — the movies app is light; for a richer
-   target, the **Contoso Traders** e-commerce app (microservices) can be deployed to a sandbox.
-4. **(Optional) Chaos** ([`chaos/`](./chaos)) — break a dependency and test resilience.
+3. **(Optional) A richer cloud target — Contoso Traders** — a live microservices e-commerce app
+   (Carts API on Container Apps, Products API on AKS, Cosmos/SQL/Key Vault) is **already deployed**.
+   Run **Azure Load Testing** and **Chaos Studio** against it with the focused guide:
+   **[Load Testing & Chaos Studio →](https://github.com/Gwayaboy/contosotraders-cloudtesting/blob/main/HACKDAY.md)**.
+   (To stand up your own instance instead, see [`infra/`](./infra).)
+4. **(Optional) Chaos** ([`chaos/`](./chaos)) — break a dependency and test resilience, locally or via
+   the Contoso Traders [Chaos Studio guide](https://github.com/Gwayaboy/contosotraders-cloudtesting/blob/main/HACKDAY.md#exercise-2--azure-chaos-studio-resilience).
 
 ---
 
