@@ -33,8 +33,10 @@ Apps, a **Products API** on AKS, plus Cosmos DB, Azure SQL and Key Vault. It's t
 target: the local movies app is great for *learning* JMeter, but this is where you drive **real
 distributed load** and **inject faults**.
 
-> This section is kept in sync with the app repo's focused guide:
-> **[contosotraders-cloudtesting/HACKDAY.md](https://github.com/Gwayaboy/contosotraders-cloudtesting/blob/main/HACKDAY.md)**.
+> Contoso Traders app repo (source, deployment templates & detailed walkthroughs):
+> **[contosotraders-cloudtesting](https://github.com/Gwayaboy/contosotraders-cloudtesting/blob/main/README.md)**.
+
+![Contoso Traders architecture](https://github.com/Gwayaboy/contosotraders-cloudtesting/raw/main/docs/architecture/contoso-traders-enhancements.drawio.png)
 
 ### Live environment (region: swedencentral)
 
@@ -160,4 +162,4 @@ Have an agent **generate a load-test plan from an NFR**, run it, **analyse the r
 the target**, and produce a short performance report with a pass/fail verdict — the performance
 flavour of [Anusha's workflow](../docs/bonus-agentic-workflow.md).
 
-Start with **Section 1 — [Contoso Traders (Load Testing & Chaos Studio)](https://github.com/Gwayaboy/contosotraders-cloudtesting/blob/main/HACKDAY.md)**, or go **[local with JMeter →](./jmeter)**.
+Start with **[Section 1 — Contoso Traders (Load Testing & Chaos Studio)](#1-contoso-traders--azure-load-testing--chaos-studio-recommended)**, or go **[local with JMeter →](./jmeter)**.
