@@ -58,6 +58,11 @@ distributed load** and **inject faults**.
 
 - **Load-test target endpoint:** `GET {Carts API base}/v1/ShoppingCart/loadtest`
 
+> **Need Azure portal access?** These exercises run in the Azure portal against the resource group
+> above. Ask an organizer to run the **[Grant participant access](https://github.com/Gwayaboy/contosotraders-cloudtesting/actions/workflows/grant-participant-access.yml)**
+> workflow with your email — it grants the **least-privilege** roles for Load Testing + Chaos Studio.
+> You'll get an Entra guest invitation to accept, then sign in at [portal.azure.com](https://portal.azure.com).
+
 > These endpoints are live now. If they stop responding (the environment may be torn down after the
 > event), it can be redeployed with a single GitHub Actions run against a **personal MSDN / sandbox**
 > subscription — never a TfL one.
