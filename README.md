@@ -9,6 +9,11 @@ tests, automate them, and think like a test leader — then share what you learn
 > **Not sure where to start?** Jump to [Setup](#setup) → then
 > [Track 1: Functional Testing](./track-1-functional).
 
+> 📢 **Join the live session (6 Oct).** We'll share on-the-day info here — including the
+> **Playwright Workspaces token** for the optional cloud regression run — in the
+> **[Teams meeting](https://teams.microsoft.com/meet/297126363575245?p=Ulz9HBO5G2YYTck0Fu)**.
+> Keep it open during the day; the token is shared there, never committed to this repo.
+
 ---
 
 ## The day at a glance
