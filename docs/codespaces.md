@@ -193,7 +193,7 @@ cloud container**. It should say **"Codespaces: …"** in the bottom-left status
 |---------|-----|
 | Movies list is empty / *"An error occurred on client"* | The SUT proxy config isn't applied. Run `node scripts/enable-sut-proxy.mjs ../playwright-movies-app` from the repo root, then restart with `npm run dev`. (The devcontainer + `start-movies-app` scripts do this automatically.) |
 | No port popup | Open the **Ports** tab, find **3000**, click the globe icon to open it. |
-| Codespace won't create | You may have hit the free quota, or the repo is owned by a *managed* (work) account — use a **personal** account. |
+| Codespace won't create | You may have hit the free quota, or you have already 2 active codespance running (stop or delete one) or the repo is owned by a *managed* (work) account — use a **personal** account. |
 | Copilot greyed out | Sign in to Copilot in the status bar; confirm your account has Copilot (or Copilot Free) enabled. |
 | Playwright MCP browser will not launch | Rebuild the container so the setup installs Chrome. Confirm [`.vscode/mcp.json`](../.vscode/mcp.json) includes `--no-sandbox`, then restart the `playwright` MCP server. |
 | Running low on hours | **Stop** the Codespace when not in use; **delete** old Codespaces from [github.com/codespaces](https://github.com/codespaces). |
