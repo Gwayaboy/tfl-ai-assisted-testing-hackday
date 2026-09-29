@@ -7,7 +7,7 @@ Welcome! Today is about getting **hands-on** with AI-assisted testing. You'll us
 tests, automate them, and think like a test leader — then share what you learned.
 
 > **Not sure where to start?** Jump to [Setup](#setup) → then
-> [Track 1: Functional Testing](#track-1--functional-testing-morning--everyone).
+> [Track 1: Functional Testing](./track-1-functional).
 
 ---
 
