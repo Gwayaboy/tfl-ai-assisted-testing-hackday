@@ -167,7 +167,8 @@ npm run test:mpt                  # playwright test --config=playwright.service.
 ```
 
 > 🧩 **In a Codespace, skip the `cp` step** — `PLAYWRIGHT_SERVICE_URL` and
-> `PLAYWRIGHT_SERVICE_ACCESS_TOKEN` are injected automatically as **Codespaces secrets**.
+> `PLAYWRIGHT_SERVICE_ACCESS_TOKEN` are injected automatically as **Codespaces secrets** (and
+> `post-create.sh` auto-writes the shared `.env` from them).
 
 👉 Full walkthrough (access-token setup, the C#/.NET path, local-SUT `exposeNetwork`, and organiser
 setup on a personal Azure subscription): **[MICROSOFT-PLAYWRIGHT-TESTING.md](./MICROSOFT-PLAYWRIGHT-TESTING.md)**.

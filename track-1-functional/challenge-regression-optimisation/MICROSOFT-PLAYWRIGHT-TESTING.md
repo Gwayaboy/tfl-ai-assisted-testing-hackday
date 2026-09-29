@@ -36,8 +36,9 @@ demo) **or** your own optimised suite. A ready-to-use
 
 > 🧩 **In a GitHub Codespace, skip steps 2–3.** The endpoint and token are injected automatically
 > as **Codespaces secrets** (`PLAYWRIGHT_SERVICE_URL` / `PLAYWRIGHT_SERVICE_ACCESS_TOKEN`), so
-> `npm run test:mpt` / `dotnet test` just work — no `.env` to create. Real env vars always win
-> over the `.env` file.
+> `npm run test:mpt` / `dotnet test` just work — no `.env` to create. `.devcontainer/post-create.sh`
+> also auto-writes the shared git-ignored `.env` from those secrets for any file-based tooling.
+> Real env vars always win over the `.env` file.
 
 1. **Install the service packages** (already listed in `baseline-suite/package.json`):
 
