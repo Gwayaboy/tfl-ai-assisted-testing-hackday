@@ -132,7 +132,11 @@ The tests hit the Movies app. Two ways to expose it to the **remote** browser:
 | Auth mode | Playwright **access token** (local auth enabled) |
 | Central store | Codespaces secrets `PLAYWRIGHT_SERVICE_URL` + `PLAYWRIGHT_SERVICE_ACCESS_TOKEN` on the repo |
 | Who gets auto-injection | Repo **collaborators** / **org members** only. For a whole cohort: host in a **GitHub org**, add participants as **members**, and set an **org-level** Codespaces secret scoped to the repo. |
-| Everyone else | External accounts + forks: hand out the token securely on the day → each adds their **own** Codespaces secret, or `cp .env.example .env`. `post-create.sh` prints these steps when the secret is absent. |
+| Everyone else (this event) | External accounts + forks don't get injection. **Token delivery for TfL = a secure Microsoft 365 channel** — the organiser shares it over **Teams** (message / meeting chat) or an **access-controlled OneDrive/SharePoint note**, *never* the repo or a public link. Participants paste it into the git-ignored `.env` (`cp .env.example .env`) or their **own** Codespaces secret. `post-create.sh` prints these steps when the secret is absent. |
+
+> 🔒 **Token stays out of the repo.** It's an access token (bearer secret) — distribute it only
+> through the M365 channel above, keep it in the git-ignored `.env`, and revoke + regenerate it in
+> the portal after the event (it already expires 2026-10-29).
 
 <details>
 <summary><b>Rotate the token / recreate the workspace — reference only</b></summary>
