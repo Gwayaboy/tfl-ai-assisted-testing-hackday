@@ -49,24 +49,33 @@ Like the JS suite, the **optimised "after" run happens on cloud browsers** via *
 Playwright Workspaces** — so the Execution-time score is measured on the same infrastructure for
 every team. [`BaselineTest`](./BaselineTest.cs) wires this up via a `ConnectOptionsAsync` override.
 It's a **no-op locally** — with no `PLAYWRIGHT_SERVICE_URL` set, `dotnet test` runs on your machine
-exactly as above — and connects to the cloud when the organiser's endpoint + access token are set:
+exactly as above — and connects to the cloud when the endpoint + access token are present.
 
-```powershell
-# the organiser gives you BOTH of these — either set them in your shell…
-$env:PLAYWRIGHT_SERVICE_URL          = "wss://<region>.api.playwright.microsoft.com/playwrightworkspaces/<id>/browsers"
-$env:PLAYWRIGHT_SERVICE_ACCESS_TOKEN = "<token>"
+**In a Codespace (how TfL runs it) there's nothing to set** — the endpoint + token arrive as
+**Codespaces secrets** and [`post-create.sh`](../../../.devcontainer/post-create.sh) writes the
+shared `.env` from them, so `BaselineTest`'s `ConnectOptionsAsync` picks them up and you just run:
+
+```bash
 dotnet test -- NUnit.NumberOfTestWorkers=20    # 20 parallel cloud browsers
 ```
 
-> 💡 …**or** copy the shared [`../.env.example`](../.env.example) → `../.env` (git-ignored, at the
-> challenge-folder root — the **same file the JS suite reads**) and paste the two values there. A
-> tiny built-in loader ([`DotEnv.cs`](./DotEnv.cs)) walks up and reads that `.env` at startup — the
-> C# equivalent of the JS suite's `dotenv` — so `dotnet test` picks them up with no shell setup.
-> **In a Codespace you need neither**: the values are injected as Codespaces secrets and
-> `post-create.sh` auto-writes the shared `.env` from them. **On a fork**, add your own
-> `PLAYWRIGHT_SERVICE_URL` + `PLAYWRIGHT_SERVICE_ACCESS_TOKEN` Codespaces secrets (forks don't
-> inherit the base repo's) and rebuild. Shell/injected env vars always win. **Never commit the real
-> token;** it belongs only in `.env`.
+> This needs your account to have access to those secrets (a repo **collaborator** or **org
+> member**); if it doesn't, `post-create.sh` prints how to add your own Codespaces secret or create
+> the `.env`.
+
+**Running locally instead?** Either set the two variables in your shell, or copy the shared
+[`../.env.example`](../.env.example) → `../.env` (git-ignored, at the challenge-folder root — the
+**same file the JS suite reads**); the built-in loader ([`DotEnv.cs`](./DotEnv.cs)) walks up and
+reads it at startup, so `dotnet test` picks them up with no shell setup.
+
+```powershell
+$env:PLAYWRIGHT_SERVICE_URL          = "wss://<region>.api.playwright.microsoft.com/playwrightworkspaces/<id>/browsers"
+$env:PLAYWRIGHT_SERVICE_ACCESS_TOKEN = "<token>"
+dotnet test -- NUnit.NumberOfTestWorkers=20
+```
+
+> Shell/injected env vars always win over the file. **Never commit the real token;** it belongs
+> only in `.env`.
 
 Auth is the workspace **access token** (`Authorization: Bearer …`) — no Azure sign-in needed. We
 build the service `wsEndpoint` ourselves with the current **`api-version=2025-09-01`**, because
