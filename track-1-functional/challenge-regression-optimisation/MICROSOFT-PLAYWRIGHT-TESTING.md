@@ -34,17 +34,19 @@ demo) **or** your own optimised suite. A ready-to-use
 `baseline-suite/`, and **both** the JS and .NET suites read ONE shared
 [`.env`](./.env.example) at the challenge-folder root (`challenge-regression-optimisation/.env`).
 
-> 🧩 **In a GitHub Codespace, skip steps 2–3.** The endpoint and token are injected automatically
-> as **Codespaces secrets** (`PLAYWRIGHT_SERVICE_URL` / `PLAYWRIGHT_SERVICE_ACCESS_TOKEN`), so
-> `npm run test:mpt` / `dotnet test` just work — no `.env` to create. `.devcontainer/post-create.sh`
-> also auto-writes the shared git-ignored `.env` from those secrets for any file-based tooling.
+> 🧩 **In a GitHub Codespace, skip steps 2–3 — *if your account can read the workspace secret.***
+> When the endpoint + token are available as **Codespaces secrets**
+> (`PLAYWRIGHT_SERVICE_URL` / `PLAYWRIGHT_SERVICE_ACCESS_TOKEN`), `.devcontainer/post-create.sh`
+> writes the shared git-ignored `.env` from them and `npm run test:mpt` / `dotnet test` just work.
 > Real env vars always win over the `.env` file.
-
-> 🍴 **Forked the repo?** Base-repo Codespaces secrets are **not** shared with forks — a Codespace
-> on your fork won't have them injected, and the `.env` won't auto-hydrate. Add the two values as
-> **your own** Codespaces secrets on the fork (*Settings ▸ Secrets and variables ▸ Codespaces ▸ New
-> repository secret*: `PLAYWRIGHT_SERVICE_URL`, `PLAYWRIGHT_SERVICE_ACCESS_TOKEN`), then rebuild the
-> Codespace — or just `cp ../.env.example ../.env` and paste the values the organiser gave you.
+>
+> ⚠️ **GitHub only injects a repo Codespaces secret for accounts that can access it — repo
+> **collaborators** or **org members**.** External participants (and anyone on a **fork** — forks
+> never inherit the base repo's secrets) won't get it injected. If the token is absent,
+> `post-create.sh` prints what to do: add your **own** Codespaces secret
+> (*Settings ▸ Secrets and variables ▸ Codespaces ▸ New repository secret*:
+> `PLAYWRIGHT_SERVICE_URL`, `PLAYWRIGHT_SERVICE_ACCESS_TOKEN`) and rebuild, **or**
+> `cp ../.env.example ../.env` and paste the values the organiser gave you.
 
 1. **Install the service packages** (already listed in `baseline-suite/package.json`):
 
@@ -115,11 +117,12 @@ The tests hit the Movies app. Two ways to expose it to the **remote** browser:
 
 ## For organisers
 
-> ✅ **Already set up for this event — nothing to do on the day.** The workspace is **pre-created**
-> and the access token is stored centrally as a **GitHub Codespaces secret**, so it's injected into
-> every Codespace on the base repo and [`post-create.sh`](../../.devcontainer/post-create.sh)
-> auto-writes the shared `.env` from it. Participants just run `npm run test:mpt` / `dotnet test`.
-> Forks don't inherit the secret — see **🍴 Forked the repo?** under the quickstart above.
+> ✅ **Workspace pre-created; token stored centrally.** The `mpt-tfl-hackday` workspace exists and
+> the access token is a **GitHub Codespaces secret** on the repo, so `post-create.sh` writes the
+> shared `.env` and participants just run `npm run test:mpt` / `dotnet test` — **as long as their
+> account can read that secret.** GitHub injects a repo Codespaces secret only for **collaborators**
+> or **org members**; plain external accounts and **forks** don't get it (verified). Decide your
+> access model before the day (see the delivery row).
 
 **What's provisioned**
 
@@ -128,7 +131,8 @@ The tests hit the Movies app. Two ways to expose it to the **remote** browser:
 | Workspace | `mpt-tfl-hackday` — resource group `rg-tfl-hackday-mpt`, **West Europe** |
 | Auth mode | Playwright **access token** (local auth enabled) |
 | Central store | Codespaces secrets `PLAYWRIGHT_SERVICE_URL` + `PLAYWRIGHT_SERVICE_ACCESS_TOKEN` on the repo |
-| Delivery | base-repo Codespaces → injected + `.env` auto-hydrated · forks → add your own secret |
+| Who gets auto-injection | Repo **collaborators** / **org members** only. For a whole cohort: host in a **GitHub org**, add participants as **members**, and set an **org-level** Codespaces secret scoped to the repo. |
+| Everyone else | External accounts + forks: hand out the token securely on the day → each adds their **own** Codespaces secret, or `cp .env.example .env`. `post-create.sh` prints these steps when the secret is absent. |
 
 <details>
 <summary><b>Rotate the token / recreate the workspace — reference only</b></summary>

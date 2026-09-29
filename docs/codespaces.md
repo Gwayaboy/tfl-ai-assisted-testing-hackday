@@ -106,11 +106,13 @@ Everything is local inside the Codespace.
    - **Regression-optimisation challenge** → [`challenge-regression-optimisation`](../track-1-functional/challenge-regression-optimisation).
 
 > ☁️ **Optional cloud regression run.** The Regression-Optimisation challenge can fan out to
-> **Microsoft Playwright Workspaces**. If the organiser set the repo's Codespaces secrets
-> (`PLAYWRIGHT_SERVICE_URL` / `PLAYWRIGHT_SERVICE_ACCESS_TOKEN`), the shared `.env` is written
-> automatically on Codespace start — nothing to do. **On a fork**, add those two as your **own**
-> Codespaces secrets (forks don't inherit the base repo's) and rebuild, or `cp .env.example .env`
-> in `track-1-functional/challenge-regression-optimisation/`. Details:
+> **Microsoft Playwright Workspaces**. When your account can read the repo's Codespaces secrets
+> (`PLAYWRIGHT_SERVICE_URL` / `PLAYWRIGHT_SERVICE_ACCESS_TOKEN`) — i.e. you're a **collaborator** or
+> **org member** — the shared `.env` is written automatically on Codespace start, nothing to do.
+> **Otherwise** (external account or a **fork**, which never inherits the secrets): add those two as
+> your **own** Codespaces secrets and rebuild, or `cp .env.example .env` in
+> `track-1-functional/challenge-regression-optimisation/`. `post-create.sh` prints these steps when
+> the secret is absent. Details:
 > [MICROSOFT-PLAYWRIGHT-TESTING.md](../track-1-functional/challenge-regression-optimisation/MICROSOFT-PLAYWRIGHT-TESTING.md).
 
 > **Why it works in the browser preview 🧩** The Movies app fetches its data *from your

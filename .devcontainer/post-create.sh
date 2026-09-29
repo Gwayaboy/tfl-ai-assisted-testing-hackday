@@ -65,7 +65,8 @@ if [ -n "${PLAYWRIGHT_SERVICE_ACCESS_TOKEN:-}" ] || [ -n "${PLAYWRIGHT_SERVICE_U
 elif [ "${CODESPACES:-}" = "true" ] && [ ! -f "$MPT_ENV" ]; then
   echo "==> (optional) No Playwright Workspaces secrets detected in this Codespace."
   echo "    Only needed for the OPTIONAL cloud regression run (Track 1 challenge)."
-  echo "    Forks do NOT inherit the base repo's Codespaces secrets. To enable it, add your own"
+  echo "    GitHub injects a repo Codespaces secret only for collaborators / org members;"
+  echo "    external accounts and forks don't get it. To enable the cloud run, add your own"
   echo "    PLAYWRIGHT_SERVICE_URL + PLAYWRIGHT_SERVICE_ACCESS_TOKEN under Settings > Secrets and"
   echo "    variables > Codespaces, then rebuild the Codespace — or run"
   echo "    'cp ${MPT_ENV}.example ${MPT_ENV}' and paste the values the organiser gave you."
