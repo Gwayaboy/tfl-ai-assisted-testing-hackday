@@ -40,6 +40,12 @@ demo) **or** your own optimised suite. A ready-to-use
 > also auto-writes the shared git-ignored `.env` from those secrets for any file-based tooling.
 > Real env vars always win over the `.env` file.
 
+> 🍴 **Forked the repo?** Base-repo Codespaces secrets are **not** shared with forks — a Codespace
+> on your fork won't have them injected, and the `.env` won't auto-hydrate. Add the two values as
+> **your own** Codespaces secrets on the fork (*Settings ▸ Secrets and variables ▸ Codespaces ▸ New
+> repository secret*: `PLAYWRIGHT_SERVICE_URL`, `PLAYWRIGHT_SERVICE_ACCESS_TOKEN`), then rebuild the
+> Codespace — or just `cp ../.env.example ../.env` and paste the values the organiser gave you.
+
 1. **Install the service packages** (already listed in `baseline-suite/package.json`):
 
    ```bash

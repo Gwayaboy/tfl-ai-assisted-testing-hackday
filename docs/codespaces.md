@@ -105,6 +105,14 @@ Everything is local inside the Codespace.
    - **API testing (C#)** → [`03bis-api-testing-dotnet`](../track-1-functional/03bis-api-testing-dotnet) — `dotnet test`.
    - **Regression-optimisation challenge** → [`challenge-regression-optimisation`](../track-1-functional/challenge-regression-optimisation).
 
+> ☁️ **Optional cloud regression run.** The Regression-Optimisation challenge can fan out to
+> **Microsoft Playwright Workspaces**. If the organiser set the repo's Codespaces secrets
+> (`PLAYWRIGHT_SERVICE_URL` / `PLAYWRIGHT_SERVICE_ACCESS_TOKEN`), the shared `.env` is written
+> automatically on Codespace start — nothing to do. **On a fork**, add those two as your **own**
+> Codespaces secrets (forks don't inherit the base repo's) and rebuild, or `cp .env.example .env`
+> in `track-1-functional/challenge-regression-optimisation/`. Details:
+> [MICROSOFT-PLAYWRIGHT-TESTING.md](../track-1-functional/challenge-regression-optimisation/MICROSOFT-PLAYWRIGHT-TESTING.md).
+
 > **Why it works in the browser preview 🧩** The Movies app fetches its data *from your
 > browser*. By default it targets `127.0.0.1:4000`, which doesn't exist on your laptop when
 > you open the `…-3000.app.github.dev` preview — so the page would show *"An error occurred on

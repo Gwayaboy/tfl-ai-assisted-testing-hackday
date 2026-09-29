@@ -62,8 +62,11 @@ dotnet test -- NUnit.NumberOfTestWorkers=20    # 20 parallel cloud browsers
 > challenge-folder root — the **same file the JS suite reads**) and paste the two values there. A
 > tiny built-in loader ([`DotEnv.cs`](./DotEnv.cs)) walks up and reads that `.env` at startup — the
 > C# equivalent of the JS suite's `dotenv` — so `dotnet test` picks them up with no shell setup.
-> **In a Codespace you need neither**: the values are injected as Codespaces secrets. Shell/injected
-> env vars always win. **Never commit the real token;** it belongs only in `.env`.
+> **In a Codespace you need neither**: the values are injected as Codespaces secrets and
+> `post-create.sh` auto-writes the shared `.env` from them. **On a fork**, add your own
+> `PLAYWRIGHT_SERVICE_URL` + `PLAYWRIGHT_SERVICE_ACCESS_TOKEN` Codespaces secrets (forks don't
+> inherit the base repo's) and rebuild. Shell/injected env vars always win. **Never commit the real
+> token;** it belongs only in `.env`.
 
 Auth is the workspace **access token** (`Authorization: Bearer …`) — no Azure sign-in needed. We
 build the service `wsEndpoint` ourselves with the current **`api-version=2025-09-01`**, because
