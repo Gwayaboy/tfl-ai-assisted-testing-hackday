@@ -24,7 +24,6 @@
       <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Passengers" enabled="true">
         <stringProp name="ThreadGroup.num_threads">${__P(users,20)}</stringProp>
         <stringProp name="ThreadGroup.ramp_time">${__P(ramp,10)}</stringProp>
-        <intProp name="ThreadGroup.loops">${__P(loops,5)}</intProp>
         <boolProp name="ThreadGroup.scheduler">false</boolProp>
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
