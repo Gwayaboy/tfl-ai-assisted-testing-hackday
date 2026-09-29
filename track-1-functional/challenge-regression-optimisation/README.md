@@ -154,16 +154,20 @@ from a local one.
 > Workspaces run that gets scored. The organiser gives you the **workspace endpoint** and an
 > **access token** — no Azure sign-in needed.
 
-A ready-to-use `playwright.service.config.ts` + `.env.example` ship in
-[`baseline-suite/`](./baseline-suite) (the C#/.NET baseline has an equivalent — see the walkthrough),
-with a `npm run test:mpt` script wired up:
+A ready-to-use `playwright.service.config.ts` ships in
+[`baseline-suite/`](./baseline-suite) (the C#/.NET baseline connects the same way — see the
+walkthrough), with a `npm run test:mpt` script wired up. Both suites read ONE shared `.env` at
+this challenge-folder root:
 
 ```bash
 cd baseline-suite
 npm install                       # pulls @azure/playwright, @azure/identity, dotenv
-cp .env.example .env              # paste the endpoint + access token the organiser gives you
+cp ../.env.example ../.env        # ONE shared file; paste the endpoint + token the organiser gives you
 npm run test:mpt                  # playwright test --config=playwright.service.config.ts --workers=20
 ```
+
+> 🧩 **In a Codespace, skip the `cp` step** — `PLAYWRIGHT_SERVICE_URL` and
+> `PLAYWRIGHT_SERVICE_ACCESS_TOKEN` are injected automatically as **Codespaces secrets**.
 
 👉 Full walkthrough (access-token setup, the C#/.NET path, local-SUT `exposeNetwork`, and organiser
 setup on a personal Azure subscription): **[MICROSOFT-PLAYWRIGHT-TESTING.md](./MICROSOFT-PLAYWRIGHT-TESTING.md)**.

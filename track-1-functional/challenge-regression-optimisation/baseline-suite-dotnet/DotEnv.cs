@@ -7,11 +7,14 @@ namespace RegressionOptimisation.Baseline;
 // Minimal, dependency-free .env loader — the C# equivalent of the JS suite's
 // `import "dotenv/config"`. Runs once at module load (before NUnit discovers or
 // runs any test), so PLAYWRIGHT_SERVICE_URL / PLAYWRIGHT_SERVICE_ACCESS_TOKEN
-// set in a local `.env` are picked up by BaselineTest.ConnectOptionsAsync().
+// set in the shared .env are picked up by BaselineTest.ConnectOptionsAsync().
 //
-// Copy `.env.example` -> `.env` (git-ignored) and put the organiser's endpoint +
-// access token there. Real environment variables set in your shell always win,
-// so `$env:PLAYWRIGHT_SERVICE_URL = ...; dotnet test` keeps working too.
+// It walks UP from the test bin, so it finds the ONE shared .env at the
+// challenge-folder root (challenge-regression-optimisation/.env) — the same file
+// the JS suite reads. Copy ../.env.example -> ../.env (git-ignored) and put the
+// organiser's endpoint + access token there. In a Codespace you don't need the
+// file at all: those values are injected as Codespaces secrets, and real
+// environment variables always win over the file.
 internal static class DotEnv
 {
     [ModuleInitializer]
@@ -19,8 +22,8 @@ internal static class DotEnv
     {
         try
         {
-            // `dotnet test` runs from bin/Debug/net8.0, so walk up to find the
-            // project's `.env` next to the .csproj.
+            // `dotnet test` runs from bin/Debug/net8.0, so walk up until we find
+            // the first `.env` — the shared one at the challenge-folder root.
             var dir = new DirectoryInfo(AppContext.BaseDirectory);
             while (dir is not null)
             {

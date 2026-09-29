@@ -30,8 +30,14 @@ browsers/OSes is a genuine **coverage** story for the readout.
 
 You can attach the service to **either** the `baseline-suite/` (great for a "watch 300 tests fly"
 demo) **or** your own optimised suite. A ready-to-use
-[`playwright.service.config.ts`](./baseline-suite/playwright.service.config.ts) and
-[`.env.example`](./baseline-suite/.env.example) already ship in `baseline-suite/`.
+[`playwright.service.config.ts`](./baseline-suite/playwright.service.config.ts) ships in
+`baseline-suite/`, and **both** the JS and .NET suites read ONE shared
+[`.env`](./.env.example) at the challenge-folder root (`challenge-regression-optimisation/.env`).
+
+> 🧩 **In a GitHub Codespace, skip steps 2–3.** The endpoint and token are injected automatically
+> as **Codespaces secrets** (`PLAYWRIGHT_SERVICE_URL` / `PLAYWRIGHT_SERVICE_ACCESS_TOKEN`), so
+> `npm run test:mpt` / `dotnet test` just work — no `.env` to create. Real env vars always win
+> over the `.env` file.
 
 1. **Install the service packages** (already listed in `baseline-suite/package.json`):
 
@@ -40,14 +46,15 @@ demo) **or** your own optimised suite. A ready-to-use
    npm install         # pulls @azure/playwright, @azure/identity, dotenv
    ```
 
-2. **Add the workspace endpoint.** Copy `.env.example` → `.env` and paste the URL the
-   organiser gives you (the workspace **Get started → browser endpoint**):
+2. **Add the workspace endpoint.** Copy the shared `../.env.example` → `../.env` (at the
+   challenge-folder root — both suites read it) and paste the URL the organiser gives you
+   (the workspace **Get started → browser endpoint**):
 
    ```
    PLAYWRIGHT_SERVICE_URL=wss://<region>.api.playwright.microsoft.com/playwrightworkspaces/<id>/browsers
    ```
 
-3. **Add your access token.** Paste the token the organiser gave you into `.env` as
+3. **Add your access token.** Paste the token the organiser gave you into that same `../.env` as
    `PLAYWRIGHT_SERVICE_ACCESS_TOKEN` — no Azure sign-in needed:
 
    ```
@@ -124,8 +131,20 @@ The tests hit the Movies app. Two ways to expose it to the **remote** browser:
    testers; no guest invites):
    - **Access token (chosen):** workspace → **Settings → Access Management** → tick **Playwright
      Service Access Token**, then **Generate token**, set an expiry past the event, and share the
-     token with the cohort over a secure channel (they paste it into `.env` as
+     token with the cohort over a secure channel (they paste it into the shared `.env` as
      `PLAYWRIGHT_SERVICE_ACCESS_TOKEN`). The token is shown **once** — copy it immediately.
+   - **Keep it central (recommended):** store the endpoint + token once as **GitHub Codespaces
+     secrets** so every Codespace launched on the repo gets them injected automatically (nothing in
+     the repo, nothing to paste). From a machine with the token in your local `.env`:
+
+     ```bash
+     gh secret set --app codespaces --repo <owner>/<repo> \
+       --env-file track-1-functional/challenge-regression-optimisation/.env
+     ```
+
+     (Repo Codespaces secrets reach Codespaces created on the **base repo**, not on personal forks —
+     so if attendees fork, still hand the token out on the day.) **Never** commit the token to the
+     repo — even base64-"obfuscated", it's trivially decoded and this repo is public.
    - **Entra ID + RBAC (alternative):** invite each TfL email as a **guest** in the tenant, then
      assign a role (Contributor) on the resource group / workspace under **Access control (IAM)**.
      More setup per person; only needed if you'd rather not use a shared token.
@@ -144,7 +163,7 @@ The tests hit the Movies app. Two ways to expose it to the **remote** browser:
 
 | Symptom | Fix |
 |---------|-----|
-| `PLAYWRIGHT_SERVICE_URL is not set` | Create `.env` from `.env.example` and paste the endpoint; the config loads it via `dotenv`. |
+| `PLAYWRIGHT_SERVICE_URL is not set` | Create the shared `../.env` from `../.env.example` (at the challenge-folder root) and paste the endpoint; both suites load it. In a Codespace it's injected as a secret. |
 | `AuthenticationError` / 401 | `az login` to the **correct tenant** (`az login --tenant <id>`), or switch to access-token auth and set `PLAYWRIGHT_SERVICE_ACCESS_TOKEN`. |
 | Tests can't reach `localhost:3000` | Keep `exposeNetwork: "<loopback>"` **and** keep the app running locally, or use the hosted `BASE_URL`. |
 | Peer-dep warning on install | `@azure/playwright` needs `@playwright/test >= 1.47` — this suite already resolves a newer version. |
