@@ -7,7 +7,7 @@ Everything here runs **locally** against the Movies app on `http://localhost:300
 No cloud. No Azure.
 
 > New to automation? Do the labs in order (`00` → `04`).
-> Comfortable already? Skim to the [Regression Optimisation challenge](./challenge-regression-optimisation) or bring your own scenario.
+> Comfortable already? Bring your own scenario and/or skim to the [Regression Optimisation challenge](./challenge-regression-optimisation) 
 
 ---
 
