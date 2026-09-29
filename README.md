@@ -21,9 +21,9 @@ tests, automate them, and think like a test leader — then share what you learn
 | 11:15 | **Session 1** — AI-assisted functional testing + Regression challenge | Notting Hill / Kew |
 | 12:40 | Lunch | 4th-floor canteen / local |
 | 13:30 | **Session 2** — Test leadership & governance + Messy project | Notting Hill / Kew |
-| 15:00 | Break | |
-| 15:10 | LLM Testing Overview | Notting Hill |
-| 15:40 | Team readouts, lessons learned & prizes | Notting Hill |
+| 15:30 | Break | |
+| 15:40 | LLM Testing Overview | Notting Hill |
+| 16:10 | Team readouts, lessons learned & prizes | Notting Hill |
 | 17:00 | Networking  & Close | |
 
 Sessions run **consecutively** — everyone does Session 1 (Track 1) then Session 2 (Track 2).
