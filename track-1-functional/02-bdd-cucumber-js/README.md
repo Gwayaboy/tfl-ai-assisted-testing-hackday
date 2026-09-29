@@ -2,7 +2,7 @@
 
 **Goal:** turn your Gherkin scenarios into **runnable** Playwright tests using Cucumber.js.
 
-**Time:** ~30 minutes · **Pick this _or_ [Lab 03 (C#)](../03-bdd-reqnroll-dotnet).**
+**Time:** ~30 minutes · **Pick this _or_ [Lab 02bis (C#)](../02bis-bdd-reqnroll-dotnet).**
 
 ---
 
@@ -79,5 +79,5 @@ Prefer getByRole/getByLabel locators and add meaningful assertions.
 - You've added at least one more journey (login or lists)
 - Locators are resilient and assertions are meaningful
 
-Next: **[Lab 04 — API testing →](../04-api-testing)** or the
+Next: **[Lab 03 — API testing →](../03-api-testing)** or the
 **[⚔️ Regression Optimisation challenge →](../challenge-regression-optimisation)**

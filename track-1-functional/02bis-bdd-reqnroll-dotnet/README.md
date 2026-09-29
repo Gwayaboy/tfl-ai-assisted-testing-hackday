@@ -1,4 +1,4 @@
-# Lab 03 — BDD with Reqnroll + Playwright (C# / .NET)
+# Lab 02bis — BDD with Reqnroll + Playwright (C# / .NET)
 
 **Goal:** the same BDD approach as Lab 02, but in **C#** using
 [Reqnroll](https://docs.reqnroll.net/) (the maintained successor to SpecFlow) + Playwright.
@@ -12,7 +12,7 @@ Choose this path if your team lives in .NET.
 ## What's in here
 
 ```
-03-bdd-reqnroll-dotnet/
+02bis-bdd-reqnroll-dotnet/
 ├── HackDay.MovieTests.csproj     # NUnit + Reqnroll + Playwright
 ├── reqnroll.json                 # Reqnroll config
 ├── Features/
@@ -26,7 +26,7 @@ Choose this path if your team lives in .NET.
 ## 1. Restore & install browsers
 
 ```bash
-cd track-1-functional/03-bdd-reqnroll-dotnet
+cd track-1-functional/02bis-bdd-reqnroll-dotnet
 dotnet restore
 dotnet build
 # install the Playwright browsers (one-time)
@@ -73,5 +73,5 @@ Review before accepting — resilient locators, real assertions, `dotnet test` g
 - One extra journey added
 - Locators resilient, assertions meaningful
 
-Next: **[Lab 04 — API testing →](../04-api-testing)** or the
+Next: **[Lab 03 — API testing →](../03-api-testing)** or the
 **[⚔️ Regression Optimisation challenge →](../challenge-regression-optimisation)**

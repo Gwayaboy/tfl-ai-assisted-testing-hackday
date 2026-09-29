@@ -56,7 +56,7 @@
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
             <collectionProp name="Arguments.arguments"/>
           </elementProp>
-          <stringProp name="TestPlan.comments">NOTE: confirm the real search path in Track 1 Lab 04 (it may differ) and update this.</stringProp>
+          <stringProp name="TestPlan.comments">NOTE: confirm the real search path in Track 1 Lab 03 (it may differ) and update this.</stringProp>
         </HTTPSamplerProxy>
         <hashTree/>
         <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="true">

@@ -28,6 +28,12 @@ jmeter -n -t movies-search-load.jmx -l results.jtl -e -o report/
 # then open report/index.html
 ```
 
+> 🧩 **In a Codespace (or any headless container), use the headless command above** (`-n`).
+> The **GUI** is a desktop app that needs an X display, which a Codespace doesn't have — so
+> tune/run plans **headless** there and open the generated `report/index.html` from the file
+> explorer (or the forwarded port). Prefer the GUI? Author the plan on your **local desktop**
+> and run it headless in the Codespace. `jmeter --version` confirms the CLI is ready.
+
 The sample plan (`movies-search-load.jmx`):
 - 20 virtual users, ramp-up 10s, 5 loops (tune these!)
 - hits the landing page and a search request

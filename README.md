@@ -199,8 +199,9 @@ a **live target you point your tests at**.
 │   ├── 00-warmup-guided/            #   guided first steps
 │   ├── 01-gherkin-scenarios/        #   write BDD scenarios
 │   ├── 02-bdd-cucumber-js/          #   implement (JS/TS)
-│   ├── 03-bdd-reqnroll-dotnet/      #   implement (C#)
-│   ├── 04-api-testing/              #   API tests with Playwright
+│   ├── 02bis-bdd-reqnroll-dotnet/   #   implement (C#) — parallel to 02
+│   ├── 03-api-testing/              #   API tests with Playwright (JS/TS)
+│   ├── 03bis-api-testing-dotnet/    #   API tests with Playwright (C#) — parallel to 03
 │   ├── challenge-regression-optimisation/   # ⚔️ competitive challenge
 │   └── prompts/                     #   starter Copilot prompts
 ├── track-2-leadership/              # Test leadership (everyone, PM)

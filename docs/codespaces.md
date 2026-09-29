@@ -100,8 +100,9 @@ Everything is local inside the Codespace.
    cd /workspaces/tfl-ai-assisted-testing-hackday/track-1-functional
    ```
    - **JavaScript / Cucumber.js path** → [`02-bdd-cucumber-js`](../track-1-functional/02-bdd-cucumber-js) — `npm install` then `npm test`.
-   - **C# / Reqnroll path** → [`03-bdd-reqnroll-dotnet`](../track-1-functional/03-bdd-reqnroll-dotnet) — `dotnet test` (the .NET SDK is already installed in the Codespace).
-   - **API testing** → [`04-api-testing`](../track-1-functional/04-api-testing).
+   - **C# / Reqnroll path** → [`02bis-bdd-reqnroll-dotnet`](../track-1-functional/02bis-bdd-reqnroll-dotnet) — `dotnet test` (the .NET SDK is already installed in the Codespace).
+   - **API testing (JS/TS)** → [`03-api-testing`](../track-1-functional/03-api-testing) — `npm install` then `npm test`.
+   - **API testing (C#)** → [`03bis-api-testing-dotnet`](../track-1-functional/03bis-api-testing-dotnet) — `dotnet test`.
    - **Regression-optimisation challenge** → [`challenge-regression-optimisation`](../track-1-functional/challenge-regression-optimisation).
 
 > **Why it works in the browser preview 🧩** The Movies app fetches its data *from your

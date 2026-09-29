@@ -86,7 +86,7 @@ later." Produce a watchlist-spec.md test plan: Gherkin scenarios + acceptance cr
 the edge cases you'd cover. Don't write test code yet.
 ```
 
-Save that `*-spec.md` - you'll generate tests *from it* in Lab 02/03, exactly like Anusha's
+Save that `*-spec.md` - you'll generate tests *from it* in Lab 02/02bis, exactly like Anusha's
 "AI Test Plan Agent -> specs/..." stage.
 
 ---
@@ -99,4 +99,4 @@ Save that `*-spec.md` - you'll generate tests *from it* in Lab 02/03, exactly li
 - (Bonus) you produced a `*-spec.md` plan before any code
 
 Next: implement them -> **[Lab 02 (Cucumber.js)](../02-bdd-cucumber-js)** or
-**[Lab 03 (Reqnroll / C#)](../03-bdd-reqnroll-dotnet)**
+**[Lab 02bis (Reqnroll / C#)](../02bis-bdd-reqnroll-dotnet)**

@@ -1,6 +1,6 @@
 // API tests against the movies app.
 //
-// IMPORTANT: The exact endpoint path may differ — use Lab 04 step 1 (Copilot + MCP,
+// IMPORTANT: The exact endpoint path may differ — use Lab 03 step 1 (Copilot + MCP,
 // or DevTools ▸ Network) to discover the real search endpoint, then update SEARCH_PATH.
 //
 // One worked test is provided (it fetches the app root and checks it responds).

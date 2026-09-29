@@ -51,7 +51,7 @@ Refactor these step definitions to use a Page Object Model with a MoviesPage cla
 encapsulates the locators. Keep the tests green.
 ```
 
-## Implement — Reqnroll / C# (Lab 03)
+## Implement — Reqnroll / C# (Lab 02bis)
 
 ```
 Using the Playwright MCP server, find role/name locators for search on http://localhost:3000,
@@ -59,7 +59,7 @@ then implement the TODO steps in StepDefinitions/MovieSearchSteps.cs using GetBy
 and NUnit assertions so the scenarios pass.
 ```
 
-## API testing (Lab 04)
+## API testing (Lab 03 / 03bis)
 
 ```
 Watch the network while I search on http://localhost:3000. Identify the search API endpoint

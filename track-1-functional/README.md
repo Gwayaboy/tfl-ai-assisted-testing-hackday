@@ -6,7 +6,7 @@ behaviour in **Gherkin**, and automate it with **BDD** — in JavaScript/TypeScr
 Everything here runs **locally** against the Movies app on `http://localhost:3000`.
 No cloud. No Azure.
 
-> New to automation? Do the labs in order (`00` → `04`).
+> New to automation? Do the labs in order (`00` → `03bis`).
 > Comfortable already? Bring your own scenario and/or skim to the [Regression Optimisation challenge](./challenge-regression-optimisation) 
 
 ---
@@ -26,11 +26,12 @@ No cloud. No Azure.
 | [00](./00-warmup-guided) | **Warm-up — explore with Copilot + MCP** | Let Copilot drive the app, snapshot it, describe what it sees | 15 min |
 | [01](./01-gherkin-scenarios) | **Gherkin fundamentals** | Write behaviour-focused Given/When/Then scenarios | 20 min |
 | [02](./02-bdd-cucumber-js) | **BDD with Cucumber.js** | Turn scenarios into runnable Playwright tests (JS/TS) | 30 min |
-| [03](./03-bdd-reqnroll-dotnet) | **BDD with Reqnroll (C#)** | Same, in .NET — pick this *or* lab 02 | 30 min |
-| [04](./04-api-testing) | **API testing** | Test the movie API directly with Playwright | 20 min |
+| [02bis](./02bis-bdd-reqnroll-dotnet) | **BDD with Reqnroll (C#)** | Same as 02, in .NET — pick this *or* lab 02 | 30 min |
+| [03](./03-api-testing) | **API testing (JS/TS)** | Test the movie API directly with Playwright | 20 min |
+| [03bis](./03bis-api-testing-dotnet) | **API testing (C#)** | Same as 03, in .NET — pick this *or* lab 03 | 20 min |
 | ⚔️ | [**Regression Optimisation challenge**](./challenge-regression-optimisation) | Make a bloated suite faster & better with AI | rest of session |
 
-You do **not** have to finish everything.  path 00 to 04 are optional.
+You do **not** have to finish everything.  path 00 to 03bis are optional.
 Pick the path that fits you, and leave time to do the [**Regression Optimisation challenge**](./challenge-regression-optimisation) 
 
 ---
