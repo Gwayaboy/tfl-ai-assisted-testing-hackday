@@ -30,8 +30,8 @@ No cloud. No Azure.
 | [04](./04-api-testing) | **API testing** | Test the movie API directly with Playwright | 20 min |
 | ⚔️ | [**Regression Optimisation challenge**](./challenge-regression-optimisation) | Make a bloated suite faster & better with AI | rest of session |
 
-You do **not** have to finish everything.  path 00 to 04 are optional, Pick the path that fits you, and leave time to
-do [**Regression Optimisation challenge**](./challenge-regression-optimisation).
+You do **not** have to finish everything.  path 00 to 04 are optional.
+Pick the path that fits you, and leave time to do the [**Regression Optimisation challenge**](./challenge-regression-optimisation) 
 
 ---
 
