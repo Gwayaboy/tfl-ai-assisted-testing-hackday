@@ -6,17 +6,27 @@
 //     Coverage 40% · Execution time 30% · Pass-rate/reliability 20% · AI use 10%
 //
 //  Usage:
-//    node score.mjs --baseline baseline-results.json --optimised optimised-results.json [--ai 8] [--json]
+//    node score.mjs --baseline <before> --optimised <after> [--ai 8] [--json]
 //
-//  Produce the JSON reports with Playwright's json reporter, e.g.:
+//  Each <before>/<after> is EITHER a Playwright JSON report (JS/TS suite) OR a
+//  .trx file (the C#/.NET suite). The scorer AUTO-DETECTS the format and converts
+//  a .trx to the same internal shape — so JS and .NET teams are scored identically
+//  against the same rubric.
+//
+//  JS/TS — produce the JSON report with Playwright's json reporter, e.g.:
 //    npx playwright test --reporter=json  > results.json     (stdout), or
 //    PLAYWRIGHT_JSON_OUTPUT_NAME=results.json npx playwright test --reporter=json
 //  (both baseline and optimised configs in this challenge also emit results.json).
 //
+//  C#/.NET — produce a .trx with the trx logger, e.g.:
+//    dotnet test --logger "trx;LogFileName=before.trx"   (baseline)
+//    dotnet test --logger "trx;LogFileName=after.trx"    (your optimised suite)
+//
 //  Coverage is measured against a fixed list of REQUIRED behaviours (below), so a
 //  team can't win on time by simply deleting tests — dropping a behaviour costs
 //  coverage points. Matching prefers explicit tags (e.g. @covers:search-exists)
-//  and falls back to test-title keywords.
+//  and falls back to test-title keywords. (.NET teams: put the tag or a keyword in
+//  the NUnit test name / SetName — the .trx carries that title through unchanged.)
 // ============================================================================
 
 import fs from "node:fs";
@@ -54,14 +64,81 @@ function parseArgs(argv) {
   return a;
 }
 
+// ---- .trx (C#/.NET MSTest logger) → Playwright-report shape -----------------
+// The C# suite emits a .trx, not a Playwright JSON report. We convert it to the
+// SAME { stats, suites } shape the scorer already understands, so a .NET run is
+// scored byte-for-byte like a JS run — coverage matches on the NUnit test names,
+// time uses the run's wall-clock, reliability uses the pass rate.
+function xmlUnescape(s) {
+  return String(s)
+    .replace(/&quot;/g, '"').replace(/&apos;/g, "'")
+    .replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&amp;/g, "&");
+}
+
+function trxDurationToMs(d) {
+  const m = /^(\d+):(\d\d):(\d\d(?:\.\d+)?)$/.exec(String(d || "").trim());
+  if (!m) return 0;
+  return (Number(m[1]) * 3600 + Number(m[2]) * 60 + Number(m[3])) * 1000;
+}
+
+function parseTrx(xml, path, label) {
+  // Wall-clock of the whole run = <Times finish> − <Times start>.
+  const timesTag = (/<Times\b[^>]*>/i.exec(xml) || [""])[0];
+  const start = (/\bstart="([^"]+)"/i.exec(timesTag) || [])[1];
+  const finish = (/\bfinish="([^"]+)"/i.exec(timesTag) || [])[1];
+  let durationMs = 0;
+  if (start && finish) {
+    const d = Date.parse(finish) - Date.parse(start);
+    if (Number.isFinite(d) && d >= 0) durationMs = d;
+  }
+
+  // Each executed test is one <UnitTestResult> (this suite has no nested
+  // InnerResults). Build one "spec" per result so coverage/pass-rate work unchanged.
+  const specs = [];
+  let passed = 0, failed = 0, skipped = 0, durSumMs = 0;
+  const re = /<UnitTestResult\b([^>]*)>/gi;
+  let m;
+  while ((m = re.exec(xml)) !== null) {
+    const attrs = m[1];
+    const title = xmlUnescape((/\btestName="([^"]*)"/i.exec(attrs) || [])[1] || "");
+    const outcome = ((/\boutcome="([^"]*)"/i.exec(attrs) || [])[1] || "").toLowerCase();
+    durSumMs += trxDurationToMs((/\bduration="([^"]+)"/i.exec(attrs) || [])[1]);
+    let status;
+    if (outcome === "passed") { passed++; status = "expected"; }
+    else if (outcome === "notexecuted" || outcome === "inconclusive" || outcome === "pending") { skipped++; status = "skipped"; }
+    else { failed++; status = "unexpected"; }
+    specs.push({ title, tags: [], ok: outcome === "passed", tests: [{ status }] });
+  }
+
+  if (specs.length === 0) {
+    console.error(`ERROR: ${label} .trx has no <UnitTestResult> entries (${path}). Run with --logger "trx".`);
+    process.exit(2);
+  }
+  // Fall back to the summed per-test durations if <Times> was missing/degenerate.
+  if (!durationMs) durationMs = durSumMs;
+
+  return {
+    stats: { expected: passed, unexpected: failed, flaky: 0, skipped, duration: durationMs },
+    suites: [{ title: "trx", suites: [], specs }],
+  };
+}
+
 function loadReport(path, label) {
-  if (!path) { console.error(`ERROR: missing --${label} <path-to-playwright-json>`); process.exit(2); }
+  if (!path) { console.error(`ERROR: missing --${label} <path-to-report> (Playwright .json or .trx)`); process.exit(2); }
   if (!fs.existsSync(path)) { console.error(`ERROR: ${label} report not found: ${path}`); process.exit(2); }
+  const text = fs.readFileSync(path, "utf8");
+
+  // .trx (C#/.NET) — XML. Detect by extension or a leading '<'.
+  if (path.toLowerCase().endsWith(".trx") || text.trimStart().startsWith("<")) {
+    return parseTrx(text, path, label);
+  }
+
+  // Playwright JSON (JS/TS).
   let raw;
-  try { raw = JSON.parse(fs.readFileSync(path, "utf8")); }
-  catch (e) { console.error(`ERROR: ${label} report is not valid JSON (${path}): ${e.message}`); process.exit(2); }
+  try { raw = JSON.parse(text); }
+  catch (e) { console.error(`ERROR: ${label} report is not valid JSON or .trx (${path}): ${e.message}`); process.exit(2); }
   if (!raw || !raw.stats || !Array.isArray(raw.suites)) {
-    console.error(`ERROR: ${label} report doesn't look like a Playwright JSON report (${path}). Run with --reporter=json.`);
+    console.error(`ERROR: ${label} report doesn't look like a Playwright JSON report (${path}). Run with --reporter=json, or pass a .trx.`);
     process.exit(2);
   }
   return raw;
@@ -188,7 +265,8 @@ function report(r, aiManual) {
 // ---- main -----------------------------------------------------------------
 const args = parseArgs(process.argv);
 if (args.help) {
-  console.log("Usage: node score.mjs --baseline <before.json> --optimised <after.json> [--ai 0-10] [--json]");
+  console.log("Usage: node score.mjs --baseline <before> --optimised <after> [--ai 0-10] [--json]");
+  console.log("  <before>/<after>: a Playwright JSON report (JS/TS) OR a .trx file (C#/.NET) — auto-detected.");
   process.exit(0);
 }
 const baseline = loadReport(args.baseline, "baseline");

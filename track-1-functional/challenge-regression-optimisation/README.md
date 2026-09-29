@@ -173,8 +173,9 @@ setup on a personal Azure subscription): **[MICROSOFT-PLAYWRIGHT-TESTING.md](./M
 ## 🧮 Objective scoring (`score.mjs`)
 
 To keep judging **fair and reproducible**, this challenge ships a scorer that reads the
-Playwright **JSON** reports from your before/after runs and computes the objective 90% of the
-rubric (Coverage 40 · Time 30 · Reliability 20); the AI-use 10% stays a judge's manual mark.
+before/after run reports — a Playwright **JSON** report (JS/TS) **or** a **`.trx`** (C#/.NET),
+auto-detected — and computes the objective 90% of the rubric (Coverage 40 · Time 30 ·
+Reliability 20); the AI-use 10% stays a judge's manual mark.
 
 Both the baseline config **and** any suite you copy it from already emit a `results.json` next
 to the HTML report (see the `json` reporter in `playwright.config.ts`), so scoring is turnkey:
@@ -196,6 +197,21 @@ node score.mjs \
   --ai 8            # judge's 0–10 mark for "how you used AI"
 ```
 
+**C#/.NET teams:** the scorer reads a **`.trx`** directly — no conversion needed. Point it at the
+`.trx` your `dotnet test` writes (wall-clock comes from the run's `<Times>` window, coverage from
+the NUnit test names):
+
+```bash
+# baseline "before" and your optimised "after", each with the trx logger:
+dotnet test --logger "trx;LogFileName=before.trx"   # in baseline-suite-dotnet
+dotnet test --logger "trx;LogFileName=after.trx"    # in your optimised .NET suite
+
+node score.mjs \
+  --baseline path/to/before.trx \
+  --optimised path/to/after.trx \
+  --ai 8
+```
+
 You'll get a scorecard like:
 
 ```
@@ -212,8 +228,9 @@ You'll get a scorecard like:
 by simply deleting tests — dropping a behaviour costs coverage points. Tag your tests with
 `@covers:<id>` (`search-exists`, `search-none`, `search-empty`, `browse`, `details`, `theme`)
 for exact attribution, or rely on title-keyword matching. Add `--json` for a machine-readable
-scorecard. This tool scores the **JS/TS** Playwright JSON; .NET teams report the same three
-numbers from their `dotnet test` run.
+scorecard. It reads **both** the JS/TS Playwright JSON **and** the C#/.NET `.trx` — auto-detected —
+so both languages are scored identically against the same rubric. (.NET: put `@covers:<id>` or a
+keyword in the NUnit test name / `SetName`; the `.trx` carries that title through unchanged.)
 
 ---
 

@@ -63,6 +63,29 @@ build the service `wsEndpoint` ourselves with the current **`api-version=2025-09
 Playwright's built-in service connect still pins the now-unsupported `2023-10-01-preview`. Full
 walkthrough (organiser setup): [MICROSOFT-PLAYWRIGHT-TESTING.md](../MICROSOFT-PLAYWRIGHT-TESTING.md).
 
+## 🧮 Score your before/after
+
+The challenge scorer ([`../score.mjs`](../score.mjs)) reads a **`.trx`** directly — the same tool
+JS/TS teams use, so both languages are judged identically (Coverage 40 · Time 30 · Reliability 20,
++ a judge's AI-use 10). Emit a `.trx` with the trx logger on each run:
+
+```bash
+# baseline "before"
+dotnet test --logger "trx;LogFileName=before.trx"
+# your optimised "after" suite
+dotnet test --logger "trx;LogFileName=after.trx"
+
+# score it (Node 18+; from the challenge folder one level up)
+node ../score.mjs --baseline before.trx --optimised after.trx --ai 8
+```
+
+- **Time** is the run's wall-clock (`.trx` `<Times>` `finish − start`), so cloud (Playwright
+  Workspaces) and local runs score the same way.
+- **Coverage** matches the six required behaviours on the **NUnit test name**. For exact
+  attribution put `@covers:<id>` (`search-exists`, `search-none`, `search-empty`, `browse`,
+  `details`, `theme`) in the test's `SetName` — the `.trx` carries it through. **Only passing
+  tests earn coverage**, so an always-red "coverage" test scores nothing.
+
 ## What's here
 
 ```

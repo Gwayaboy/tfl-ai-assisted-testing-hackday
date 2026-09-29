@@ -24,7 +24,8 @@ report is perfect).
 
 > 🧮 **Objective scorer:** the challenge ships a
 > [`score.mjs`](../track-1-functional/challenge-regression-optimisation/README.md#-objective-scoring-scoremjs)
-> that reads the before/after Playwright JSON reports and computes the objective 90%
+> that reads the before/after reports — a Playwright JSON report (JS/TS) **or** a `.trx` (C#/.NET) —
+> and computes the objective 90%
 > (Coverage · Time · Reliability) reproducibly, with the AI-use 10% left as a judge's mark.
 > Coverage is checked against a fixed list of required behaviours, so a team can't win on time
 > by deleting tests.
