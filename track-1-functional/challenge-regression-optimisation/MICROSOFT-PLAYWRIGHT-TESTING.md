@@ -113,56 +113,67 @@ The tests hit the Movies app. Two ways to expose it to the **remote** browser:
 
 ---
 
-## For organisers (setup before the day)
+## For organisers
 
-> This matches Franck's plan: a Playwright Workspace on a **personal Azure subscription**, with
-> the TfL participants granted access via a resource group.
+> ✅ **Already set up for this event — nothing to do on the day.** The workspace is **pre-created**
+> and the access token is stored centrally as a **GitHub Codespaces secret**, so it's injected into
+> every Codespace on the base repo and [`post-create.sh`](../../.devcontainer/post-create.sh)
+> auto-writes the shared `.env` from it. Participants just run `npm run test:mpt` / `dotnet test`.
+> Forks don't inherit the secret — see **🍴 Forked the repo?** under the quickstart above.
 
-1. **Create the workspace.** Azure portal → **Create a resource** → search *Playwright Workspaces*
-   → **Create**. Put it in a dedicated **resource group** (e.g. `rg-tfl-hackday-mpt`) on the
-   personal subscription. **Pick a region that offers Playwright Workspaces — e.g. West Europe or
-   Switzerland North. (UK South is NOT supported for Playwright Workspaces — it only offers Azure
-   Load Testing.)** Or via CLI:
+**What's provisioned**
+
+| | |
+|---|---|
+| Workspace | `mpt-tfl-hackday` — resource group `rg-tfl-hackday-mpt`, **West Europe** |
+| Auth mode | Playwright **access token** (local auth enabled) |
+| Central store | Codespaces secrets `PLAYWRIGHT_SERVICE_URL` + `PLAYWRIGHT_SERVICE_ACCESS_TOKEN` on the repo |
+| Delivery | base-repo Codespaces → injected + `.env` auto-hydrated · forks → add your own secret |
+
+<details>
+<summary><b>Rotate the token / recreate the workspace — reference only</b></summary>
+
+Only needed to **rotate** an expiring token or **stand up a fresh** workspace (e.g. reusing this
+repo for a later event).
+
+1. **(Re)create the workspace** — skip if `mpt-tfl-hackday` still exists. Use a region that offers
+   Playwright Workspaces (e.g. West Europe / Switzerland North; **UK South is not supported**):
 
    ```bash
    az group create -n rg-tfl-hackday-mpt -l westeurope
-   az resource create -g rg-tfl-hackday-mpt -n <workspace-name> \
+   az resource create -g rg-tfl-hackday-mpt -n mpt-tfl-hackday \
      --resource-type Microsoft.LoadTestService/playwrightWorkspaces \
      -l westeurope --api-version 2026-08-01-preview --properties '{}'
    ```
 
-2. **Grab the endpoint.** Open the workspace → **Get started** → copy the **browser endpoint**
-   URL. That's the `PLAYWRIGHT_SERVICE_URL` every participant needs.
+2. **Generate a token + grab the endpoint.** Workspace → **Settings → Access Management** → tick
+   **Playwright Service Access Token** → **Generate token** (set an expiry past the event; it's shown
+   **once** — copy it). The **Get started → browser endpoint** is `PLAYWRIGHT_SERVICE_URL`.
+   *(The Azure CLI can't mint this token — Entra blocks the CLI app from the Playwright API — so use
+   the portal.)*
 
-3. **Give participants access — for this event we use an access token** (simplest for ~50 external
-   testers; no guest invites):
-   - **Access token (chosen):** workspace → **Settings → Access Management** → tick **Playwright
-     Service Access Token**, then **Generate token**, set an expiry past the event, and share the
-     token with the cohort over a secure channel (they paste it into the shared `.env` as
-     `PLAYWRIGHT_SERVICE_ACCESS_TOKEN`). The token is shown **once** — copy it immediately.
-   - **Keep it central (recommended):** store the endpoint + token once as **GitHub Codespaces
-     secrets** so every Codespace launched on the repo gets them injected automatically (nothing in
-     the repo, nothing to paste). From a machine with the token in your local `.env`:
+3. **Store it centrally** so every base-repo Codespace gets it injected (run from a machine that has
+   the two values in the shared `.env`):
 
-     ```bash
-     gh secret set --app codespaces --repo <owner>/<repo> \
-       --env-file track-1-functional/challenge-regression-optimisation/.env
-     ```
+   ```bash
+   gh secret set --app codespaces --repo <owner>/<repo> \
+     --env-file track-1-functional/challenge-regression-optimisation/.env
+   ```
 
-     (Repo Codespaces secrets reach Codespaces created on the **base repo**, not on personal forks —
-     so if attendees fork, still hand the token out on the day.) **Never** commit the token to the
-     repo — even base64-"obfuscated", it's trivially decoded and this repo is public.
-   - **Entra ID + RBAC (alternative):** invite each TfL email as a **guest** in the tenant, then
-     assign a role (Contributor) on the resource group / workspace under **Access control (IAM)**.
-     More setup per person; only needed if you'd rather not use a shared token.
+   **Never** commit the token — even base64-"obfuscated" it's trivially decoded, and this repo is
+   public. Forks don't inherit repo secrets; forkers add their own (see the quickstart).
 
-4. **Cost note.** Billing is per **test-minute** — **$0.01/min** on the default Linux cloud
-   browsers in West Europe (Windows browsers are $0.02/min); stored reports are just ordinary Azure
-   Blob Storage. A subscription's **first** workspace gets a one-time **free trial: 30 days / 100
-   browser-minutes**. A whole 10-team workshop (each running ~300 tests a few times on 20 workers)
-   lands around **$7–$15 total** — trivially covered by VS Enterprise monthly credits. Still, tell
-   teams to run a **single spec first** to check plumbing, and to avoid re-running the full
-   300-test baseline on the service repeatedly.
+   *Alternative — Entra ID + RBAC:* invite testers as **guests** and assign a role on the workspace
+   instead of a shared token (more setup per person).
+</details>
+
+**Cost.** Billing is per **test-minute** — **$0.01/min** on the default Linux cloud
+browsers in West Europe (Windows browsers are $0.02/min); stored reports are just ordinary Azure
+Blob Storage. A subscription's **first** workspace gets a one-time **free trial: 30 days / 100
+browser-minutes**. A whole 10-team workshop (each running ~300 tests a few times on 20 workers)
+lands around **$7–$15 total** — trivially covered by VS Enterprise monthly credits. Still, tell
+teams to run a **single spec first** to check plumbing, and to avoid re-running the full
+300-test baseline on the service repeatedly.
 
 ---
 
