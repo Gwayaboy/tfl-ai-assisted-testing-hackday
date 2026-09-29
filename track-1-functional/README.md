@@ -13,7 +13,7 @@ No cloud. No Azure.
 
 ## Before you start
 
-- SUT running at http://localhost:3000 (see [repo setup](../docs/setup.md))
+- SUT running at http://localhost:3000 — see **[Setup](../README.md#setup)** (Codespaces or local)
 - Copilot **agent mode** on + **Playwright MCP** server allowed
 - Login for authenticated flows: `me@outlook.com` / `12345`
 

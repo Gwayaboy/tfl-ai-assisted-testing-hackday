@@ -51,9 +51,15 @@ Each track has **guided step-by-step labs** (great if you're newer to automation
 > The **easiest** way to take part — nothing to install, works on a locked-down laptop,
 > and a **free personal GitHub account is enough**.
 >
-> 1. **Sign in / sign up** (free) at **[github.com/signup](https://github.com/signup)** — a
->    free personal account includes **120 Codespaces core-hours + 15 GB storage per month**,
->    plenty for the day.
+> ⚠️ **Use a _personal_ GitHub account — not your TfL corporate one.** TfL accounts with a Copilot
+> licence can't reach resources outside TfL's GitHub Enterprise (this repo and Codespaces), so
+> everyone should use a personal account — whether or not you already have a corporate licence.
+>
+> 1. **Sign up (free)** at **[github.com/signup](https://github.com/signup)** using a **personal
+>    email — not your TfL address**. **Gmail** works smoothly; Outlook.com addresses can occasionally
+>    be rejected at the sign-up _"verify email"_ step, so Gmail is the reliable fallback. A free
+>    account includes **GitHub Copilot Free** plus **120 Codespaces core-hours + 15 GB storage per
+>    month**, plenty for the day — you'll set a username + password and verify via an emailed code.
 > 2. On this repo, click **`< > Code` ▸ Codespaces ▸ Create codespace on main**.
 >
 >    ![GitHub Create a new codespace page for the hack-day repo on the main branch](docs/assets/prereqs/create-codespace.png)

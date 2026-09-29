@@ -16,7 +16,10 @@ paid plan, an Azure subscription, or any TMDB/IMDb account or API key.
 ## 0. One-time: get a free GitHub account + Codespaces
 
 1. **Create a free account** at **[github.com/signup](https://github.com/signup)** (skip if you
-   already have one — a personal account is fine; you don't need to use a work account).
+   already have one — a personal account is fine; you don't need to use a work account). Use a
+   **personal email, not your TfL address** — **Gmail** works smoothly; Outlook.com addresses can
+   occasionally be rejected at the sign-up _"verify email"_ step, so Gmail is the reliable fallback.
+   You'll set a username + password and verify via a code emailed to you.
 2. That free account includes a monthly Codespaces allowance:
 
    | Plan | Compute / month | Storage / month |
