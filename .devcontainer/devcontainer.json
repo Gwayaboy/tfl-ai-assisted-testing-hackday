@@ -13,6 +13,7 @@
     "ghcr.io/devcontainers/features/java:1": {
       "version": "17"
     },
+    "ghcr.io/devcontainers/features/powershell:1": {},
     "ghcr.io/devcontainers/features/sshd:1": {}
   },
   "forwardPorts": [3000, 4000],
@@ -42,7 +43,12 @@
       ],
       "settings": {
         "chat.mcp.enabled": true,
-        "chat.agent.enabled": true
+        "chat.agent.enabled": true,
+        "terminal.integrated.profiles.linux": {
+          "bash": { "path": "bash" },
+          "pwsh": { "path": "pwsh", "icon": "terminal-powershell" }
+        },
+        "terminal.integrated.defaultProfile.linux": "bash"
       }
     }
   },

@@ -71,7 +71,8 @@ Each track has **guided step-by-step labs** (great if you're newer to automation
 >    and it **pre-clones and builds the Movies app SUT** for you. The **JMeter download is the slow
 >    part**; setup is finished when the terminal prints **`Setup complete`**. If you start the app
 >    before that, let it finish first. **Tip:** create the Codespace *before* the day (or first
->    thing) so the wait doesn't eat into hacking time.
+>    thing) so the wait doesn't eat into hacking time. (**PowerShell** is also installed — pick it
+>    from the terminal's **+ ▾** dropdown if you prefer `pwsh` over the default bash.)
 >
 >    ![VS Code dialog asking Do you trust the authors of the files in this folder, with a Trust Folder and Continue button](docs/assets/prereqs/codespace-trust.png)
 >    *On first open, click **Trust Folder & Continue** when VS Code prompts.*
