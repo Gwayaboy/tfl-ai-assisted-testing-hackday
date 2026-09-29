@@ -55,6 +55,9 @@ Each track has **guided step-by-step labs** (great if you're newer to automation
 >    free personal account includes **120 Codespaces core-hours + 15 GB storage per month**,
 >    plenty for the day.
 > 2. On this repo, click **`< > Code` ▸ Codespaces ▸ Create codespace on main**.
+>
+>    ![GitHub Create a new codespace page for the hack-day repo on the main branch](docs/assets/prereqs/create-codespace.png)
+>    *Create a codespace on the **main** branch of the hack-day repo.*
 > 3. **Give it ~10–15 min on first creation.** It happens in two phases: the **editor opens** after
 >    ~3–5 min, then a **one-time background setup** keeps running for another ~5–10 min. It
 >    auto-installs Node, .NET, the GitHub CLI, **Java + JMeter, the Azure CLI (+ `az load`) and
@@ -63,9 +66,18 @@ Each track has **guided step-by-step labs** (great if you're newer to automation
 >    part**; setup is finished when the terminal prints **`Setup complete`**. If you start the app
 >    before that, let it finish first. **Tip:** create the Codespace *before* the day (or first
 >    thing) so the wait doesn't eat into hacking time.
+>
+>    ![VS Code dialog asking Do you trust the authors of the files in this folder, with a Trust Folder and Continue button](docs/assets/prereqs/codespace-trust.png)
+>    *On first open, click **Trust Folder & Continue** when VS Code prompts.*
+>
+>    ![VS Code in the browser showing Setting up remote connection, Building codespace](docs/assets/prereqs/codespace-building.png)
+>    *The one-time background setup runs automatically — it's ready when the terminal prints **`Setup complete`**.*
 > 4. **Sign in to GitHub Copilot** in the Codespace (Copilot icon ▸ Sign in). We'll make sure
 >    everyone has Copilot access on the day; **[Copilot Free](https://github.com/copilot)** also
 >    works on personal accounts.
+>
+>    ![GitHub settings page showing the GitHub Copilot Free plan is active](docs/assets/prereqs/copilot-free.png)
+>    *Signed in with your personal account, [github.com/settings/copilot](https://github.com/settings/copilot) should show the **Copilot Free** plan.*
 > 5. Start the app and go:
 >    ```bash
 >    cd ../playwright-movies-app && npm run dev
