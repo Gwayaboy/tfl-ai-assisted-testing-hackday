@@ -1,0 +1,4 @@
+# Objective scorer inputs — machine-specific run outputs, don't commit these.
+results.json
+baseline-results.json
+optimised-results.json

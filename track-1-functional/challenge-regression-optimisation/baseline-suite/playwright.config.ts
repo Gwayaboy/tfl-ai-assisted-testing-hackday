@@ -24,6 +24,10 @@ export default defineConfig({
   reporter: [
     ["list"],
     ["html", { open: "never" }],
+    // NOT an anti-pattern — this feeds the objective scorer (../score.mjs).
+    // It writes a machine-readable results.json alongside the HTML report so
+    // your "before" (and your optimised "after") can be scored reproducibly.
+    ["json", { outputFile: "results.json" }],
   ],
 
   use: {

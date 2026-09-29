@@ -141,6 +141,53 @@ of everything that's wrong (great to feed Copilot, or to hunt yourself).
 
 ---
 
+## 🧮 Objective scoring (`score.mjs`)
+
+To keep judging **fair and reproducible**, this challenge ships a scorer that reads the
+Playwright **JSON** reports from your before/after runs and computes the objective 90% of the
+rubric (Coverage 40 · Time 30 · Reliability 20); the AI-use 10% stays a judge's manual mark.
+
+Both the baseline config **and** any suite you copy it from already emit a `results.json` next
+to the HTML report (see the `json` reporter in `playwright.config.ts`), so scoring is turnkey:
+
+```bash
+# 1) baseline "before" (writes baseline-suite/results.json)
+cd track-1-functional/challenge-regression-optimisation/baseline-suite
+npm run test:baseline
+
+# 2) your optimised "after" (your suite's config also writes results.json)
+cd ../your-optimised-suite
+npx playwright test
+
+# 3) score it (from the challenge folder)
+cd ..
+node score.mjs \
+  --baseline baseline-suite/results.json \
+  --optimised your-optimised-suite/results.json \
+  --ai 8            # judge's 0–10 mark for "how you used AI"
+```
+
+You'll get a scorecard like:
+
+```
+  Speed-up                               324.1×  (100% faster)
+  Coverage of required behaviours (passing tests):
+    [x] Search returns matching results      [x] Browse / landing renders movies
+    [x] Search with no matches shows empty   [x] Movie details render
+    [x] Empty query keeps browsable list     [x] Dark / light theme toggles
+    → 6/6 behaviours covered
+  Weighted score  Coverage 40 · Time 30 · Reliability 20 · AI 8  →  TOTAL 98 / 100
+```
+
+**Coverage is measured against a fixed list of required behaviours**, so you can't win on time
+by simply deleting tests — dropping a behaviour costs coverage points. Tag your tests with
+`@covers:<id>` (`search-exists`, `search-none`, `search-empty`, `browse`, `details`, `theme`)
+for exact attribution, or rely on title-keyword matching. Add `--json` for a machine-readable
+scorecard. This tool scores the **JS/TS** Playwright JSON; .NET teams report the same three
+numbers from their `dotnet test` run.
+
+---
+
 ## What to show at the readout
 
 - **Before:** baseline test count + total time (screenshot the HTML report).
