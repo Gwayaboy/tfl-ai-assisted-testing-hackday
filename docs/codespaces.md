@@ -30,12 +30,18 @@ paid plan, an Azure subscription, or any TMDB/IMDb account or API key.
 3. **GitHub Copilot:** we'll make sure everyone has Copilot access on the day. Personal accounts
    can also use **[Copilot Free](https://github.com/copilot)** (monthly limit) in the meantime.
 
+   ![GitHub settings page showing the GitHub Copilot Free plan is active](assets/prereqs/copilot-free.png)
+   *Signed in with your personal account, [github.com/settings/copilot](https://github.com/settings/copilot) should show the **Copilot Free** plan.*
+
 ---
 
 ## 1. Launch your Codespace
 
 1. Open the repo: **[github.com/Gwayaboy/tfl-ai-assisted-testing-hackday](https://github.com/Gwayaboy/tfl-ai-assisted-testing-hackday)**
 2. Click the green **`< > Code`** button ▸ **Codespaces** tab ▸ **Create codespace on main**.
+
+   ![GitHub Create a new codespace page for the hack-day repo on the main branch](assets/prereqs/create-codespace.png)
+   *Create a codespace on the **main** branch of the hack-day repo.*
 3. **Give it ~10–15 minutes on first creation.** It happens in two phases: the **editor opens**
    after ~3–5 min, then a **one-time background setup** (`postCreateCommand`) keeps running for
    another ~5–10 min. It automatically installs **Node, .NET 8, the GitHub CLI, Java 17 + Apache
@@ -44,6 +50,12 @@ paid plan, an Azure subscription, or any TMDB/IMDb account or API key.
    Azure CLI, Bicep, Azure Resources**) and the **Playwright MCP** config — and it **pre-clones and
    builds the Movies app** for you. The **Apache JMeter download is the slow part**; the terminal
    prints **`Setup complete`** when everything is ready. **Create it ahead of the day** if you can.
+
+   ![VS Code dialog asking Do you trust the authors of the files in this folder, with a Trust Folder and Continue button](assets/prereqs/codespace-trust.png)
+   *On first open, click **Trust Folder & Continue** when VS Code prompts.*
+
+   ![VS Code in the browser showing Setting up remote connection, Building codespace](assets/prereqs/codespace-building.png)
+   *The one-time background setup runs automatically — it's ready when the terminal prints **`Setup complete`**.*
 4. **Sign in to Copilot:** click the Copilot icon in the bottom status bar ▸ **Sign in**.
 
 > 💡 **Tip — save your quota:** when you finish, **stop** the Codespace
