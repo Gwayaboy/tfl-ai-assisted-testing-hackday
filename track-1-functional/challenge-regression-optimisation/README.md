@@ -162,15 +162,13 @@ this challenge-folder root:
 ```bash
 cd baseline-suite
 npm install                       # pulls @azure/playwright, @azure/identity, dotenv
-cp ../.env.example ../.env        # ONE shared file; paste the endpoint + token the organiser gives you
 npm run test:mpt                  # playwright test --config=playwright.service.config.ts --workers=20
 ```
 
-> 🧩 **In a Codespace, skip the `cp` step** — `PLAYWRIGHT_SERVICE_URL` and
-> `PLAYWRIGHT_SERVICE_ACCESS_TOKEN` are injected automatically as **Codespaces secrets** (and
-> `post-create.sh` auto-writes the shared `.env` from them). **On a fork**, add those two as your
-> own Codespaces secrets (forks don't inherit them) and rebuild, or `cp ../.env.example ../.env`
-> and paste the values.
+> 🧩 **Codespaces (how TfL runs it):** the endpoint + token arrive as **Codespaces secrets**, so
+> there's nothing to paste — `post-create.sh` writes the shared `.env` and `npm run test:mpt` just
+> works. This needs your account to have access to those secrets (a repo **collaborator** or **org
+> member**); if it doesn't, `post-create.sh` prints how to add your own secret or create the `.env`.
 
 👉 Full walkthrough (access-token setup, the C#/.NET path, local-SUT `exposeNetwork`, and organiser
 setup on a personal Azure subscription): **[MICROSOFT-PLAYWRIGHT-TESTING.md](./MICROSOFT-PLAYWRIGHT-TESTING.md)**.
