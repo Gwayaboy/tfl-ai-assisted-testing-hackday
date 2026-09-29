@@ -47,9 +47,9 @@ pwsh bin/Debug/net8.0/playwright.ps1 show-trace traces/<test-name>.zip
 
 Like the JS suite, the **optimised "after" run happens on cloud browsers** via **Microsoft
 Playwright Workspaces** — so the Execution-time score is measured on the same infrastructure for
-every team. [`PlaywrightServiceSetup.cs`](./PlaywrightServiceSetup.cs) wires this up. It's a **no-op
-locally** — with no `PLAYWRIGHT_SERVICE_URL` set, `dotnet test` runs on your machine exactly as
-above — and routes to the cloud when the organiser's endpoint + access token are set:
+every team. [`BaselineTest`](./BaselineTest.cs) wires this up via a `ConnectOptionsAsync` override.
+It's a **no-op locally** — with no `PLAYWRIGHT_SERVICE_URL` set, `dotnet test` runs on your machine
+exactly as above — and connects to the cloud when the organiser's endpoint + access token are set:
 
 ```powershell
 # the organiser gives you BOTH of these:
@@ -58,9 +58,10 @@ $env:PLAYWRIGHT_SERVICE_ACCESS_TOKEN = "<token>"
 dotnet test -- NUnit.NumberOfTestWorkers=20    # 20 parallel cloud browsers
 ```
 
-Needs **Microsoft.Playwright.NUnit ≥ 1.50** (this project is on 1.55) — required by the
-`Azure.Developer.Playwright.NUnit` package. Full walkthrough (auth, organiser setup):
-[MICROSOFT-PLAYWRIGHT-TESTING.md](../MICROSOFT-PLAYWRIGHT-TESTING.md).
+Auth is the workspace **access token** (`Authorization: Bearer …`) — no Azure sign-in needed. We
+build the service `wsEndpoint` ourselves with the current **`api-version=2025-09-01`**, because
+Playwright's built-in service connect still pins the now-unsupported `2023-10-01-preview`. Full
+walkthrough (organiser setup): [MICROSOFT-PLAYWRIGHT-TESTING.md](../MICROSOFT-PLAYWRIGHT-TESTING.md).
 
 ## What's here
 
@@ -70,8 +71,7 @@ baseline-suite-dotnet/
 ├── .runsettings              # deliberately bad: 1 worker, 30s expect timeout
 ├── AssemblyInfo.cs           # forces serial execution (LevelOfParallelism 1)
 ├── PlaywrightEnvironment.cs  # Codespaces/VS Code setup: clears bogus BROWSER, installs chromium
-├── PlaywrightServiceSetup.cs # ☁️ Playwright Workspaces (cloud browsers) — no-op unless PLAYWRIGHT_SERVICE_URL is set
-├── BaselineTest.cs           # base class: always-on trace + video + screenshot
+├── BaselineTest.cs           # base class: always-on trace + video + screenshot; ☁️ cloud-browser connect (Playwright Workspaces) when service env vars are set
 ├── Helpers.cs                # the slow helpers (hard sleeps, re-navigation)
 ├── Fixtures.cs               # ~40 search terms -> lots of data-driven tests
 └── Tests/
