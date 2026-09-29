@@ -5,10 +5,14 @@
   "description": "Deliberately slow/bloated Playwright regression suite - optimise me!",
   "scripts": {
     "test:baseline": "playwright test",
+    "test:mpt": "playwright test --config=playwright.service.config.ts --workers=20",
     "test:report": "playwright show-report",
     "count": "playwright test --list | find /c \"›\" || playwright test --list | grep -c '›'"
   },
   "devDependencies": {
-    "@playwright/test": "^1.48.0"
+    "@azure/identity": "^4.10.2",
+    "@azure/playwright": "^1.1.6",
+    "@playwright/test": "^1.48.0",
+    "dotenv": "^16.4.5"
   }
 }

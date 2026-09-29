@@ -141,6 +141,29 @@ of everything that's wrong (great to feed Copilot, or to hunt yourself).
 
 ---
 
+## ☁️ Scale on Microsoft Playwright Workspaces (optional)
+
+Once your suite is lean locally, run it on **cloud-hosted browsers** with **Microsoft Playwright
+Workspaces** (Azure App Testing) — fan out to **20+ parallel workers** and across multiple
+browsers/OSes without owning the machines. It's the last big lever on the **execution-time**
+score, and the scorer treats a cloud run exactly like a local one.
+
+A ready-to-use `playwright.service.config.ts` + `.env.example` ship in
+[`baseline-suite/`](./baseline-suite), and there's a `npm run test:mpt` script wired up:
+
+```bash
+cd baseline-suite
+npm install                       # pulls @azure/playwright, @azure/identity, dotenv
+cp .env.example .env              # paste the workspace endpoint the organiser gives you
+az login                          # Microsoft Entra ID auth (or use an access token)
+npm run test:mpt                  # playwright test --config=playwright.service.config.ts --workers=20
+```
+
+👉 Full walkthrough (auth options, local-SUT `exposeNetwork`, and organiser setup on a personal
+Azure subscription): **[MICROSOFT-PLAYWRIGHT-TESTING.md](./MICROSOFT-PLAYWRIGHT-TESTING.md)**.
+
+---
+
 ## 🧮 Objective scoring (`score.mjs`)
 
 To keep judging **fair and reproducible**, this challenge ships a scorer that reads the

@@ -2,3 +2,6 @@
 results.json
 baseline-results.json
 optimised-results.json
+
+# Microsoft Playwright Workspaces — endpoint/token secrets, never commit.
+.env
