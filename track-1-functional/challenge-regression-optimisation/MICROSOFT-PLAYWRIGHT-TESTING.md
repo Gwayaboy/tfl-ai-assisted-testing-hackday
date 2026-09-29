@@ -5,7 +5,8 @@
 > **cloud-hosted browsers** — Linux/Windows, all engines — with **massive parallelism**.
 > Nothing about your tests changes; you just point Playwright at a service config.
 
-This is an **optional accelerator** for the [Regression Optimisation challenge](./README.md).
+This is a **required step** of the [Regression Optimisation challenge](./README.md) — every team runs
+their optimised suite here, so the Execution-time score is measured on identical cloud infrastructure.
 After you've de-duplicated and de-slept your suite locally, running it on **20+ cloud workers**
 is the last big lever on the **Execution-time (30%)** score — and running across multiple
 browsers/OSes is a genuine **coverage** story for the readout.
@@ -46,13 +47,15 @@ demo) **or** your own optimised suite. A ready-to-use
    PLAYWRIGHT_SERVICE_URL=wss://<region>.api.playwright.microsoft.com/playwrightworkspaces/<id>/browsers
    ```
 
-3. **Authenticate.** Microsoft Entra ID is the default:
+3. **Add your access token.** Paste the token the organiser gave you into `.env` as
+   `PLAYWRIGHT_SERVICE_ACCESS_TOKEN` — no Azure sign-in needed:
 
-   ```bash
-   az login          # sign in to the tenant that owns the workspace
+   ```
+   PLAYWRIGHT_SERVICE_ACCESS_TOKEN=<token from the organiser>
    ```
 
-   > Using an **access token** instead? See [Authentication options](#authentication-options).
+   > Have your own Azure identity on the workspace instead? You can use Microsoft Entra ID
+   > (`az login`) — see [Authentication options](#authentication-options).
 
 4. **Run on cloud browsers:**
 
@@ -103,28 +106,37 @@ The tests hit the Movies app. Two ways to expose it to the **remote** browser:
 
 1. **Create the workspace.** Azure portal → **Create a resource** → search *Playwright Workspaces*
    → **Create**. Put it in a dedicated **resource group** (e.g. `rg-tfl-hackday-mpt`) on the
-   personal subscription; pick a nearby **region** (e.g. UK South / West Europe). Or via CLI:
+   personal subscription. **Pick a region that offers Playwright Workspaces — e.g. West Europe or
+   Switzerland North. (UK South is NOT supported for Playwright Workspaces — it only offers Azure
+   Load Testing.)** Or via CLI:
 
    ```bash
-   az group create -n rg-tfl-hackday-mpt -l uksouth
-   # then create the "Microsoft.LoadTestService/playwrightworkspaces" resource in the portal
+   az group create -n rg-tfl-hackday-mpt -l westeurope
+   az resource create -g rg-tfl-hackday-mpt -n <workspace-name> \
+     --resource-type Microsoft.LoadTestService/playwrightWorkspaces \
+     -l westeurope --api-version 2026-08-01-preview --properties '{}'
    ```
 
 2. **Grab the endpoint.** Open the workspace → **Get started** → copy the **browser endpoint**
    URL. That's the `PLAYWRIGHT_SERVICE_URL` every participant needs.
 
-3. **Give participants access — pick one:**
-   - **Entra ID + RBAC (their own identity):** invite each TfL email as a **guest** in the tenant,
-     then assign them a role on the resource group / workspace so they can run tests (Contributor
-     is the safe choice; review under **Access control (IAM)**). This is the "add the list of TfL
-     emails to the resource group" step.
-   - **Access token (simplest for external folks):** workspace → **Settings → Access Management**
-     → tick **Playwright Service Access Token**, then generate a token and share it with the
-     cohort over a secure channel. No guest invites needed.
+3. **Give participants access — for this event we use an access token** (simplest for ~50 external
+   testers; no guest invites):
+   - **Access token (chosen):** workspace → **Settings → Access Management** → tick **Playwright
+     Service Access Token**, then **Generate token**, set an expiry past the event, and share the
+     token with the cohort over a secure channel (they paste it into `.env` as
+     `PLAYWRIGHT_SERVICE_ACCESS_TOKEN`). The token is shown **once** — copy it immediately.
+   - **Entra ID + RBAC (alternative):** invite each TfL email as a **guest** in the tenant, then
+     assign a role (Contributor) on the resource group / workspace under **Access control (IAM)**.
+     More setup per person; only needed if you'd rather not use a shared token.
 
-4. **Cost note.** Billing is per **test-minute** (plus stored results); new workspaces include a
-   **free trial** allotment. For a one-day workshop that's plenty, but tell teams to run a single
-   spec first and avoid re-running the full 300-test baseline on the service repeatedly.
+4. **Cost note.** Billing is per **test-minute** — **$0.01/min** on the default Linux cloud
+   browsers in West Europe (Windows browsers are $0.02/min); stored reports are just ordinary Azure
+   Blob Storage. A subscription's **first** workspace gets a one-time **free trial: 30 days / 100
+   browser-minutes**. A whole 10-team workshop (each running ~300 tests a few times on 20 workers)
+   lands around **$7–$15 total** — trivially covered by VS Enterprise monthly credits. Still, tell
+   teams to run a **single spec first** to check plumbing, and to avoid re-running the full
+   300-test baseline on the service repeatedly.
 
 ---
 

@@ -1,6 +1,5 @@
 import { defineConfig } from "@playwright/test";
-import { createAzurePlaywrightConfig, ServiceOS } from "@azure/playwright";
-import { DefaultAzureCredential } from "@azure/identity";
+import { createAzurePlaywrightConfig, ServiceAuth, ServiceOS } from "@azure/playwright";
 import "dotenv/config";
 import config from "./playwright.config";
 
@@ -10,8 +9,9 @@ import config from "./playwright.config";
 //  Full walkthrough: ../MICROSOFT-PLAYWRIGHT-TESTING.md
 //
 //  Requires:  PLAYWRIGHT_SERVICE_URL  — the workspace "Get started" endpoint
-//             (put it in a .env file next to this one; see .env.example)
-//  Auth:      Microsoft Entra ID by default → run `az login` first.
+//             PLAYWRIGHT_SERVICE_ACCESS_TOKEN — the workspace access token
+//             (put both in a .env file next to this one; see .env.example)
+//  Auth:      access token (no Azure sign-in needed) — see the note below.
 //  Run:       npm run test:mpt          (fans out to --workers=20)
 //
 //  This wraps the SAME base playwright.config.ts, so it works unchanged on the
@@ -28,10 +28,11 @@ export default defineConfig(
     exposeNetwork: "<loopback>",
     connectTimeout: 3 * 60 * 1000, // 3 minutes to acquire a cloud browser
     os: ServiceOS.LINUX,
-    // Microsoft Entra ID (recommended). For external workshop participants you
-    // can instead use a workspace access token — see MICROSOFT-PLAYWRIGHT-TESTING.md:
-    //   import { ServiceAuth } from "@azure/playwright";
-    //   serviceAuthType: ServiceAuth.ACCESS_TOKEN,   // reads PLAYWRIGHT_SERVICE_ACCESS_TOKEN
-    credential: new DefaultAzureCredential(),
+    // Access-token auth — reads PLAYWRIGHT_SERVICE_ACCESS_TOKEN from .env. This is
+    // the path TfL participants use: no Azure/Entra sign-in required. To use your
+    // own Microsoft Entra ID identity instead (requires `az login` to a tenant with
+    // access to the workspace), drop this line and pass instead:
+    //   credential: new DefaultAzureCredential(),   // import { DefaultAzureCredential } from "@azure/identity"
+    serviceAuthType: ServiceAuth.ACCESS_TOKEN,
   })
 );

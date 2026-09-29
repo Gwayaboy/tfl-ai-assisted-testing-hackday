@@ -29,6 +29,11 @@ report is perfect).
 > Coverage is checked against a fixed list of required behaviours, so a team can't win on time
 > by deleting tests.
 
+> ☁️ **The optimised "after" run is executed on Microsoft Playwright Workspaces** (cloud browsers) —
+> a required step, so every team's **Execution-time** score is measured on the same cloud
+> infrastructure rather than on whoever brought the fastest laptop. See
+> [MICROSOFT-PLAYWRIGHT-TESTING.md](../track-1-functional/challenge-regression-optimisation/MICROSOFT-PLAYWRIGHT-TESTING.md).
+
 ### ⚔️ Challenge 2 — Messy Project (in Track 2)
 
 A realistic, deliberately messy testing scenario. This is **less about code, more about

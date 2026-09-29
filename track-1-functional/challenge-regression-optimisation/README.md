@@ -141,26 +141,32 @@ of everything that's wrong (great to feed Copilot, or to hunt yourself).
 
 ---
 
-## ☁️ Scale on Microsoft Playwright Workspaces (optional)
+## ☁️ Required: run your optimised suite on Microsoft Playwright Workspaces
 
-Once your suite is lean locally, run it on **cloud-hosted browsers** with **Microsoft Playwright
-Workspaces** (Azure App Testing) — fan out to **20+ parallel workers** and across multiple
-browsers/OSes without owning the machines. It's the last big lever on the **execution-time**
-score, and the scorer treats a cloud run exactly like a local one.
+**This is a required step.** Once your suite is lean locally, run your **optimised "after" suite on
+cloud-hosted browsers** with **Microsoft Playwright Workspaces** (Azure App Testing) — fanning out
+to **20 parallel workers**. Every team runs their optimised suite on the **same shared workspace**,
+so the **Execution-time (30%)** score is measured on identical cloud infrastructure — no advantage
+for whoever brought the fastest laptop. The scorer reads the same `results.json` from a cloud run as
+from a local one.
+
+> Your **baseline "before"** stays a local run; your **optimised "after"** is the Playwright
+> Workspaces run that gets scored. The organiser gives you the **workspace endpoint** and an
+> **access token** — no Azure sign-in needed.
 
 A ready-to-use `playwright.service.config.ts` + `.env.example` ship in
-[`baseline-suite/`](./baseline-suite), and there's a `npm run test:mpt` script wired up:
+[`baseline-suite/`](./baseline-suite) (the C#/.NET baseline has an equivalent — see the walkthrough),
+with a `npm run test:mpt` script wired up:
 
 ```bash
 cd baseline-suite
 npm install                       # pulls @azure/playwright, @azure/identity, dotenv
-cp .env.example .env              # paste the workspace endpoint the organiser gives you
-az login                          # Microsoft Entra ID auth (or use an access token)
+cp .env.example .env              # paste the endpoint + access token the organiser gives you
 npm run test:mpt                  # playwright test --config=playwright.service.config.ts --workers=20
 ```
 
-👉 Full walkthrough (auth options, local-SUT `exposeNetwork`, and organiser setup on a personal
-Azure subscription): **[MICROSOFT-PLAYWRIGHT-TESTING.md](./MICROSOFT-PLAYWRIGHT-TESTING.md)**.
+👉 Full walkthrough (access-token setup, the C#/.NET path, local-SUT `exposeNetwork`, and organiser
+setup on a personal Azure subscription): **[MICROSOFT-PLAYWRIGHT-TESTING.md](./MICROSOFT-PLAYWRIGHT-TESTING.md)**.
 
 ---
 
