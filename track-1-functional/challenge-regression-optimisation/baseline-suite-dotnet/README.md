@@ -52,11 +52,17 @@ It's a **no-op locally** — with no `PLAYWRIGHT_SERVICE_URL` set, `dotnet test`
 exactly as above — and connects to the cloud when the organiser's endpoint + access token are set:
 
 ```powershell
-# the organiser gives you BOTH of these:
+# the organiser gives you BOTH of these — either set them in your shell…
 $env:PLAYWRIGHT_SERVICE_URL          = "wss://<region>.api.playwright.microsoft.com/playwrightworkspaces/<id>/browsers"
 $env:PLAYWRIGHT_SERVICE_ACCESS_TOKEN = "<token>"
 dotnet test -- NUnit.NumberOfTestWorkers=20    # 20 parallel cloud browsers
 ```
+
+> 💡 …**or** copy [`.env.example`](./.env.example) → `.env` (git-ignored) and paste the two
+> values there. A tiny built-in loader ([`DotEnv.cs`](./DotEnv.cs)) reads `.env` at startup —
+> the C# equivalent of the JS suite's `dotenv` — so `dotnet test` picks them up with no shell
+> setup. Shell variables (above) still win if both are set. **Never commit the real token;**
+> it belongs only in `.env`.
 
 Auth is the workspace **access token** (`Authorization: Bearer …`) — no Azure sign-in needed. We
 build the service `wsEndpoint` ourselves with the current **`api-version=2025-09-01`**, because
@@ -94,6 +100,7 @@ baseline-suite-dotnet/
 ├── .runsettings              # deliberately bad: 1 worker, 30s expect timeout
 ├── AssemblyInfo.cs           # forces serial execution (LevelOfParallelism 1)
 ├── PlaywrightEnvironment.cs  # Codespaces/VS Code setup: clears bogus BROWSER, installs chromium
+├── DotEnv.cs                 # tiny .env loader (Playwright Workspaces endpoint/token) — see .env.example
 ├── BaselineTest.cs           # base class: always-on trace + video + screenshot; ☁️ cloud-browser connect (Playwright Workspaces) when service env vars are set
 ├── Helpers.cs                # the slow helpers (hard sleeps, re-navigation)
 ├── Fixtures.cs               # ~40 search terms -> lots of data-driven tests
