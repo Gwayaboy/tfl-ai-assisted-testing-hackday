@@ -60,8 +60,11 @@ The messy project only works if requirements come from **people, not a handout**
   [`personas.md`](../track-2-leadership/messy-project-challenge/artifacts/personas.md) and have
   them **hold that role all session**. A workable split for a small crew:
   - **Station A** — Product Owner + Operations
-  - **Station B** — Security / Compliance + Accessibility lead
-  - The old wiki spec is a **stale trap** — seed it as a document, no station needed.
+  - **Station B** — Security / Compliance + Accessibility + **Finance**
+  - Devs (Tom/Raj/Sara) need **no station** — their reality is in the team-chat artifact; the old
+    wiki spec is a **stale trap**, seed it as a document. Full persona→station mapping and the
+    "two facilitator jobs" split are in the
+    [run-sheet](../track-2-leadership/messy-project-challenge/facilitator/run-sheet.md).
   TfL coaches are ideal on the stations (real context); MS CSAs float and nudge AI-as-copilot use.
 - **One facilitator floats per cluster of ~2–3 teams.** They run the **curveball timer** for the
   cluster ([`curveballs.md`](../track-2-leadership/messy-project-challenge/facilitator/curveballs.md)),
@@ -69,7 +72,7 @@ The messy project only works if requirements come from **people, not a handout**
 - **Make teams send a liaison** to the stations rather than crowding them — reward the teams that
   ask the sharpest questions and surface the contradictions.
 - **Nudge internal team roles** (see the
-  [Track 2 README](../track-2-leadership/README.md#internal-roles-assign-at-the-start)): team lead,
+  [Track 2 README](../track-2-leadership/README.md#your-teams-lanes-the-internal-roles)): team lead,
   requirements liaison, risk lead, strategy lead, curveball wrangler. If a team is flailing, it's
   usually because nobody owns the **liaison** or **curveball** lane — assign them.
 

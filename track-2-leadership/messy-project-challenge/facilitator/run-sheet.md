@@ -50,13 +50,28 @@ Pairs with [`curveballs.md`](./curveballs.md) (the timed injects) and
 9. **Readout (15:40 · 3–4 min):** top-3 risks · strategy in a nutshell · how curveballs were
    handled · the safe-to-ship assurance story.
 
-## Persona stations — staffing
+## Facilitator jobs & persona-station staffing
 
-- **Station A** — Product Owner + Operations
-- **Station B** — Security/Compliance + Accessibility
-- The **legacy wiki spec is a stale trap** — seed it as a document, no station needed.
-- **TfL coaches** are ideal on the stations (real context); **MS CSAs** float and nudge AI-as-copilot use.
-- **One facilitator floats per cluster of ~2–3 teams**, runs the curveball timer, keeps energy up, unblocks.
+On the day a facilitator does **one of two jobs** — be clear which is yours:
+
+- **① Persona-station actor** — you *become* one or more FareRight characters and hold that role all
+  session, answering liaisons **in character** (ham it up). You're the "other team" they consult.
+- **② Floating coach** — you float across a **cluster of ~2–3 teams**, run their **curveball timer**,
+  keep energy up, unblock, and nudge Copilot-as-copilot use. You're yourself, not a character.
+
+**Every persona needs a home.** Default split — flex it to your crew:
+
+| Station | Personas played (by a facilitator) | The truth they hold |
+|---------|------------------------------------|---------------------|
+| **A — Product & Operations** | **Priya** (PO) + **Dan** (Ops) | the vision & demo deadline vs the overnight-batch / peak-load reality |
+| **B — Compliance & Money** | **Marcus** (Security), **Nadia** (Accessibility), **Fran** (Finance) | cap-vs-auto-refund conflict, a11y law, false-positive cost |
+| *(devs)* | **Tom · Raj · Sara** — **no live station** | their reality is already in the **team-chat artifact (`02`)**; a floater can voice a dev if a team digs |
+| *(legacy)* | — | the **wiki spec (`07`) is a stale trap** — seed it as a document, no station |
+
+- **TfL coaches** are ideal as **station actors** (real domain context); **MS CSAs** tend to **float**.
+- **More crew?** Split Station B into a "Security + Accessibility" desk and a separate "Finance" desk.
+- **Fewer?** One facilitator can run a station as several characters — just say **who you are** each time.
+- **One liaison per team** at a station — reward sharp questions; don't let 8 teams mob a desk.
 
 ## Judging (per team)
 

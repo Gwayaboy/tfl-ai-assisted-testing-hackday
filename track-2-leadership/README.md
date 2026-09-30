@@ -56,7 +56,29 @@ You compete on collaboration, prioritisation, handling curveballs, and communica
 
 ---
 
-## Internal roles (assign at the start)
+## How the room works: three layers
+
+Three things sound alike but are completely different. Keep them straight and the day clicks
+into place:
+
+| Layer | Who | Real, or role-play? |
+|-------|-----|---------------------|
+| **① Your team's lanes** | the 6–7 of **you**, splitting the work: team lead · liaison · risk · strategy · curveball wrangler | **Real** — you, as yourselves |
+| **② Personas** | the 8 FareRight characters (Priya, Tom, Dan, Marcus…) who hold the scattered requirements | **Role-play** — *acted by a facilitator* at a persona station |
+| **③ Facilitators** | Microsoft CSAs + TfL coaches running the game | **Real** — they play the personas, throw curveballs, and coach |
+
+**In one line:** *you* organise into **lanes ①**, send your **liaison** to interview the
+**personas ②** (who are **facilitators ③** in character), and build your strategy while the
+facilitators lob **curveballs**.
+
+- "**Roles**" and "**lanes**" mean the **same thing** — how *your team* divides the work. They are
+  **not** the personas.
+- **You never *become* a persona** — the facilitators do. Your job is to **go and talk to them** and
+  assemble the truth.
+
+---
+
+## Your team's lanes (the internal roles)
 
 You'll move faster if each teammate **owns a lane** — it's not bureaucracy, it stops things
 falling through the cracks, and it maps straight onto the
@@ -75,16 +97,16 @@ together; the roles just make sure nothing gets dropped.
 
 ---
 
-## Persona stations — who holds the requirements
+## Persona stations — who holds the requirements (Layer ②)
 
-The scattered requirements live with **people, not documents**. Each persona in
-[`personas.md`](./messy-project-challenge/artifacts/personas.md) is **staffed by a facilitator**
-(a Microsoft CSA or TfL coach) running a **persona station**. To unlock what only that persona
-knows, send your **liaison** to talk to them **in role** — ask sharp questions, then cross-check
-what you hear (some of it contradicts, some is out of date). Teams that seek out the right people
-score higher.
+The scattered requirements live with **people, not documents**. The personas in
+[`personas.md`](./messy-project-challenge/artifacts/personas.md) are **played by facilitators**
+(Microsoft CSAs or TfL coaches) at a **few persona stations** — one facilitator may voice two or
+three characters. To unlock what only a persona knows, send **one liaison** (don't crowd the
+station) to talk to them **in role** — ask sharp questions, then cross-check what you hear (some of
+it contradicts, some is out of date). Teams that seek out the right people score higher.
 
-A facilitator also **floats for your cluster of teams**, dropping curveballs on a timer and
+A separate facilitator **floats for your cluster of teams**, dropping curveballs on a timer and
 keeping you unblocked. Not sure who holds a piece of the picture? Ask them.
 
 ---

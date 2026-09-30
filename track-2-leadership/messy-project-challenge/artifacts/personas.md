@@ -4,6 +4,11 @@ Information about FareRight is **siloed**. Each person below holds part of the t
 session, ask your **facilitator to role-play a persona** to unlock what only they know — just
 like a real test lead chasing down the picture.
 
+> 🎭 **These aren't real people on the day** — each persona is a **facilitator in character** at a
+> persona station ("Layer ②" in the
+> [Track 2 overview](../../README.md#how-the-room-works-three-layers)). Send **one liaison** to
+> interview them; don't crowd the desk.
+
 > 💡 Scoring hint: teams that **identify and consult the right people** (especially Ops,
 > Security and Accessibility — the ones easy to forget) score higher on collaboration.
 
