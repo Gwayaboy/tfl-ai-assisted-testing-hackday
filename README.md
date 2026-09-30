@@ -23,9 +23,9 @@ tests, automate them, and think like a test leader — then share what you learn
 | 09:30 | Arrival, coffee & networking | 2KS reception |
 | 10:00 | Welcome & objectives — **form teams, pick names** | Notting Hill |
 | 10:15 | How can we use AI to test end to end? | Notting Hill |
-| 11:15 | **Session 1** — AI-assisted functional testing + Regression challenge | Notting Hill / Kew |
+| 11:15 | [**Session 1** — AI-assisted functional testing + Regression challenge](./track-1-functional) | Notting Hill / Kew |
 | 12:40 | Lunch | 4th-floor canteen / local |
-| 13:30 | **Session 2** — Test leadership & governance + Messy project | Notting Hill / Kew |
+| 13:30 | [**Session 2** — Test leadership & governance + Messy project | Notting Hill / Kew |
 | 15:30 | Break | |
 | 15:40 | LLM Testing Overview | Notting Hill |
 | 16:10 | Team readouts, lessons learned & prizes | Notting Hill |
@@ -43,7 +43,7 @@ activity for anyone who wants to go further.
 |-------|-------|-----|-----------|
 | [**1 — Functional**](./track-1-functional) | BDD, Playwright, Copilot-assisted test authoring | Movies app | **100% local** |
 | [**2 — Leadership**](./track-2-leadership) | Strategy, assurance, cross-team collaboration | Messy Project brief | Whiteboard / laptop |
-| [**3 — Performance** *(optional)*](./track-3-performance-optional) | Load testing, JMeter, Azure Load Testing | Contoso Traders | Cloud (optional) |
+| [**3 — Performance** *(optional)*](./track-3-perfor(./track-2-leadership) mance-optional) | Load testing, JMeter, Azure Load Testing | Contoso Traders | Cloud (optional) |
 
 Each track has **guided step-by-step labs** (great if you're newer to automation)
 **and** open challenges (if you want to push yourself). Do as much or as little as you like.
