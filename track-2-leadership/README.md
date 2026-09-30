@@ -70,7 +70,7 @@ falling through the cracks, and it maps straight onto the
 | **Strategy lead** | the test strategy — functional **and** non-functional | (core deliverable) |
 | **Curveball wrangler** | catches injected changes and re-prioritises when they land | Handling curveballs |
 
-Only three of you? **Double up** — the point is that *someone* owns each lane. You still think
+Only three or more than 6 of you? **Double up** — the point is that *someone* owns each lane. You still think
 together; the roles just make sure nothing gets dropped.
 
 ---
