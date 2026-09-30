@@ -35,7 +35,7 @@ report is perfect).
 > infrastructure rather than on whoever brought the fastest laptop. See
 > [MICROSOFT-PLAYWRIGHT-TESTING.md](../track-1-functional/challenge-regression-optimisation/MICROSOFT-PLAYWRIGHT-TESTING.md).
 
-### ⚔️ Challenge 2 — Messy Project (in Track 3)
+### ⚔️ Challenge 2 — Messy Project (in Track 2)
 
 A realistic, deliberately messy testing scenario. This is **less about code, more about
 thinking** like a test leader.
