@@ -14,8 +14,8 @@ Testing leadership is a growing need, and this track targets it head-on:
 
 - Testers are increasingly growing into **leadership** roles that need people who see beyond
   their own team.
-- A test lead needs to understand the **non-functional** picture (performance, resilience,
-  accessibility, security) enough to **drive** it — even if they don't run every test.
+- A test lead needs to understand the functional and **non-functional** picture as earlybas possible (performance, resilience,
+  accessibility, security) enough to **drive** it — even if they don't run every test. 
 - Real projects are **messy**: requirements are scattered, people are in different teams,
   priorities shift.
 
