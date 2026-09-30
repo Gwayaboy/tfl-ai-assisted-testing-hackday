@@ -21,15 +21,17 @@ tests, automate them, and think like a test leader — then share what you learn
 | Time | What | Where |
 |------|------|-------|
 | 09:30 | Arrival, coffee & networking | 2KS reception |
-| 10:00 | Welcome & objectives — **form teams, pick names** | Notting Hill |
-| 10:15 | How can we use AI to test end to end? | Notting Hill |
-| 11:15 | [**Session 1** — AI-assisted functional testing + Regression challenge](./track-1-functional) | Notting Hill / Kew |
+| 10:00 | Welcome & objectives — **form teams, pick names** | Silk, Beech & Fore St |
+| 10:15 | How can we use AI to test end to end? | Silk, Beech & Fore St |
+| 11:15 | [**Session 1** — AI-assisted functional testing + Regression challenge](./track-1-functional) | Silk, Beech & Fore St |
 | 12:40 | Lunch | 4th-floor canteen / local |
-| 13:30 | [**Session 2** — Test leadership & governance + Messy project](./track-2-leadership)  | Notting Hill / Kew |
+| 13:30 | [**Session 2** — Test leadership & governance + Messy project](./track-2-leadership)  | Silk, Beech & Fore St |
 | 15:30 | Break | |
-| 15:40 | LLM Testing Overview | Notting Hill |
-| 16:10 | Team readouts, lessons learned & prizes | Notting Hill |
+| 15:40 | LLM Testing Overview | Silk, Beech & Fore St |
+| 16:10 | Team readouts, lessons learned & prizes | Silk, Beech & Fore St |
 | 17:00 | Networking  & Close | |
+
+📍 **Room:** all sessions run in **Silk, Beech & Fore Street** — three rooms combined into one cabaret-style space at 2KS, set the same way all day (8 team tables). We'll meet everyone at **2KS reception at 09:30** and walk you in together.
 
 Sessions run **consecutively** — everyone does Session 1 (Track 1) then Session 2 (Track 2).
 [**Track 3 — Performance**](./track-3-performance-optional) is an **optional** back-pocket
