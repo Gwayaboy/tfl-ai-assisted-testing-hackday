@@ -43,7 +43,7 @@ activity for anyone who wants to go further.
 |-------|-------|-----|-----------|
 | [**1 — Functional**](./track-1-functional) | BDD, Playwright, Copilot-assisted test authoring | Movies app | **100% local** |
 | [**2 — Leadership**](./track-2-leadership) | Strategy, assurance, cross-team collaboration | Messy Project brief | Whiteboard / laptop |
-| [**3 — Performance** *(optional)*](./track-3-perfor(./track-2-leadership) mance-optional) | Load testing, JMeter, Azure Load Testing | Contoso Traders | Cloud (optional) |
+| [**3 — Performance** *(optional)*](./track-3-performance-optional) | Load testing, JMeter, Azure Load Testing | Contoso Traders | Cloud (optional) |
 
 Each track has **guided step-by-step labs** (great if you're newer to automation)
 **and** open challenges (if you want to push yourself). Do as much or as little as you like.
