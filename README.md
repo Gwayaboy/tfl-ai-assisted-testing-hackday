@@ -25,7 +25,7 @@ tests, automate them, and think like a test leader — then share what you learn
 | 10:15 | How can we use AI to test end to end? | Notting Hill |
 | 11:15 | [**Session 1** — AI-assisted functional testing + Regression challenge](./track-1-functional) | Notting Hill / Kew |
 | 12:40 | Lunch | 4th-floor canteen / local |
-| 13:30 | [**Session 2** — Test leadership & governance + Messy project | Notting Hill / Kew |
+| 13:30 | [**Session 2** — Test leadership & governance + Messy project](./track-2-leadership)  | Notting Hill / Kew |
 | 15:30 | Break | |
 | 15:40 | LLM Testing Overview | Notting Hill |
 | 16:10 | Team readouts, lessons learned & prizes | Notting Hill |
