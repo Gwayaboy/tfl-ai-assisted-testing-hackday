@@ -73,6 +73,20 @@ On the day a facilitator does **one of two jobs** — be clear which is yours:
 - **Fewer?** One facilitator can run a station as several characters — just say **who you are** each time.
 - **One liaison per team** at a station — reward sharp questions; don't let 8 teams mob a desk.
 
+## Live Azure DevOps project (optional but recommended)
+
+The messy backlog and the stale legacy spec are also set up as a **read-only Azure DevOps project**
+that mirrors the [`artifacts/`](../artifacts) — so teams can point **GitHub Copilot + the Azure
+DevOps MCP** at real work items and a real wiki to triage the mess. Only the **deliberately messy**
+material is in ADO; the **persona-held truth stays with you** (off ADO), so the collaboration
+mechanic is intact.
+
+- **Share the project link via the contributors chat / the day's Teams meeting — it is NOT committed
+  to this public repo** (it's a private org instance).
+- Teams browse it **read-only**; the facilitator/contributor crew has edit access to tweak it.
+- If you don't use ADO, the markdown [`artifacts/`](../artifacts) remain the canonical source —
+  nothing is lost.
+
 ## Judging (per team)
 
 **Collaboration 30 · Prioritisation 25 · Curveballs 25 · Communication 20.** Use the

@@ -51,6 +51,14 @@ assemble the truth and spot the contradictions.
 > holds part of the picture. Ask your facilitator to "role-play" a persona to unlock the detail
 > only they know. Teams that seek out the right people score higher.
 
+> 💻 **Also available as a live Azure DevOps project.** The messy backlog (`04`) and the stale
+> legacy spec (`07`) are mirrored in a **read-only Azure DevOps project** your facilitators will
+> share on the day — so you can point **GitHub Copilot + the Azure DevOps MCP** at real work items
+> and a real wiki to triage the mess, à la
+> [Anusha's agentic workflow](../../docs/bonus-agentic-workflow.md). The **persona-held detail is
+> still not in there** — you'll always have to talk to people to assemble the truth. (If you'd
+> rather, the markdown [`artifacts/`](./artifacts) are the same content.)
+
 ---
 
 ## Your mission (deliverables)
