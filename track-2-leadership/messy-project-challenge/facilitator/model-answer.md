@@ -3,6 +3,24 @@
 **Not a script for teams.** A reference so judges can quickly recognise strong work. There's no
 single right answer — reward **thinking**, not conformity to this.
 
+## ⭐ Gold behaviours — the mark of a top team
+
+Three standout moves separate a top team from a merely competent one. If you see these, **mark high
+and call them out** at the readout:
+
+1. **Drives the 24h‑vs‑48h promise to an honest decision.** Spots that the board's "within 24 hours"
+   collides with Ops' real **48‑hour** batch — and instead of quietly building to 48 while advertising
+   24, takes it **back to the PO for a ruling** and changes the *public promise* (or two‑speeds it:
+   fast‑path small high‑confidence refunds, 48h for the rest). Leadership = surfacing the conflict and
+   forcing the call, not hiding the gap.
+2. **Under time pressure, cuts scope — not assurance.** When the demo is pulled forward, a top team
+   **narrows breadth** (one overcharge category, a limited controlled pilot, small values) while
+   **keeping every legitimacy/safety control** (feed‑quality gate, idempotency test, authN/authZ).
+   They drop *features*, never the *tests*. A weak team cuts testing to save time.
+3. **Makes an honest, phased "safe to ship?" call.** Not a binary yes/no: **"safe to *demo* as a
+   controlled pilot; not safe for full live auto‑refund,"** with explicit green‑light conditions
+   (feed validated · idempotency proven · pen‑test passed · >£25 review queue owned). Honest beats shiny.
+
 ## The contradictions a strong team surfaces
 
 - [ ] **"Instant" vs overnight batch** → refund is next-day-ish; passenger copy must change to
@@ -41,6 +59,8 @@ single right answer — reward **thinking**, not conformity to this.
 ## Handling curveballs well
 
 - Re-prioritises calmly; states what's dropped and the residual risk.
+- **Under a "less time" curveball, cuts scope — not assurance:** fewer features / a limited pilot,
+  but keeps the safety tests (idempotency, feed‑quality, authZ). See ⭐ Gold behaviours.
 - Connects the "misleading copy" curveball to the contradiction they (ideally) already spotted.
 - Has an **assurance story** for the false-positive incident (what would have caught it).
 
