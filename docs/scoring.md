@@ -40,12 +40,13 @@ report is perfect).
 A realistic, deliberately messy testing scenario. This is **less about code, more about
 thinking** like a test leader.
 
-| Criterion | Weight | What "good" looks like |
+| Criterion | Points | What "good" looks like |
 |-----------|:------:|------------------------|
-| **Cross-team collaboration** | 30% | You found the right info by "talking to" the right people/personas |
-| **Risk-based prioritisation** | 25% | You tested what matters most first, and can justify it |
-| **Handling curveballs** | 25% | You adapted when requirements changed or were scattered |
-| **Communication** | 20% | Clear test strategy / assurance story you could take to stakeholders |
+| **Cross-team collaboration** | 0–30 | You found the right info by "talking to" the right people/personas |
+| **Risk-based prioritisation** | 0–25 | You tested what matters most first, and can justify it |
+| **Handling curveballs** | 0–25 | You adapted when requirements changed or were scattered |
+| **Communication** | 0–20 | Clear test strategy / assurance story you could take to stakeholders |
+| **Total** | **/100** | Sum of the four scores above |
 
 ### 🎨 Overall craft & sharing (all day)
 

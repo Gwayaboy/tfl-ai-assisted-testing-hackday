@@ -119,7 +119,8 @@ Expect **a couple** over the session (not a constant stream).
 ## How you're judged
 
 [Full rubric](../../docs/scoring.md#-challenge-2--messy-project-in-track-2): collaboration
-(30%) · risk-based prioritisation (25%) · handling curveballs (25%) · communication (20%).
+(0–30) · risk-based prioritisation (0–25) · handling curveballs (0–25) · communication (0–20) —
+**scored out of 100**.
 
 ## Readout (16:10)
 
