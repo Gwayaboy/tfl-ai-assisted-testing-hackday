@@ -57,7 +57,7 @@ thinking** like a test leader.
 
 ## Readout format (16:10)
 
-Each team gets ~3–4 minutes:
+Each team gets ~5 minutes:
 
 1. **Team name** + who you are
 2. What you **built / optimised / decided**
