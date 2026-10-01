@@ -29,6 +29,26 @@ It's due to a **board demo in 3 weeks**. Development started before testing was 
 
 ---
 
+## How the game runs — one simple loop
+
+It's **one repeatable loop**, like a board game. Don't overthink it:
+
+1. **Set up (~10 min).** Pick your lanes, skim the brief, and start your
+   **[Leadership Board](./templates/leadership-board-template.md)** — one page, three columns:
+   **Top Risks · Test Strategy · Open Questions**.
+2. **Loop (repeat ~every 10 min):**
+   - 🗣️ **INTERVIEW** — send your liaison to **one of three desks** (Product & Business ·
+     Engineering & Ops · Risk & Compliance) to pull out what they know.
+   - 📝 **UPDATE THE BOARD** — log risks, decisions, and any contradiction you spot.
+   - 📣 **CURVEBALL** — the facilitators may throw in a change; **re-prioritise** and carry on.
+3. **Readout (3–4 min).** Your board **is** your story: top risks, test strategy, how you handled
+   the curveballs, and your "safe to ship?" call.
+
+That's the whole game: **interview → update the board → adapt → present.** The richness is in the
+people you talk to and the calls you make — not in complicated rules.
+
+---
+
 ## What's in the box
 
 Everything you need is **scattered on purpose** across [`artifacts/`](./artifacts):
@@ -47,9 +67,10 @@ Everything you need is **scattered on purpose** across [`artifacts/`](./artifact
 You will **not** find one tidy spec. That's the point — a real lead has to **collaborate** to
 assemble the truth and spot the contradictions.
 
-> 🗣️ **Talking to the right people:** each persona in [`personas.md`](./artifacts/personas.md)
-> holds part of the picture. Ask your facilitator to "role-play" a persona to unlock the detail
-> only they know. Teams that seek out the right people score higher.
+> 🗣️ **Talking to the right people:** the roles in [`personas.md`](./artifacts/personas.md) sit at
+> **three interview desks** (Product & Business · Engineering & Ops · Risk & Compliance). Send your
+> **liaison** to a desk to unlock the detail only those people know. Teams that seek out the right
+> people — especially the easy-to-forget ones — score higher.
 
 > 💻 **Also set up as a live Azure DevOps project (a facilitator demo).** The messy backlog (`04`)
 > and the stale legacy spec (`07`) are mirrored in an **Azure DevOps project** your facilitators
@@ -63,7 +84,9 @@ assemble the truth and spot the contradictions.
 
 ## Your mission (deliverables)
 
-Work as a team to produce (templates in [`templates/`](./templates)):
+Capture everything on your **[Leadership Board](./templates/leadership-board-template.md)** (one
+page) as you go — it rolls up the three things we're judging (deeper templates in
+[`templates/`](./templates) if you want them):
 
 1. **A prioritised risk matrix** — what could go wrong, likelihood × impact, what to test first.
    ([template](./templates/risk-matrix-template.md))
@@ -87,9 +110,10 @@ plan.
 
 ## Curveballs
 
-Your facilitator releases **curveballs on a timer** — a scope change, a contradicting
-stakeholder, a shrinking deadline. You don't get these up front; how you **adapt** is scored.
-(Facilitators: [`facilitator/curveballs.md`](./facilitator/curveballs.md).)
+Part-way through, the facilitators **throw in a change** — a shrinking deadline, a production
+incident, a contradicting stakeholder. You don't get these up front; how you **adapt** is scored.
+Expect **a couple** over the session (not a constant stream). (Facilitators:
+[`facilitator/curveballs.md`](./facilitator/curveballs.md).)
 
 ---
 

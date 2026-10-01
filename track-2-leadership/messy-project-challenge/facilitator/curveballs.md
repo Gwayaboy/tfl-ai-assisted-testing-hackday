@@ -4,11 +4,13 @@
 **adapt**. Don't hand them out in advance. Announce to the whole room (or drop into the group
 chat) as "📣 Curveball!".
 
-Suggested cadence for a ~75–90 min challenge. Adjust to the room.
+**Curveballs are a dial, not a script.** **Default to two: Curveball 1 + Curveball 3.** Throw the
+others **only if a team is racing ahead** — a struggling team needs a nudge, not another problem.
+Adjust to the room.
 
 ---
 
-## T+15 min — 📣 Curveball 1: "The demo just moved up"
+## T+15 min — 📣 Curveball 1 **(DEFAULT)**: "The demo just moved up"
 
 > "Good news and bad news. The board demo got moved **forward to next week**. You now have
 > **half the time**. What's your **minimum viable test scope** to give the board confidence —
@@ -18,7 +20,7 @@ Suggested cadence for a ~75–90 min challenge. Adjust to the room.
 
 ---
 
-## T+30 min — 📣 Curveball 2: "Legal has entered the chat"
+## T+30 min — 📣 Curveball 2 *(optional)*: "Legal has entered the chat"
 
 > "Legal saw the mock-ups. The screens say **'You've been refunded'** but the money arrives
 > next day. They're calling it **misleading to consumers**. This is now a **release blocker**.
@@ -29,7 +31,7 @@ already spot the "instant" contradiction from the artifacts?
 
 ---
 
-## T+45 min — 📣 Curveball 3: "The false-positive bomb"
+## T+45 min — 📣 Curveball 3 **(DEFAULT)**: "The false-positive bomb"
 
 > "Overnight, the detection logic refunded **8,000 passengers who were NOT overcharged** —
 > because the reader-outage feed arrived late and it double-counted. Finance is furious.

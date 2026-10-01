@@ -52,25 +52,26 @@ The room spans manual testers → seasoned SDETs. Keep it from being boring **or
   [`messy-project-challenge/facilitator/curveballs.md`](../track-2-leadership/messy-project-challenge/facilitator/curveballs.md).
 - Reward teams who **talk to the right people** and re-prioritise — not just the fastest coders.
 
-### Persona stations & facilitator-per-cluster model
+### Three interview desks & facilitator-per-cluster model
 
-The messy project only works if requirements come from **people, not a handout**. Run it like this:
+The messy project only works if requirements come from **people, not a handout**. Run it as a
+simple loop (🗣️ interview a desk → 📝 update the board → 📣 adapt to a curveball → repeat → present):
 
-- **Staff the personas as "stations."** Give each facilitator one or two personas from
-  [`personas.md`](../track-2-leadership/messy-project-challenge/artifacts/personas.md) and have
-  them **hold that role all session**. A workable split for a small crew:
-  - **Station A** — Product Owner + Operations
-  - **Station B** — Security / Compliance + Accessibility + **Finance**
-  - Devs (Tom/Raj/Sara) need **no station** — their reality is in the team-chat artifact; the old
-    wiki spec is a **stale trap**, seed it as a document. Full persona→station mapping and the
-    "two facilitator jobs" split are in the
-    [run-sheet](../track-2-leadership/messy-project-challenge/facilitator/run-sheet.md).
-  TfL coaches are ideal on the stations (real context); MS CSAs float and nudge AI-as-copilot use.
-- **One facilitator floats per cluster of ~2–3 teams.** They run the **curveball timer** for the
-  cluster ([`curveballs.md`](../track-2-leadership/messy-project-challenge/facilitator/curveballs.md)),
+- **Staff the eight roles at three desks** (one facilitator each, voicing everyone at that desk) —
+  full detail + the "noise" stakeholder are in the
+  [run-sheet](../track-2-leadership/messy-project-challenge/facilitator/run-sheet.md) and
+  [`personas.md`](../track-2-leadership/messy-project-challenge/artifacts/personas.md):
+  - **Desk 1 — Product & Business** (Priya PO + Blake, the non-MVP "noise" sponsor)
+  - **Desk 2 — Engineering & Ops** (Tom/Raj/Sara devs + Dan Ops)
+  - **Desk 3 — Risk & Compliance** (Marcus Security + Nadia Accessibility + Fran Finance)
+  - The old wiki spec is a **stale trap** — seed it as a document, no desk. **Minimum crew: 3**
+    (one per desk) + a floater; short-handed, one person runs two desks.
+  TfL coaches are ideal as desk actors (real context); MS CSAs float and nudge AI-as-copilot use.
+- **One facilitator floats per cluster of ~2–3 teams.** They run the **curveball dial** (default
+  **two**: [`curveballs.md`](../track-2-leadership/messy-project-challenge/facilitator/curveballs.md)),
   keep energy up, and unblock. Keep clusters small so curveballs land at the right moment.
-- **Make teams send a liaison** to the stations rather than crowding them — reward the teams that
-  ask the sharpest questions and surface the contradictions.
+- **Make teams send a liaison** to the desks rather than crowding them — reward the teams that
+  ask the sharpest questions and surface the contradictions (don't hand the contradictions over).
 - **Nudge internal team roles** (see the
   [Track 2 README](../track-2-leadership/README.md#your-teams-lanes-the-internal-roles)): team lead,
   requirements liaison, risk lead, strategy lead, curveball wrangler. If a team is flailing, it's

@@ -7,71 +7,84 @@ Pairs with [`curveballs.md`](./curveballs.md) (the timed injects) and
 
 > **Shape:** Session 2 runs **13:30–15:00**; readouts at **15:40**. It's **one activity** —
 > every team runs the **same FareRight scenario in parallel** and competes. Teams do **not**
-> depend on each other; the "other teams" they consult are the **facilitator-played personas**
-> (the fictional project's silos: PO, Dev, Ops, Security, Accessibility, Finance).
+> depend on each other; the "other teams" they consult are the **facilitator-played roles** at
+> **three interview desks** (Product & Business · Engineering & Ops · Risk & Compliance).
+>
+> **The loop teams run:** 🗣️ interview a desk → 📝 update their one-page Leadership Board → 📣 adapt
+> to a curveball → repeat → present. Keep it that simple.
 
 ## At a glance
 
 | Time | Phase | Facilitators do | Teams do |
 |------|-------|-----------------|----------|
-| 13:30 | Framing (15 min) | Frame test leadership + risk-based thinking; open the persona stations | Assign the 5 lanes |
-| 13:45 | Challenge starts — **timer T+0** | Hold persona roles; **one facilitator floats per cluster** of ~2–3 teams | Triage the 7 artifacts (with Copilot) |
-| ~14:00 | **Curveball 1** (T+15) | Drop *"demo moved up — half the time"* | Cut to a minimum viable scope; state residual risk |
-| ~14:15 | **Curveball 2** (T+30) | Drop *"legal: the 'refunded' copy is misleading"* | Connect comms → risk; re-prioritise |
-| ~14:30 | **Curveball 3** (T+45) | Drop *"false-positive bomb: 8,000 wrong refunds"* | Assurance story; idempotency/data-quality thinking |
-| ~14:40 | **Curveball 4** (T+55, opt) | Drop *"the 'raise a query' button nobody owns"* | Make + justify the scope call |
-| ~14:50 | **Curveball 5** (T+65, opt) | Drop *"strike/peak day — 10× volume"* | Add performance/resilience testing |
-| ~15:00 | Wrap | Note scores-in-progress | Finalise the 3 deliverables |
+| 13:30 | Framing (~10–15 min) | Frame test leadership; open the **3 desks**; explain the loop | Pick lanes; start the **Leadership Board** |
+| 13:45 | Challenge starts — **T+0** | Hold the 3 desks; **one facilitator floats per cluster** of ~2–3 teams | Loop: interview a desk → update the board |
+| ~14:05 | **Curveball 1** (default) | Drop *"demo moved up — half the time"* | Cut to a minimum viable scope; state residual risk |
+| ~14:30 | **Curveball 2** (default) | Drop *"false-positive bomb: 8,000 wrong refunds"* | Assurance story; idempotency/data-quality thinking |
+| as needed | **Extra curveballs** *(optional)* | Only if a team's flying: *misleading 'refunded' copy* · *unowned query button* · *strike/peak day 10× volume* | Re-prioritise |
+| ~15:00 | Wrap | Note scores-in-progress | Finalise the board (= the 3 deliverables) |
 | 15:00 | Break | — | — |
-| 15:40 | Readouts (3–4 min/team) | Judge with the scoring sheet | Present the assurance story |
+| 15:40 | Readouts (3–4 min/team) | Judge with the quick checklist | Present the board — "safe to ship?" |
+
+> 🎚️ **Curveballs are a dial, not a script.** Default to **two** (1 + 2). Throw more only if a team
+> is racing ahead; let a struggling team wrestle the basics (security, accessibility) with a nudge,
+> not a new problem.
 
 ## Step by step
 
 1. **Framing (13:30).** Short intro: what test *leadership* is (strategy, risk, assurance,
    driving the non-functional picture). Set the scene: a project already in motion and in a mess.
+   **Explain the loop and the 3 desks** so everyone knows the rules before they start.
 2. **Assign the lanes.** Each team picks: **team lead** (time, decisions, readout) ·
-   **requirements liaison** (works the stations) · **risk lead** (risk matrix) ·
+   **requirements liaison** (works the desks) · **risk lead** (risk matrix) ·
    **strategy lead** (test strategy) · **curveball wrangler** (catches injects). 3 people → double up.
-3. **Drop the brief (13:45 · T+0).** Hand out **FareRight** + the **7 scattered artifacts**.
-   Start the cluster's curveball timer.
-4. **Triage.** Teams skim the artifacts and use **Copilot** to summarise — and quickly find it
-   doesn't add up (the mess is deliberate).
-5. **Work the persona stations.** The **liaison** interviews the facilitators **in role**, asks
-   sharp questions, and cross-checks the **contradictions** (e.g. "instant" vs overnight batch;
-   "auto-refund everything" vs £25 cap + manual review). **Send one liaison — don't crowd the station.**
-6. **Build in parallel.** While the liaison is out: risk lead drafts the matrix, strategy lead
-   drafts the strategy (functional **and** non-functional), lead preps the readout, wrangler stays alert.
-7. **Curveballs on the timer.** ~every 15 min the floating facilitator drops an inject. Teams
-   **re-prioritise**; the lead states what's now dropped and the residual risk.
-   **Reward adaptation, not a perfect untouched plan.**
-8. **Converge on 3 deliverables (~15:00):** ① prioritised **risk matrix** ② **test strategy**
-   (scope, functional + non-functional, data, entry/exit) ③ **one-slide stakeholder summary**
-   (safe to ship? residual risk?).
+3. **Drop the brief (13:45 · T+0).** Hand out **FareRight** + point them at the artifacts and a
+   blank **Leadership Board**. Open the 3 desks.
+4. **They run the loop.** 🗣️ liaison **interviews a desk** → 📝 team **updates the board** (risks,
+   strategy, open questions) → repeat. Copilot is fair game to summarise artifacts and sharpen
+   questions. They'll quickly find the story doesn't add up — that's the point.
+5. **Hold the desks in character.** Answer the liaison's questions **in role**; let them **discover**
+   the contradictions (don't hand them over). **One liaison per team — don't let a desk get mobbed.**
+6. **Build in parallel.** While the liaison is out: risk lead ranks the matrix, strategy lead drafts
+   functional **and** non-functional, lead preps the readout, wrangler stays alert.
+7. **Throw a curveball (default 2).** The floating facilitator drops **Curveball 1** (~14:05) and
+   **Curveball 2** (~14:30). Teams **re-prioritise**; the lead states what's dropped and the residual
+   risk. **Reward adaptation, not a perfect untouched plan.** More curveballs only if a team's flying.
+8. **Converge (~15:00).** The board **is** the three deliverables: ① prioritised **risk matrix**
+   ② **test strategy** (functional + non-functional, data, entry/exit) ③ the **"safe to ship?"** call.
 9. **Readout (15:40 · 3–4 min):** top-3 risks · strategy in a nutshell · how curveballs were
    handled · the safe-to-ship assurance story.
 
-## Facilitator jobs & persona-station staffing
+## The three interview desks
 
-On the day a facilitator does **one of two jobs** — be clear which is yours:
+A facilitator does **one of two jobs** — be clear which is yours:
 
-- **① Persona-station actor** — you *become* one or more FareRight characters and hold that role all
-  session, answering liaisons **in character** (ham it up). You're the "other team" they consult.
-- **② Floating coach** — you float across a **cluster of ~2–3 teams**, run their **curveball timer**,
+- **① Desk actor** — you sit at a desk and voice its roles **in character** (ham it up). You're the
+  "other team" the liaison consults. Let them discover the contradictions; don't hand them over.
+- **② Floating coach** — you float across a **cluster of ~2–3 teams**, run the **curveball dial**,
   keep energy up, unblock, and nudge Copilot-as-copilot use. You're yourself, not a character.
 
-**Every persona needs a home.** Default split — flex it to your crew:
+**Three desks — one facilitator each voices all the roles at that desk:**
 
-| Station | Personas played (by a facilitator) | The truth they hold |
-|---------|------------------------------------|---------------------|
-| **A — Product & Operations** | **Priya** (PO) + **Dan** (Ops) | the vision & demo deadline vs the overnight-batch / peak-load reality |
-| **B — Compliance & Money** | **Marcus** (Security), **Nadia** (Accessibility), **Fran** (Finance) | cap-vs-auto-refund conflict, a11y law, false-positive cost |
-| *(devs)* | **Tom · Raj · Sara** — **no live station** | their reality is already in the **team-chat artifact (`02`)**; a floater can voice a dev if a team digs |
-| *(legacy)* | — | the **wiki spec (`07`) is a stale trap** — seed it as a document, no station |
+| Desk | Roles voiced | The truth (and traps) they hold |
+|------|--------------|---------------------------------|
+| **1 · Product & Business** | Priya (PO) + **Blake** (exec sponsor — *noise*) | vision & deadline, scope calls, **+ unreasonable non-MVP asks to say no to** |
+| **2 · Engineering & Ops** | Tom, Raj, Sara (devs) + Dan (Ops) | overnight batch vs "instant", false positives, idempotency, peak-day load |
+| **3 · Risk & Compliance** | Marcus (Security), Nadia (Accessibility), Fran (Finance) | IDOR/audit/PII, a11y law, the **£25 cap vs auto-refund** conflict, false-positive cost |
 
-- **TfL coaches** are ideal as **station actors** (real domain context); **MS CSAs** tend to **float**.
-- **More crew?** Split Station B into a "Security + Accessibility" desk and a separate "Finance" desk.
-- **Fewer?** One facilitator can run a station as several characters — just say **who you are** each time.
-- **One liaison per team** at a station — reward sharp questions; don't let 8 teams mob a desk.
+- The **legacy wiki spec (`07`) is a stale trap** — seed it as a document, no desk.
+- **TfL coaches** make great **desk actors** (real context); **MS CSAs** tend to **float**.
+- **Minimum crew: 3** (one per desk) + a floater. **Short-handed?** One person runs two desks —
+  just say **which role you are** each time. **Plenty of crew?** Split Desk 3 (Security/Accessibility
+  vs Finance).
+- **One liaison per team** at a desk — reward sharp questions; don't let teams mob a desk.
+
+### 🙃 The "noise" role — Blake (exec sponsor)
+Play Blake with enthusiasm and zero judgement: *"Could we add a **social feed** so passengers share
+their refunds? Can we make sure it handles **700 million users**? What's our **Singapore latency**?
+Oh — and everything should be **manually tested**, just to be safe."* None of it is MVP. The test:
+does the lead **push back, descope, and justify** — or meekly write it all down? Reward teams that
+challenge Blake.
 
 ## Live Azure DevOps project (facilitator demo — optional)
 
@@ -89,17 +102,25 @@ so the collaboration mechanic is intact.
 - **Teams self-serve via the markdown [`artifacts/`](../artifacts)** — the canonical source. If you
   skip ADO entirely, nothing is lost.
 
-## Judging (per team)
+## Judging (per team) — keep it simple
 
-**Collaboration 30 · Prioritisation 25 · Curveballs 25 · Communication 20.** Use the
-[printable scoring sheet](../../../docs/facilitator-guide.md#printable-scoring-sheet-per-team)
-and the [model answer](./model-answer.md).
+Four things, out of 100 — a quick gut check per team, no complex maths:
+
+- ☐ **Collaboration (30)** — did they seek out the **easy-to-forget desks** (Ops, Security,
+  Accessibility, Finance) rather than just the PO?
+- ☐ **Prioritisation (25)** — a clear, **justified top-3 risk**, not boil-the-ocean?
+- ☐ **Curveballs (25)** — did they **re-prioritise calmly** and state the residual risk?
+- ☐ **Communication (20)** — a crisp **"safe to ship?"** story at the readout?
+
+Want detail? The [printable scoring sheet](../../../docs/facilitator-guide.md#printable-scoring-sheet-per-team)
+and the [model answer](./model-answer.md) have it — but the checklist above is enough to run the day.
 
 ## Facilitator reminders
 
 - **Send a liaison, don't crowd** — reward the sharpest questions.
-- **Nudge quiet teams** toward the forgotten personas: **Ops, Security, Accessibility, Finance**.
+- **Nudge quiet teams** toward the forgotten roles at **Desk 2 (Ops)** and **Desk 3 (Security,
+  Accessibility, Finance)**.
 - **Watch the traps:** planning from the legacy spec; believing "instant"; ignoring the £25 cap
-  conflict; forgetting accessibility.
+  conflict; forgetting accessibility; **swallowing Blake's non-MVP asks** without pushback.
 - **Reward adaptation** over a beautiful plan that never changes.
-- **Ham up the personas** — the role-play is half the fun. 🎭
+- **Ham up the desks** — the role-play is half the fun. 🎭
