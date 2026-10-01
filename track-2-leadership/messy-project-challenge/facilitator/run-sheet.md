@@ -73,19 +73,21 @@ On the day a facilitator does **one of two jobs** — be clear which is yours:
 - **Fewer?** One facilitator can run a station as several characters — just say **who you are** each time.
 - **One liaison per team** at a station — reward sharp questions; don't let 8 teams mob a desk.
 
-## Live Azure DevOps project (optional but recommended)
+## Live Azure DevOps project (facilitator demo — optional)
 
-The messy backlog and the stale legacy spec are also set up as a **read-only Azure DevOps project**
-that mirrors the [`artifacts/`](../artifacts) — so teams can point **GitHub Copilot + the Azure
-DevOps MCP** at real work items and a real wiki to triage the mess. Only the **deliberately messy**
-material is in ADO; the **persona-held truth stays with you** (off ADO), so the collaboration
-mechanic is intact.
+The messy backlog and the stale legacy spec are also set up as an **Azure DevOps project** that
+mirrors the [`artifacts/`](../artifacts) — a **facilitator asset** that makes the mess feel real
+(real work items, a real wiki) and shows off a **GitHub Copilot + Azure DevOps MCP** triage. Only
+the **deliberately messy** material is in ADO; the **persona-held truth stays with you** (off ADO),
+so the collaboration mechanic is intact.
 
-- **Share the project link via the contributors chat / the day's Teams meeting — it is NOT committed
-  to this public repo** (it's a private org instance).
-- Teams browse it **read-only**; the facilitator/contributor crew has edit access to tweak it.
-- If you don't use ADO, the markdown [`artifacts/`](../artifacts) remain the canonical source —
-  nothing is lost.
+- It's a **private org instance** — **public/anonymous browsing isn't available** (Azure DevOps
+  retired public projects). So use it as a **facilitator demo**: show it on the big screen during
+  framing, and pull it up when a team's liaison consults a persona.
+- The **facilitator/contributor crew** has access (added to the org); give the **project link via
+  the contributors chat / the day's Teams meeting — it is NOT committed to this public repo**.
+- **Teams self-serve via the markdown [`artifacts/`](../artifacts)** — the canonical source. If you
+  skip ADO entirely, nothing is lost.
 
 ## Judging (per team)
 
