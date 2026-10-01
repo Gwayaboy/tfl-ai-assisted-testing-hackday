@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 600" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="880" height="600" fill="#FFFFFF"/>
+  <text x="440" y="34" font-size="22" font-weight="700" text-anchor="middle" fill="#0F172A">FareRight — the three interview desks</text>
+
+  <!-- Screen -->
+  <rect x="345" y="52" width="190" height="16" rx="4" fill="#E2E8F0" stroke="#94A3B8"/>
+  <text x="440" y="64" font-size="11" text-anchor="middle" fill="#475569">Screen / AV</text>
+
+  <!-- Desks -->
+  <rect x="60" y="86" width="220" height="72" rx="10" fill="#DCEAFE" stroke="#2563EB" stroke-width="2"/>
+  <text x="170" y="116" font-size="14" font-weight="700" text-anchor="middle" fill="#1E3A8A">DESK 1</text>
+  <text x="170" y="138" font-size="12" text-anchor="middle" fill="#1E3A8A">Product &amp; Business</text>
+
+  <rect x="330" y="86" width="220" height="72" rx="10" fill="#DCFCE7" stroke="#16A34A" stroke-width="2"/>
+  <text x="440" y="116" font-size="14" font-weight="700" text-anchor="middle" fill="#14532D">DESK 2</text>
+  <text x="440" y="138" font-size="12" text-anchor="middle" fill="#14532D">Engineering &amp; Ops</text>
+
+  <rect x="600" y="86" width="220" height="72" rx="10" fill="#FEF3C7" stroke="#D97706" stroke-width="2"/>
+  <text x="710" y="116" font-size="14" font-weight="700" text-anchor="middle" fill="#7C2D12">DESK 3</text>
+  <text x="710" y="138" font-size="12" text-anchor="middle" fill="#7C2D12">Risk &amp; Compliance</text>
+
+  <text x="440" y="184" font-size="12.5" font-style="italic" text-anchor="middle" fill="#64748B">Each desk = the people you interview (role-played in character)</text>
+
+  <!-- Team tables row 1 -->
+  <rect x="70" y="236" width="120" height="76" rx="12" fill="#F1F5F9" stroke="#64748B"/>
+  <text x="130" y="270" font-size="13" font-weight="600" text-anchor="middle" fill="#334155">Team 1</text>
+  <text x="130" y="290" font-size="10" text-anchor="middle" fill="#64748B">building</text>
+  <rect x="270" y="236" width="120" height="76" rx="12" fill="#F1F5F9" stroke="#64748B"/>
+  <text x="330" y="270" font-size="13" font-weight="600" text-anchor="middle" fill="#334155">Team 2</text>
+  <text x="330" y="290" font-size="10" text-anchor="middle" fill="#64748B">building</text>
+  <rect x="470" y="236" width="120" height="76" rx="12" fill="#F1F5F9" stroke="#64748B"/>
+  <text x="530" y="270" font-size="13" font-weight="600" text-anchor="middle" fill="#334155">Team 3</text>
+  <text x="530" y="290" font-size="10" text-anchor="middle" fill="#64748B">building</text>
+  <rect x="670" y="236" width="120" height="76" rx="12" fill="#F1F5F9" stroke="#64748B"/>
+  <text x="730" y="270" font-size="13" font-weight="600" text-anchor="middle" fill="#334155">Team 4</text>
+  <text x="730" y="290" font-size="10" text-anchor="middle" fill="#64748B">building</text>
+
+  <!-- Team tables row 2 -->
+  <rect x="70" y="356" width="120" height="76" rx="12" fill="#F1F5F9" stroke="#64748B"/>
+  <text x="130" y="390" font-size="13" font-weight="600" text-anchor="middle" fill="#334155">Team 5</text>
+  <text x="130" y="410" font-size="10" text-anchor="middle" fill="#64748B">building</text>
+  <rect x="270" y="356" width="120" height="76" rx="12" fill="#F1F5F9" stroke="#64748B"/>
+  <text x="330" y="390" font-size="13" font-weight="600" text-anchor="middle" fill="#334155">Team 6</text>
+  <text x="330" y="410" font-size="10" text-anchor="middle" fill="#64748B">building</text>
+  <rect x="470" y="356" width="120" height="76" rx="12" fill="#F1F5F9" stroke="#64748B"/>
+  <text x="530" y="390" font-size="13" font-weight="600" text-anchor="middle" fill="#334155">Team 7</text>
+  <text x="530" y="410" font-size="10" text-anchor="middle" fill="#64748B">building</text>
+  <rect x="670" y="356" width="120" height="76" rx="12" fill="#F1F5F9" stroke="#64748B"/>
+  <text x="730" y="390" font-size="13" font-weight="600" text-anchor="middle" fill="#334155">Team 8</text>
+  <text x="730" y="410" font-size="10" text-anchor="middle" fill="#64748B">building</text>
+
+  <!-- Liaison path: Team 6 -> Desk 2 -->
+  <path d="M330,356 C352,288 408,220 440,160" fill="none" stroke="#475569" stroke-width="2" stroke-dasharray="6,5" marker-end="url(#arrow)"/>
+  <text x="452" y="250" font-size="11" font-style="italic" fill="#475569">send ONE liaison</text>
+  <text x="452" y="265" font-size="11" font-style="italic" fill="#475569">ask, then walk back</text>
+
+  <!-- Legend -->
+  <rect x="60" y="452" width="760" height="126" rx="8" fill="#F8FAFC" stroke="#CBD5E1"/>
+  <rect x="78" y="470" width="16" height="16" rx="3" fill="#DCEAFE" stroke="#2563EB"/>
+  <text x="102" y="483" font-size="12" fill="#334155">Interview desk — go here to talk to the people (role-played in character)</text>
+  <rect x="78" y="496" width="16" height="16" rx="3" fill="#F1F5F9" stroke="#64748B"/>
+  <text x="102" y="509" font-size="12" fill="#334155">Your team table — build your Leadership Board here</text>
+  <text x="78" y="540" font-size="12.5" font-weight="600" fill="#0F172A">Send ONE liaison at a time — ask a few sharp questions, then bring the answers back.</text>
+  <text x="78" y="561" font-size="12" fill="#475569">Visit every desk: the easy-to-forget people (Ops, Security, Accessibility, Finance) hold the biggest risks.</text>
+</svg>

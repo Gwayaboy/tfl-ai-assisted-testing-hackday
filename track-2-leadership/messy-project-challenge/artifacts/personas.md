@@ -12,6 +12,10 @@ like a real test lead chasing down the picture.
 > 💡 Scoring hint: teams that **seek out the easy-to-forget people** (Ops, Security, Accessibility,
 > Finance) score higher on collaboration — and find the risks that sink a public money service.
 
+![The FareRight room — three interview desks and your team tables](./room-map.svg)
+
+*The room at a glance: three interview desks up front, your team tables in the middle. Send one liaison to a desk, ask, and bring the answers back.*
+
 ## The three interview desks
 
 Each desk is staffed by **one facilitator** who voices everyone sitting there:
