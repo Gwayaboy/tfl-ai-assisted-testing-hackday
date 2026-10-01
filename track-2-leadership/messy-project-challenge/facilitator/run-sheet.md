@@ -97,6 +97,8 @@ collaboration mechanic (worth **30%**).
 > send **one liaison** to walk up to the right desk, ask a couple of questions in character, and walk
 > back. The **same 3 desks answer every team**, so everyone runs **one consistent, fair scenario**.
 
+![Option A — three central help desks, eight team tables, three roaming floaters](./room-layout.svg)
+
 ```text
              [ Screen / AV ]
    +--------+   +--------+   +--------+
