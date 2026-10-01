@@ -93,6 +93,10 @@ central**, near the screen, so the room *is* the game: **the info lives at the d
 it.** Don't embed a coach at each table — that spoon-feeds the info and kills the "go find it"
 collaboration mechanic (worth **30%**).
 
+> 🎪 **Mental model — a careers fair.** Teams build at their tables; when they need something they
+> send **one liaison** to walk up to the right desk, ask a couple of questions in character, and walk
+> back. The **same 3 desks answer every team**, so everyone runs **one consistent, fair scenario**.
+
 ```text
              [ Screen / AV ]
    +--------+   +--------+   +--------+
@@ -148,6 +152,10 @@ Four things, out of 100 — a quick gut check per team, no complex maths:
 
 Want detail? The [printable scoring sheet](../../../docs/facilitator-guide.md#printable-scoring-sheet-per-team)
 and the [model answer](./model-answer.md) have it — but the checklist above is enough to run the day.
+
+> 👥 **Judge as a panel.** At the readouts, the **desk coaches + floaters huddle and score together** —
+> compare notes, calibrate, and agree each team's four numbers. One shared bar across all teams = fair
+> results everyone trusts.
 
 ## Facilitator reminders
 
