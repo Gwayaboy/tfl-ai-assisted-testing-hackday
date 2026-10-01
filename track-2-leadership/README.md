@@ -98,7 +98,7 @@ together; the roles just make sure nothing gets dropped.
 ---
 
 ## Interview desks — who holds the requirements (Layer ②)
-![The FareRight room — three interview desks and your team tables](./messy-project-challenge/artifacts/room-map.svg/room-map.svg)
+![The FareRight room — three interview desks and your team tables](/messy-project-challenge/artifacts/room-map.svg/room-map.svg)
 The scattered requirements live with **people, not documents** — eight roles grouped into **three
 interview desks** (Product & Business · Engineering & Ops · Risk & Compliance). Each desk is
 **played by a facilitator** (Microsoft CSA or TfL coach) who voices everyone sitting there. To
