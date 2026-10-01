@@ -112,8 +112,7 @@ plan.
 
 Part-way through, the facilitators **throw in a change** — a shrinking deadline, a production
 incident, a contradicting stakeholder. You don't get these up front; how you **adapt** is scored.
-Expect **a couple** over the session (not a constant stream). (Facilitators:
-[`facilitator/curveballs.md`](./facilitator/curveballs.md).)
+Expect **a couple** over the session (not a constant stream).
 
 ---
 
