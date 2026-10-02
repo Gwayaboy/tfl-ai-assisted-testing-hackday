@@ -52,6 +52,42 @@ Each track has **guided step-by-step labs** (great if you're newer to automation
 
 ---
 
+## House rules
+
+- **Teams:** Form small teams (6-7). Pick a fun **team name** — you'll present as a team.
+- **Objective:** Learn something practical and **share it** in the readout. This isn't about
+  building for the sake of it — it's about ideas you can take back to your team.
+- **Balance:** Newer to automation? Start with the **guided labs**. Comfortable already?
+  Skip ahead to the **challenges** or bring your own scenario.
+- **Bring your own use case:** Got a real testing problem? Great — adapt a track to it and
+  tell us how you approached it.
+- **Ask:** Microsoft CSAs and TfL track coaches are on the floor all day. Wave us over.
+- **Have fun & compete:** There's swag. See [scoring](./docs/scoring.md).
+
+---
+
+## Repo map
+
+```
+.
+├── track-1-functional/              # Functional testing (everyone, AM)
+│   ├── 00-warmup-guided/            #   guided first steps
+│   ├── 01-gherkin-scenarios/        #   write BDD scenarios
+│   ├── 02-bdd-cucumber-js/          #   implement (JS/TS)
+│   ├── 02bis-bdd-reqnroll-dotnet/   #   implement (C#) — parallel to 02
+│   ├── 03-api-testing/              #   API tests with Playwright (JS/TS)
+│   ├── 03bis-api-testing-dotnet/    #   API tests with Playwright (C#) — parallel to 03
+│   ├── challenge-regression-optimisation/   # ⚔️ competitive challenge
+│   └── prompts/                     #   starter Copilot prompts
+├── track-2-leadership/              # Test leadership (everyone, PM)
+│   └── messy-project-challenge/     # ⚔️ cross-team collaboration challenge
+├── track-3-performance-optional/    # Performance (optional back-pocket)
+├── team-template/                   # copy this per team to track your work
+├── docs/                            # setup, scoring, facilitator guide
+└── scripts/                         # helpers to run the SUT
+```
+---
+
 ## Setup
 
 > ### ⭐ Preferred: open in GitHub Codespaces (zero install)
@@ -181,45 +217,6 @@ a **live target you point your tests at**.
 >   [Regression Optimisation challenge README](./track-1-functional/challenge-regression-optimisation/README.md#how-to-run-the-baseline-get-your-before).
 
 ✅ **You're ready.** Head to [Track 1](./track-1-functional).
-
----
-
-## House rules
-
-- **Teams:** Form small teams (6-7). Pick a fun **team name** — you'll present as a team.
-- **Objective:** Learn something practical and **share it** in the readout. This isn't about
-  building for the sake of it — it's about ideas you can take back to your team.
-- **Balance:** Newer to automation? Start with the **guided labs**. Comfortable already?
-  Skip ahead to the **challenges** or bring your own scenario.
-- **Bring your own use case:** Got a real testing problem? Great — adapt a track to it and
-  tell us how you approached it.
-- **Ask:** Microsoft CSAs and TfL track coaches are on the floor all day. Wave us over.
-- **Have fun & compete:** There's swag. See [scoring](./docs/scoring.md).
-
----
-
-## Repo map
-
-```
-.
-├── track-1-functional/              # Functional testing (everyone, AM)
-│   ├── 00-warmup-guided/            #   guided first steps
-│   ├── 01-gherkin-scenarios/        #   write BDD scenarios
-│   ├── 02-bdd-cucumber-js/          #   implement (JS/TS)
-│   ├── 02bis-bdd-reqnroll-dotnet/   #   implement (C#) — parallel to 02
-│   ├── 03-api-testing/              #   API tests with Playwright (JS/TS)
-│   ├── 03bis-api-testing-dotnet/    #   API tests with Playwright (C#) — parallel to 03
-│   ├── challenge-regression-optimisation/   # ⚔️ competitive challenge
-│   └── prompts/                     #   starter Copilot prompts
-├── track-2-leadership/              # Test leadership (everyone, PM)
-│   └── messy-project-challenge/     # ⚔️ cross-team collaboration challenge
-├── track-3-performance-optional/    # Performance (optional back-pocket)
-├── team-template/                   # copy this per team to track your work
-├── docs/                            # setup, scoring, facilitator guide
-└── scripts/                         # helpers to run the SUT
-```
-
----
 
 ## Feedback
 
