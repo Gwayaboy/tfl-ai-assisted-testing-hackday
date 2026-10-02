@@ -18,15 +18,15 @@ like a real test lead chasing down the picture.
 
 ## The three interview desks
 
-Each desk is staffed by **one facilitator** who voices everyone sitting there:
+Each desk is staffed by its **two Microsoft coaches**, who voice everyone sitting there:
 
-### 🟦 Desk 1 — Product & Business
+### 🟦 Desk 1 — Product & Business · *Microsoft coaches: Milo Farrell & Ryan Byrne*
 | Role | Holds the key to… |
 |------|-------------------|
 | **Priya** — Product Owner | the vision, the demo deadline, scope calls |
 | **Blake** — Exec Sponsor ⚠️ *noise* | shiny "wouldn't-it-be-cool" asks that are **not** MVP — a leader pushes back |
 
-### 🟩 Desk 2 — Engineering & Ops
+### 🟩 Desk 2 — Engineering & Ops · *Microsoft coaches: Leo Durrant & Franck Theolade*
 | Role | Holds the key to… |
 |------|-------------------|
 | **Tom** — Backend dev | the overnight-batch reality, refund mechanics |
@@ -34,7 +34,7 @@ Each desk is staffed by **one facilitator** who voices everyone sitting there:
 | **Sara** — Frontend dev | the misleading "instant" copy, the query-flow gap |
 | **Dan** — Operations & Reliability ⚠️ | volumes, batch window, peak-day load, reconciliation |
 
-### 🟥 Desk 3 — Risk & Compliance
+### 🟥 Desk 3 — Risk & Compliance · *Microsoft coaches: Ajil Jins & Najmah Mohamed*
 | Role | Holds the key to… |
 |------|-------------------|
 | **Marcus** — Security & Compliance ⚠️ | fraud, PII, auditability, the cap-vs-auto-refund conflict |
