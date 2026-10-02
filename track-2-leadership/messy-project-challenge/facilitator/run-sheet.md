@@ -26,7 +26,7 @@ Pairs with [`curveballs.md`](./curveballs.md) (the timed injects) and
 | ~15:15 | Wrap | Note scores-in-progress | Finalise the board (= the 3 deliverables) |
 | 15:20 | Break | — | — |
 | 15:30 | LLM Testing Overview *(separate talk)* | — | — |
-| 16:00 | Readouts (3–4 min/team) | Judge with the quick checklist | Present the board — "safe to ship?" |
+| 16:00 | Readouts (5–7 min/team) | Judge with the quick checklist | Present the board — "safe to ship?" |
 
 > 🎚️ **Curveballs are a dial, not a script.** Default to **two** (1 + 2). Throw more only if a team
 > is racing ahead; let a struggling team wrestle the basics (security, accessibility) with a nudge,
@@ -54,7 +54,7 @@ Pairs with [`curveballs.md`](./curveballs.md) (the timed injects) and
    risk. **Reward adaptation, not a perfect untouched plan.** More curveballs only if a team's flying.
 8. **Converge (~15:15).** The board **is** the three deliverables: ① prioritised **risk matrix**
    ② **test strategy** (functional + non-functional, data, entry/exit) ③ the **"safe to ship?"** call.
-9. **Readout (16:00 · 3–4 min):** top-3 risks · strategy in a nutshell · how curveballs were
+9. **Readout (16:00 · 5–7 min/team):** top-3 risks · strategy in a nutshell · how curveballs were
    handled · the safe-to-ship assurance story.
 
 ## The three interview desks

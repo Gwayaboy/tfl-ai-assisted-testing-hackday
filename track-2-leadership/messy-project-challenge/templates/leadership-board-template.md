@@ -38,7 +38,7 @@
 
 ---
 
-## ✅ Readout (3–4 min) — "Safe to ship?"
+## ✅ Readout (5–7 min) — "Safe to ship?"
 
 1. **Top 3 risks** — and why.
 2. **Test strategy** in a nutshell (functional **and** non-functional).

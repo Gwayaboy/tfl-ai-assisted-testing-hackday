@@ -71,7 +71,7 @@
 
 ---
 
-## Readout (≤ 4 min)
+## Readout (5–7 min)
 
 1. **Team name + who we are**
 2. **What we built / optimised / decided**

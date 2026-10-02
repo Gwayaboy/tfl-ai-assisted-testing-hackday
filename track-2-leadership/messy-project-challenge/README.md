@@ -41,7 +41,7 @@ It's **one repeatable loop**, like a board game. Don't overthink it:
      Engineering & Ops · Risk & Compliance) to pull out what they know.
    - 📝 **UPDATE THE BOARD** — log risks, decisions, and any contradiction you spot.
    - 📣 **CURVEBALL** — the facilitators may throw in a change; **re-prioritise** and carry on.
-3. **Readout (3–4 min).** Your board **is** your story: top risks, test strategy, how you handled
+3. **Readout (5–7 min).** Your board **is** your story: top risks, test strategy, how you handled
    the curveballs, and your "safe to ship?" call.
 
 That's the whole game: **interview → update the board → adapt → present.** The richness is in the
@@ -124,7 +124,7 @@ Expect **a couple** over the session (not a constant stream).
 
 ## Readout (16:00)
 
-~3–4 min: your **top 3 risks**, your **test strategy in a nutshell**, how you **handled the
+**5–7 min per team**: your **top 3 risks**, your **test strategy in a nutshell**, how you **handled the
 curveballs**, and your **assurance story** — safe to ship or not, and why.
 
 ---

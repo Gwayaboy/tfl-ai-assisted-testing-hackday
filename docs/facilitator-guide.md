@@ -19,7 +19,7 @@ Internal-facing notes for the people **running the floor**. Participants don't n
 | 13:30 | **Session 2 — Leadership + Messy Project.** Hand out the messy brief. Release **curveballs on a timer** (see below). Less code, more thinking. |
 | 15:20 | Break. |
 | 15:30 | **LLM Testing Overview** — short talk on testing AI/LLM systems (separate topic; Jide's ask). |
-| 16:00 | **Readouts (full hour).** ~3–4 min/team, then lessons learned & prizes. |
+| 16:00 | **Readouts (full hour).** **5–7 min/team**, then lessons learned & prizes. |
 | 17:00 | Close. |
 
 ## Balancing skill levels (Sri's key ask)
