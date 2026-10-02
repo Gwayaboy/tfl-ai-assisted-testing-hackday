@@ -24,7 +24,7 @@ Each desk is run by its **two Microsoft coaches**, who play the FareRight stakeh
 | Who — your Microsoft coach | Holds the key to… |
 |------|-------------------|
 | **Milo Farrell** — Product Owner | the vision, the demo deadline, scope calls |
-| **Ryan Byrne** — Exec Sponsor ⚠️ *noise* | shiny "wouldn't-it-be-cool" asks that are **not** MVP — a leader pushes back |
+| **Ryan Byrne** — Exec Sponsor | the big-picture vision and exciting "wouldn't-it-be-cool" ideas for where FareRight could go |
 
 ### 🟩 Desk 2 — Engineering & Ops
 | Who — your Microsoft coach | Holds the key to… |
@@ -43,7 +43,7 @@ Each desk is run by its **two Microsoft coaches**, who play the FareRight stakeh
 ## A word of warning 🙃
 
 **Stakeholders aren't always right, and they don't always agree with each other.** Some of what
-you hear is out of date, over-ambitious, or flatly contradicted by someone at another desk (watch
-Ryan especially — not everything asked for belongs in an MVP). Part of leadership is **spotting
+you hear is out of date, over-ambitious, or flatly contradicted by someone at another desk — and
+not everything you're asked for truly belongs in the MVP. Part of leadership is **spotting
 the conflicts and deciding what's actually true** — don't just write down the first thing you're
 told. Finding and resolving those contradictions is the heart of the challenge.
