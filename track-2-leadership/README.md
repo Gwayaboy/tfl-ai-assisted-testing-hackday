@@ -64,16 +64,16 @@ into place:
 | Layer | Who | Real, or role-play? |
 |-------|-----|---------------------|
 | **① Your team's lanes** | the 6–7 of **you**, splitting the work: team lead · liaison · risk · strategy · curveball wrangler | **Real** — you, as yourselves |
-| **② Personas** | the 8 FareRight characters (Priya, Tom, Dan, Marcus…) who hold the scattered requirements | **Role-play** — *acted by a facilitator* at a persona station |
-| **③ Facilitators** | Microsoft CSAs + TfL coaches running the game | **Real** — they play the personas, throw curveballs, and coach |
+| **② Stakeholders** | the 6 FareRight stakeholders (Milo Farrell, Leo Durrant, Ajil Jins…) who hold the scattered requirements | **Role-play** — *played by your Microsoft coaches* at the three desks |
+| **③ Facilitators** | Microsoft CSAs + TfL coaches running the game | **Real** — they play the stakeholders, throw curveballs, and coach |
 
 **In one line:** *you* organise into **lanes ①**, send your **liaison** to interview the
-**personas ②** (who are **facilitators ③** in character), and build your strategy while the
+**stakeholders ②** (who are **facilitators ③** in character), and build your strategy while the
 facilitators lob **curveballs**.
 
 - "**Roles**" and "**lanes**" mean the **same thing** — how *your team* divides the work. They are
-  **not** the personas.
-- **You never *become* a persona** — the facilitators do. Your job is to **go and talk to them** and
+  **not** the stakeholders.
+- **You never *become* a stakeholder** — the facilitators do. Your job is to **go and talk to them** and
   assemble the truth.
 
 ---
@@ -87,7 +87,7 @@ falling through the cracks, and it maps straight onto the
 | Role | Owns | Scores into |
 |------|------|-------------|
 | **Team lead** | keeps time, drives decisions, owns the readout | Communication |
-| **Requirements liaison** | works the persona stations, assembles the real picture, spots contradictions | Collaboration |
+| **Requirements liaison** | works the interview desks, assembles the real picture, spots contradictions | Collaboration |
 | **Risk lead** | the prioritised risk matrix — what to test first & *why* | Prioritisation |
 | **Strategy lead** | the test strategy — functional **and** non-functional | (core deliverable) |
 | **Curveball wrangler** | catches injected changes and re-prioritises when they land | Handling curveballs |
@@ -101,10 +101,9 @@ together; the roles just make sure nothing gets dropped.
 
 ![The FareRight room — three interview desks and your team tables](./messy-project-challenge/artifacts/room-map.svg)
 
-The scattered requirements live with **people, not documents** — eight roles grouped into [**three
-interview desks**](./messy-project-challenge/artifacts/personas.md) (Product & Business · Engineering & Ops · Risk & Compliance). Each desk is
-**played by a facilitator** (Microsoft CSA or TfL coach) who voices everyone sitting there. To
-unlock what a role knows, send **one liaison** (don't crowd the desk) to talk to them **in role** —
+The scattered requirements live with **people, not documents** — six stakeholders grouped into [**three
+interview desks**](./messy-project-challenge/artifacts/personas.md) (Product & Business · Engineering & Ops · Risk & Compliance), **two per desk, played by your Microsoft coaches**. To
+unlock what a stakeholder knows, send **one liaison** (don't crowd the desk) to talk to them **in role** —
 ask sharp questions, then cross-check what you hear (some of it contradicts, some is out of date,
 and one stakeholder keeps asking for things you don't need). Teams that seek out the right people —
 especially the easy-to-forget desks — score higher. 👉 **Who sits at each desk:** see the

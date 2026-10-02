@@ -1,6 +1,6 @@
 # FareRight — Product Owner brief
 
-*From: Priya (Product Owner) · "living document", last edited recently*
+*From: Milo Farrell (Product Owner) · "living document", last edited recently*
 
 > ⚠️ Fictional scenario for training. Do not use real operational data.
 
@@ -41,4 +41,4 @@ This is a **board priority**. We're demoing in **3 weeks**. Let's make it magica
 
 *Notes to self: need to confirm the refund window with Finance. Dev said something about only
 being able to do refunds in batches overnight? That can't be right if we promise "instant". Also
-someone mentioned GDPR — need to check. — P*
+someone mentioned GDPR — need to check. — Milo*

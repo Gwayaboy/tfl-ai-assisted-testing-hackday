@@ -66,13 +66,13 @@ A facilitator does **one of two jobs** — be clear which is yours:
 - **② Floating coach** — you float across a **cluster of ~2–3 teams**, run the **curveball dial**,
   keep energy up, unblock, and nudge Copilot-as-copilot use. You're yourself, not a character.
 
-**Three desks — a facilitator voices all the roles at each desk** (staff **two per desk** on the day — see **Room setup** below):
+**Three desks — each run by its two Microsoft coaches, who play the stakeholders below** (see **Room setup**):
 
-| Desk | MS coaches on the day | Roles voiced | The truth (and traps) they hold |
-|------|----------------------|--------------|---------------------------------|
-| **1 · Product & Business** | **Milo Farrell · Ryan Byrne** | Priya (PO) + **Blake** (exec sponsor — *noise*) | vision & deadline, scope calls, **+ unreasonable non-MVP asks to say no to** |
-| **2 · Engineering & Ops** | **Leo Durrant · Franck Theolade** (Franck also floats) | Tom, Raj, Sara (devs) + Dan (Ops) | overnight batch vs "instant", false positives, idempotency, peak-day load |
-| **3 · Risk & Compliance** | **Ajil Jins · Najmah Mohamed** | Marcus (Security), Nadia (Accessibility), Fran (Finance) | IDOR/audit/PII, a11y law, the **£25 cap vs auto-refund** conflict, false-positive cost |
+| Desk | Stakeholders — your Microsoft coaches | The truth (and traps) they hold |
+|------|---------------------------------------|---------------------------------|
+| **1 · Product & Business** | **Milo Farrell** (Product Owner) · **Ryan Byrne** (Exec Sponsor — *noise*) | vision & deadline, scope calls, **+ unreasonable non-MVP asks to say no to** |
+| **2 · Engineering & Ops** | **Leo Durrant** (Engineering) · **Franck Theolade** (Operations — also floats) | overnight batch vs "instant", false positives, idempotency, peak-day load |
+| **3 · Risk & Compliance** | **Ajil Jins** (Security & Compliance) · **Najmah Mohamed** (Accessibility & Finance) | IDOR/audit/PII, a11y law, the **£25 cap vs auto-refund** conflict, false-positive cost |
 
 - The **legacy wiki spec (`07`) is a stale trap** — seed it as a document, no desk.
 - **MS coaches staff the three desks two-each** (names in the table above); **TfL coaches** pair in for real context, and spare hands **float**.
@@ -81,12 +81,12 @@ A facilitator does **one of two jobs** — be clear which is yours:
   vs Finance).
 - **One liaison per team** at a desk — reward sharp questions; don't let teams mob a desk.
 
-### 🙃 The "noise" role — Blake (exec sponsor)
-Play Blake with enthusiasm and zero judgement: *"Could we add a **social feed** so passengers share
+### 🙃 The "noise" role — Ryan Byrne (exec sponsor)
+Play Ryan with enthusiasm and zero judgement: *"Could we add a **social feed** so passengers share
 their refunds? Can we make sure it handles **700 million users**? What's our **Singapore latency**?
 Oh — and everything should be **manually tested**, just to be safe."* None of it is MVP. The test:
 does the lead **push back, descope, and justify** — or meekly write it all down? Reward teams that
-challenge Blake.
+challenge Ryan.
 
 ## Room setup & avoiding queues
 
@@ -168,6 +168,6 @@ and the [model answer](./model-answer.md) have it — but the checklist above is
   Accessibility, Finance)** — by **~T+45**, if a team still hasn't hit **Accessibility or Finance**,
   drop a hint; it's the easiest collaboration points to leave on the table.
 - **Watch the traps:** planning from the legacy spec; believing "instant"; ignoring the £25 cap
-  conflict; forgetting accessibility; **swallowing Blake's non-MVP asks** without pushback.
+  conflict; forgetting accessibility; **swallowing Ryan's non-MVP asks** without pushback.
 - **Reward adaptation** over a beautiful plan that never changes.
 - **Ham up the desks** — the role-play is half the fun. 🎭

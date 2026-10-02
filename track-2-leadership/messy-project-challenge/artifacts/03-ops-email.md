@@ -1,5 +1,5 @@
 Subject: RE: FareRight — Operations constraints (PLEASE READ before you plan testing)
-From: Dan (Operations & Reliability)
+From: Franck Theolade (Operations & Reliability)
 To: FareRight team
 
 > ⚠️ Fictional scenario for training.
@@ -31,4 +31,4 @@ exactly when the system is under most stress. Test for the bad day, not the aver
 
 Happy to walk anyone through the batch architecture — grab me.
 
-Dan
+Franck Theolade

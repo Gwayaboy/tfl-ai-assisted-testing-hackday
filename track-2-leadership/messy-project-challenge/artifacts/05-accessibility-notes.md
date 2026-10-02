@@ -1,6 +1,6 @@
 # FareRight — Accessibility notes
 
-*From: Nadia (Accessibility Lead). Short, but non-negotiable.*
+*From: Najmah Mohamed (Accessibility & Finance). Short, but non-negotiable.*
 
 > ⚠️ Fictional scenario for training.
 

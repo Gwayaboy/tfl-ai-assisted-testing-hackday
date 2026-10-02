@@ -57,13 +57,13 @@ The room spans manual testers → seasoned SDETs. Keep it from being boring **or
 The messy project only works if requirements come from **people, not a handout**. Run it as a
 simple loop (🗣️ interview a desk → 📝 update the board → 📣 adapt to a curveball → repeat → present):
 
-- **Staff the eight roles at three desks** (one facilitator each, voicing everyone at that desk) —
+- **Staff the three desks — two Microsoft coaches each, playing the FareRight stakeholders** —
   full detail + the "noise" stakeholder are in the
   [run-sheet](../track-2-leadership/messy-project-challenge/facilitator/run-sheet.md) and
   [`personas.md`](../track-2-leadership/messy-project-challenge/artifacts/personas.md):
-  - **Desk 1 — Product & Business** (Priya PO + Blake, the non-MVP "noise" sponsor) — **MS coaches: Milo Farrell · Ryan Byrne**
-  - **Desk 2 — Engineering & Ops** (Tom/Raj/Sara devs + Dan Ops) — **MS coaches: Leo Durrant · Franck Theolade** (Franck also floats)
-  - **Desk 3 — Risk & Compliance** (Marcus Security + Nadia Accessibility + Fran Finance) — **MS coaches: Ajil Jins · Najmah Mohamed**
+  - **Desk 1 — Product & Business** — **Milo Farrell** (Product Owner) · **Ryan Byrne** (Exec Sponsor, the non-MVP "noise")
+  - **Desk 2 — Engineering & Ops** — **Leo Durrant** (Engineering) · **Franck Theolade** (Operations, also floats)
+  - **Desk 3 — Risk & Compliance** — **Ajil Jins** (Security & Compliance) · **Najmah Mohamed** (Accessibility & Finance)
   - The old wiki spec is a **stale trap** — seed it as a document, no desk. **Minimum crew: 3**
     (one per desk) + a floater; short-handed, one person runs two desks.
   MS coaches staff the three desks two-each (assigned above); TfL coaches pair in for real context, and spare hands float and nudge AI-as-copilot use.

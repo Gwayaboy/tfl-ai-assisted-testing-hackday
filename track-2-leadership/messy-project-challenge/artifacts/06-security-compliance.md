@@ -1,6 +1,6 @@
 # FareRight — Security & compliance checklist
 
-*From: Marcus (Security & Compliance). This feature moves money and touches PII — high stakes.*
+*From: Ajil Jins (Security & Compliance). This feature moves money and touches PII — high stakes.*
 
 > ⚠️ Fictional scenario for training.
 
