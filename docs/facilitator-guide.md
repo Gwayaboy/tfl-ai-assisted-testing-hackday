@@ -61,12 +61,12 @@ simple loop (🗣️ interview a desk → 📝 update the board → 📣 adapt t
   full detail + the "noise" stakeholder are in the
   [run-sheet](../track-2-leadership/messy-project-challenge/facilitator/run-sheet.md) and
   [`personas.md`](../track-2-leadership/messy-project-challenge/artifacts/personas.md):
-  - **Desk 1 — Product & Business** (Priya PO + Blake, the non-MVP "noise" sponsor)
-  - **Desk 2 — Engineering & Ops** (Tom/Raj/Sara devs + Dan Ops)
-  - **Desk 3 — Risk & Compliance** (Marcus Security + Nadia Accessibility + Fran Finance)
+  - **Desk 1 — Product & Business** (Priya PO + Blake, the non-MVP "noise" sponsor) — **MS coaches: Milo Farrell · Ryan Byrne**
+  - **Desk 2 — Engineering & Ops** (Tom/Raj/Sara devs + Dan Ops) — **MS coaches: Leo Durrant · Franck Theolade** (Franck also floats)
+  - **Desk 3 — Risk & Compliance** (Marcus Security + Nadia Accessibility + Fran Finance) — **MS coaches: Ajil Jins · Najmah Mohamed**
   - The old wiki spec is a **stale trap** — seed it as a document, no desk. **Minimum crew: 3**
     (one per desk) + a floater; short-handed, one person runs two desks.
-  TfL coaches are ideal as desk actors (real context); MS CSAs float and nudge AI-as-copilot use.
+  MS coaches staff the three desks two-each (assigned above); TfL coaches pair in for real context, and spare hands float and nudge AI-as-copilot use.
 - **One facilitator floats per cluster of ~2–3 teams.** They run the **curveball dial** (default
   **two**: [`curveballs.md`](../track-2-leadership/messy-project-challenge/facilitator/curveballs.md)),
   keep energy up, and unblock. Keep clusters small so curveballs land at the right moment.

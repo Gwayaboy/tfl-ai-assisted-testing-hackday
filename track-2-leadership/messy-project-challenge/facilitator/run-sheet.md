@@ -66,14 +66,14 @@ A facilitator does **one of two jobs** — be clear which is yours:
 
 **Three desks — a facilitator voices all the roles at each desk** (staff **two per desk** on the day — see **Room setup** below):
 
-| Desk | Roles voiced | The truth (and traps) they hold |
-|------|--------------|---------------------------------|
-| **1 · Product & Business** | Priya (PO) + **Blake** (exec sponsor — *noise*) | vision & deadline, scope calls, **+ unreasonable non-MVP asks to say no to** |
-| **2 · Engineering & Ops** | Tom, Raj, Sara (devs) + Dan (Ops) | overnight batch vs "instant", false positives, idempotency, peak-day load |
-| **3 · Risk & Compliance** | Marcus (Security), Nadia (Accessibility), Fran (Finance) | IDOR/audit/PII, a11y law, the **£25 cap vs auto-refund** conflict, false-positive cost |
+| Desk | MS coaches on the day | Roles voiced | The truth (and traps) they hold |
+|------|----------------------|--------------|---------------------------------|
+| **1 · Product & Business** | **Milo Farrell · Ryan Byrne** | Priya (PO) + **Blake** (exec sponsor — *noise*) | vision & deadline, scope calls, **+ unreasonable non-MVP asks to say no to** |
+| **2 · Engineering & Ops** | **Leo Durrant · Franck Theolade** (Franck also floats) | Tom, Raj, Sara (devs) + Dan (Ops) | overnight batch vs "instant", false positives, idempotency, peak-day load |
+| **3 · Risk & Compliance** | **Ajil Jins · Najmah Mohamed** | Marcus (Security), Nadia (Accessibility), Fran (Finance) | IDOR/audit/PII, a11y law, the **£25 cap vs auto-refund** conflict, false-positive cost |
 
 - The **legacy wiki spec (`07`) is a stale trap** — seed it as a document, no desk.
-- **TfL coaches** make great **desk actors** (real context); **MS CSAs** tend to **float**.
+- **MS coaches staff the three desks two-each** (names in the table above); **TfL coaches** pair in for real context, and spare hands **float**.
 - **Floor is 3** (one per desk) + a floater (**planned day: 2 per desk + 3 floaters** — see Room setup). **Really short-handed?** One person runs two desks —
   just say **which role you are** each time. **Plenty of crew?** Split Desk 3 (Security/Accessibility
   vs Finance).
