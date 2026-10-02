@@ -101,13 +101,14 @@ together; the roles just make sure nothing gets dropped.
 
 ![The FareRight room — three interview desks and your team tables](./messy-project-challenge/artifacts/room-map.svg)
 
-The scattered requirements live with **people, not documents** — eight roles grouped into **three
-interview desks** (Product & Business · Engineering & Ops · Risk & Compliance). Each desk is
+The scattered requirements live with **people, not documents** — eight roles grouped into [**three
+interview desks**](./messy-project-challenge/artifacts/personas.md) (Product & Business · Engineering & Ops · Risk & Compliance). Each desk is
 **played by a facilitator** (Microsoft CSA or TfL coach) who voices everyone sitting there. To
 unlock what a role knows, send **one liaison** (don't crowd the desk) to talk to them **in role** —
 ask sharp questions, then cross-check what you hear (some of it contradicts, some is out of date,
 and one stakeholder keeps asking for things you don't need). Teams that seek out the right people —
-especially the easy-to-forget desks — score higher.
+especially the easy-to-forget desks — score higher. 👉 **Who sits at each desk:** see the
+[persona page](./messy-project-challenge/artifacts/personas.md).
 
 A separate facilitator **floats for your cluster of teams**, dropping the occasional curveball and
 keeping you unblocked. Not sure who holds a piece of the picture? Ask them.
