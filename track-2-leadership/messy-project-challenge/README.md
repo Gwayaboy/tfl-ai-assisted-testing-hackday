@@ -122,7 +122,7 @@ Expect **a couple** over the session (not a constant stream).
 (0–30) · risk-based prioritisation (0–25) · handling curveballs (0–25) · communication (0–20) —
 **scored out of 100**.
 
-## Readout (16:10)
+## Readout (16:00)
 
 ~3–4 min: your **top 3 risks**, your **test strategy in a nutshell**, how you **handled the
 curveballs**, and your **assurance story** — safe to ship or not, and why.

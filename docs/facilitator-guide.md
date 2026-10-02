@@ -17,9 +17,9 @@ Internal-facing notes for the people **running the floor**. Participants don't n
 | 10:15 | **"How can we use AI to test end to end?"** — Uros/Amaury/Anusha. Keep it practical, tie to what they'll do next. |
 | 11:15 | **Session 1 — Functional.** Everyone starts in `00-warmup-guided`. Coaches roam. Push fast movers into the **Regression Optimisation challenge**. Do a quick **check-in before lunch**. |
 | 13:30 | **Session 2 — Leadership + Messy Project.** Hand out the messy brief. Release **curveballs on a timer** (see below). Less code, more thinking. |
-| 15:30 | Break. |
-| 15:40 | **LLM Testing Overview** — short talk on testing AI/LLM systems (separate topic; Jide's ask). |
-| 16:10 | **Readouts.** ~3–4 min/team. Then prizes. |
+| 15:20 | Break. |
+| 15:30 | **LLM Testing Overview** — short talk on testing AI/LLM systems (separate topic; Jide's ask). |
+| 16:00 | **Readouts (full hour).** ~3–4 min/team, then lessons learned & prizes. |
 | 17:00 | Close. |
 
 ## Balancing skill levels (Sri's key ask)

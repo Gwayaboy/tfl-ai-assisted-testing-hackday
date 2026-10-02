@@ -1,6 +1,6 @@
 # Scoring & prizes
 
-The day is **competitive and fun**. Teams present at the readout (16:10) and we award swag.
+The day is **competitive and fun**. Teams present at the readout (16:00) and we award swag.
 You don't have to "win" to get value — the goal is learning and sharing. But there's glory
 (and swag) on offer. 🏆
 
@@ -56,7 +56,7 @@ thinking** like a test leader.
 | **Learning shared** | A clear readout: what you tried, what worked, what surprised you |
 | **Creativity** | Bringing your own use case, novel prompts, edge cases |
 
-## Readout format (16:10)
+## Readout format (16:00)
 
 Each team gets ~5 minutes:
 

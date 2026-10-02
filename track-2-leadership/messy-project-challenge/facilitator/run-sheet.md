@@ -5,7 +5,8 @@ Pairs with [`curveballs.md`](./curveballs.md) (the timed injects) and
 [`model-answer.md`](./model-answer.md) (judging aid). Participant brief:
 [`../README.md`](../README.md).
 
-> **Shape:** Session 2 runs **13:30–15:00**; readouts at **15:40**. It's **one activity** —
+> **Shape:** Session 2 runs **13:30–15:20**; readouts at **16:00** (after the 15:30 LLM Testing
+> Overview). It's **one activity** —
 > every team runs the **same FareRight scenario in parallel** and competes. Teams do **not**
 > depend on each other; the "other teams" they consult are the **facilitator-played roles** at
 > **three interview desks** (Product & Business · Engineering & Ops · Risk & Compliance).
@@ -22,9 +23,10 @@ Pairs with [`curveballs.md`](./curveballs.md) (the timed injects) and
 | ~14:05 | **Curveball 1** (default) | Drop *"demo moved up — half the time"* | Cut to a minimum viable scope; state residual risk |
 | ~14:30 | **Curveball 2** (default) | Drop *"false-positive bomb: 8,000 wrong refunds"* | Assurance story; idempotency/data-quality thinking |
 | as needed | **Extra curveballs** *(optional)* | Only if a team's flying: *misleading 'refunded' copy* · *unowned query button* · *strike/peak day 10× volume* | Re-prioritise |
-| ~15:00 | Wrap | Note scores-in-progress | Finalise the board (= the 3 deliverables) |
-| 15:00 | Break | — | — |
-| 15:40 | Readouts (3–4 min/team) | Judge with the quick checklist | Present the board — "safe to ship?" |
+| ~15:15 | Wrap | Note scores-in-progress | Finalise the board (= the 3 deliverables) |
+| 15:20 | Break | — | — |
+| 15:30 | LLM Testing Overview *(separate talk)* | — | — |
+| 16:00 | Readouts (3–4 min/team) | Judge with the quick checklist | Present the board — "safe to ship?" |
 
 > 🎚️ **Curveballs are a dial, not a script.** Default to **two** (1 + 2). Throw more only if a team
 > is racing ahead; let a struggling team wrestle the basics (security, accessibility) with a nudge,
@@ -50,9 +52,9 @@ Pairs with [`curveballs.md`](./curveballs.md) (the timed injects) and
 7. **Throw a curveball (default 2).** The floating facilitator drops **Curveball 1** (~14:05) and
    **Curveball 2** (~14:30). Teams **re-prioritise**; the lead states what's dropped and the residual
    risk. **Reward adaptation, not a perfect untouched plan.** More curveballs only if a team's flying.
-8. **Converge (~15:00).** The board **is** the three deliverables: ① prioritised **risk matrix**
+8. **Converge (~15:15).** The board **is** the three deliverables: ① prioritised **risk matrix**
    ② **test strategy** (functional + non-functional, data, entry/exit) ③ the **"safe to ship?"** call.
-9. **Readout (15:40 · 3–4 min):** top-3 risks · strategy in a nutshell · how curveballs were
+9. **Readout (16:00 · 3–4 min):** top-3 risks · strategy in a nutshell · how curveballs were
    handled · the safe-to-ship assurance story.
 
 ## The three interview desks
