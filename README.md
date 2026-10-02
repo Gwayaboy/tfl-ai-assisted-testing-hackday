@@ -186,7 +186,7 @@ a **live target you point your tests at**.
 
 ## House rules
 
-- **Teams:** Form small teams (3–5). Pick a fun **team name** — you'll present as a team.
+- **Teams:** Form small teams (6-7). Pick a fun **team name** — you'll present as a team.
 - **Objective:** Learn something practical and **share it** in the readout. This isn't about
   building for the sake of it — it's about ideas you can take back to your team.
 - **Balance:** Newer to automation? Start with the **guided labs**. Comfortable already?
