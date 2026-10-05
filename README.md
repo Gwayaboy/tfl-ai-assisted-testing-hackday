@@ -23,9 +23,10 @@ tests, automate them, and think like a test leader — then share what you learn
 | 09:30 | Arrival, coffee & networking | 2KS reception |
 | 10:00 | Welcome & objectives — **form teams, pick names** | Silk, Beech & Fore St |
 | 10:15 | How can we use AI to test end to end? | Silk, Beech & Fore St |
-| 11:15 | [**Session 1** — AI-assisted functional testing + Regression challenge](./track-1-functional) | Silk, Beech & Fore St |
-| 12:40 | Lunch | 4th-floor canteen / local |
-| 13:30 | [**Session 2** — Test leadership & governance + Messy project](./track-2-leadership)  | Silk, Beech & Fore St |
+| 11:15 | Break | |
+| 11:30 | [**Session 1** — AI-assisted functional testing + Regression challenge](./track-1-functional) | Silk, Beech & Fore St |
+| 12:50 | Lunch | 4th-floor canteen / local |
+| 13:40 | [**Session 2** — Test leadership & governance + Messy project](./track-2-leadership)  | Silk, Beech & Fore St |
 | 15:20 | Break | |
 | 15:30 | LLM Testing Overview | Silk, Beech & Fore St |
 | 16:00 | Team readouts, lessons learned & prizes | Silk, Beech & Fore St |

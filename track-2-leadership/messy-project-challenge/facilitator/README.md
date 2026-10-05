@@ -48,7 +48,7 @@ TfL coaches pair in for real context; spare hands float and run the curveball di
 
 ## Timings on the day
 
-`13:30` framing · `13:45` challenge starts (**T+0**) · `~14:05` Curveball 1 ·
+`13:40` framing · `13:55` challenge starts (**T+0**) · `~14:05` Curveball 1 ·
 `~14:30` Curveball 2 · `~15:15` wrap · `15:20` break · `15:30` LLM Testing Overview
 (separate talk) · **`16:00–17:00` readouts (5–7 min/team).**
 

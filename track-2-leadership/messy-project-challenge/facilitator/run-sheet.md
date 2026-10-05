@@ -5,7 +5,7 @@ Pairs with [`curveballs.md`](./curveballs.md) (the timed injects) and
 [`model-answer.md`](./model-answer.md) (judging aid). Participant brief:
 [`../README.md`](../README.md).
 
-> **Shape:** Session 2 runs **13:30–15:20**; readouts at **16:00** (after the 15:30 LLM Testing
+> **Shape:** Session 2 runs **13:40–15:20**; readouts at **16:00** (after the 15:30 LLM Testing
 > Overview). It's **one activity** —
 > every team runs the **same FareRight scenario in parallel** and competes. Teams do **not**
 > depend on each other; the "other teams" they consult are the **facilitator-played roles** at
@@ -18,8 +18,8 @@ Pairs with [`curveballs.md`](./curveballs.md) (the timed injects) and
 
 | Time | Phase | Facilitators do | Teams do |
 |------|-------|-----------------|----------|
-| 13:30 | Framing (~10–15 min) | Frame test leadership; open the **3 desks**; explain the loop | Pick lanes; start the **Leadership Board** |
-| 13:45 | Challenge starts — **T+0** | Hold the 3 desks (**2 each**); **3 floaters** run the curveball dial & absorb desk overflow | Loop: interview a desk → update the board |
+| 13:40 | Framing (~10–15 min) | Frame test leadership; open the **3 desks**; explain the loop | Pick lanes; start the **Leadership Board** |
+| 13:55 | Challenge starts — **T+0** | Hold the 3 desks (**2 each**); **3 floaters** run the curveball dial & absorb desk overflow | Loop: interview a desk → update the board |
 | ~14:05 | **Curveball 1** (default) | Drop *"demo moved up — half the time"* | Cut to a minimum viable scope; state residual risk |
 | ~14:30 | **Curveball 2** (default) | Drop *"false-positive bomb: 8,000 wrong refunds"* | Assurance story; idempotency/data-quality thinking |
 | as needed | **Extra curveballs** *(optional)* | Only if a team's flying: *misleading 'refunded' copy* · *unowned query button* · *strike/peak day 10× volume* | Re-prioritise |
@@ -34,13 +34,13 @@ Pairs with [`curveballs.md`](./curveballs.md) (the timed injects) and
 
 ## Step by step
 
-1. **Framing (13:30).** Short intro: what test *leadership* is (strategy, risk, assurance,
+1. **Framing (13:40).** Short intro: what test *leadership* is (strategy, risk, assurance,
    driving the non-functional picture). Set the scene: a project already in motion and in a mess.
    **Explain the loop and the 3 desks** so everyone knows the rules before they start.
 2. **Assign the lanes.** Each team picks: **team lead** (time, decisions, readout) ·
    **requirements liaison** (works the desks) · **risk lead** (risk matrix) ·
    **strategy lead** (test strategy) · **curveball wrangler** (catches injects). 3 people → double up.
-3. **Drop the brief (13:45 · T+0).** Hand out **FareRight** + point them at the artifacts and a
+3. **Drop the brief (13:55 · T+0).** Hand out **FareRight** + point them at the artifacts and a
    blank **Leadership Board**. Open the 3 desks.
 4. **They run the loop.** 🗣️ liaison **interviews a desk** → 📝 team **updates the board** (risks,
    strategy, open questions) → repeat. Copilot is fair game to summarise artifacts and sharpen
