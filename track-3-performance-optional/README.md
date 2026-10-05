@@ -43,7 +43,7 @@ distributed load** and **inject faults**.
 | Service | URL | Hosted on |
 |---------|-----|-----------|
 | **UI (main app)** | https://contoso-traders-ui2ct26-budwfddfdjfbc7db.z03.azurefd.net/ | Storage + Front Door |
-| **Carts API** (Swagger) | https://contoso-traders-cartsct26.happyrock-fb72c3f0.swedencentral.azurecontainerapps.io/swagger/index.html | Azure Container Apps |
+| **Carts API** (Swagger) | https://contoso-traders-cartsct26.delightfulsand-dd2e953b.swedencentral.azurecontainerapps.io/swagger/index.html | Azure Container Apps |
 | **Products API** (Swagger) | https://contoso-traders-productsct26.swedencentral.cloudapp.azure.com/swagger/index.html | AKS |
 
 **Azure resources** (resource group `contoso-traders-rgct26`):
