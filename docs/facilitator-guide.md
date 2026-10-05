@@ -41,15 +41,18 @@ The room spans manual testers → seasoned SDETs. Keep it from being boring **or
 
 ## Messy Project challenge — running it
 
+> 🔒 **Facilitator-only materials (run-sheet, curveball script, model answer) live on the
+> [`facilitator` branch](https://github.com/Gwayaboy/tfl-ai-assisted-testing-hackday/tree/facilitator/track-2-leadership/messy-project-challenge/facilitator), not on `main`** — so participants browsing the default branch don't see the spoilers. The links below point to that branch.
+
 - **Minute-by-minute run-sheet:**
-  [`messy-project-challenge/facilitator/run-sheet.md`](../track-2-leadership/messy-project-challenge/facilitator/run-sheet.md)
+  [`run-sheet.md`](https://github.com/Gwayaboy/tfl-ai-assisted-testing-hackday/blob/facilitator/track-2-leadership/messy-project-challenge/facilitator/run-sheet.md)
   — the step-by-step for the day (framing → stations → curveballs → readout).
 - Brief + artifacts in
   [`track-2-leadership/messy-project-challenge`](../track-2-leadership/messy-project-challenge).
 - Requirements are **deliberately scattered** across personas/documents. Teams must
   collaborate across "roles" to assemble the real picture.
 - **Curveball script** (release on a timer to keep energy up) is in
-  [`messy-project-challenge/facilitator/curveballs.md`](../track-2-leadership/messy-project-challenge/facilitator/curveballs.md).
+  [`curveballs.md`](https://github.com/Gwayaboy/tfl-ai-assisted-testing-hackday/blob/facilitator/track-2-leadership/messy-project-challenge/facilitator/curveballs.md).
 - Reward teams who **talk to the right people** and re-prioritise — not just the fastest coders.
 
 ### Three interview desks & facilitator-per-cluster model
@@ -59,7 +62,7 @@ simple loop (🗣️ interview a desk → 📝 update the board → 📣 adapt t
 
 - **Staff the three desks — two Microsoft coaches each, playing the FareRight stakeholders** —
   full detail + the "noise" stakeholder are in the
-  [run-sheet](../track-2-leadership/messy-project-challenge/facilitator/run-sheet.md) and
+  [run-sheet](https://github.com/Gwayaboy/tfl-ai-assisted-testing-hackday/blob/facilitator/track-2-leadership/messy-project-challenge/facilitator/run-sheet.md) and
   [`personas.md`](../track-2-leadership/messy-project-challenge/artifacts/personas.md):
   - **Desk 1 — Product & Business** — **Milo Farrell** (Product Owner) · **Ryan Byrne** (Exec Sponsor, the non-MVP "noise")
   - **Desk 2 — Engineering & Ops** — **Leo Durrant** (Engineering) · **Franck Theolade** (Operations, also floats)
@@ -68,7 +71,7 @@ simple loop (🗣️ interview a desk → 📝 update the board → 📣 adapt t
     (one per desk) + a floater; short-handed, one person runs two desks.
   MS coaches staff the three desks two-each (assigned above); TfL coaches pair in for real context, and spare hands float and nudge AI-as-copilot use.
 - **One facilitator floats per cluster of ~2–3 teams.** They run the **curveball dial** (default
-  **two**: [`curveballs.md`](../track-2-leadership/messy-project-challenge/facilitator/curveballs.md)),
+  **two**: [`curveballs.md`](https://github.com/Gwayaboy/tfl-ai-assisted-testing-hackday/blob/facilitator/track-2-leadership/messy-project-challenge/facilitator/curveballs.md)),
   keep energy up, and unblock. Keep clusters small so curveballs land at the right moment.
 - **Make teams send a liaison** to the desks rather than crowding them — reward the teams that
   ask the sharpest questions and surface the contradictions (don't hand the contradictions over).
