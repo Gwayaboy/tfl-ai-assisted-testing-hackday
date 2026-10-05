@@ -71,5 +71,5 @@ Kept deliberately light — scored by Franck (Microsoft), Sreelekha & Treasa (Tf
 score formally on the two challenges and judge the rest subjectively on creativity and
 sharing. **Prizes: swag for the winning team + spot prizes.**
 
-> Team leads/coaches: see the [facilitator guide](./facilitator-guide.md) for a printable
+> Team leads/coaches: see the [facilitator guide](https://github.com/Gwayaboy/tfl-ai-assisted-testing-hackday/blob/facilitator/docs/facilitator-guide.md) (on the `facilitator` branch) for a printable
 > scoring sheet.
