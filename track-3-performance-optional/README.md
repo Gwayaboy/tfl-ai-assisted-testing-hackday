@@ -12,9 +12,9 @@ on **business outcomes and NFRs** — not just CPU/memory graphs.
 
 ## Two ways to do this track
 
-1. **Contoso Traders — Azure Load Testing & Chaos Studio** *(recommended)* — a **live** cloud
-   microservices app is **already deployed**; drive real distributed load and inject faults.
-   Nothing to deploy — just an Azure portal sign-in. *(Section 1 below.)*
+1. **Contoso Traders — Azure Load Testing & Chaos Studio** *(recommended)* — a cloud microservices
+   app you **deploy to your own sandbox / MSDN subscription** with a single GitHub Actions run, then
+   drive real distributed load and inject faults. *(Section 1 below.)*
 2. **Local load testing with JMeter** *(secondary)* — learn load testing entirely **locally**
    against the movies app. No cloud, no account. *(Section 2 below.)*
 
@@ -25,8 +25,9 @@ on **business outcomes and NFRs** — not just CPU/memory graphs.
 ## 1. Contoso Traders — Azure Load Testing & Chaos Studio (recommended)
 
 Two cloud exercises — **performance** (Azure Load Testing) and **resilience** (Azure Chaos Studio) —
-run against a **live, already-deployed** Contoso Traders environment. Nothing to deploy: you just
-need portal access to the subscription hosting the app.
+run against a Contoso Traders environment **you deploy to your own subscription**. The shared event
+environment has been **decommissioned after the hack day**, so to try this on your own time, deploy
+your own copy first (one GitHub Actions run — see **Deploy your own** below).
 
 Contoso Traders is a microservices e-commerce app — a React UI, a **Carts API** on Azure Container
 Apps, a **Products API** on AKS, plus Cosmos DB, Azure SQL and Key Vault. It's the richer cloud
@@ -38,34 +39,39 @@ distributed load** and **inject faults**.
 
 ![Contoso Traders architecture](https://github.com/Gwayaboy/contosotraders-cloudtesting/raw/main/docs/architecture/contoso-traders-enhancements.drawio.png)
 
-### Live environment (region: swedencentral)
+### Deploy your own environment (region: swedencentral)
 
-| Service | URL | Hosted on |
-|---------|-----|-----------|
-| **UI (main app)** | https://contoso-traders-ui2ct26-budwfddfdjfbc7db.z03.azurefd.net/ | Storage + Front Door |
-| **Carts API** (Swagger) | https://contoso-traders-cartsct26.delightfulsand-dd2e953b.swedencentral.azurecontainerapps.io/swagger/index.html | Azure Container Apps |
-| **Products API** (Swagger) | https://contoso-traders-productsct26.swedencentral.cloudapp.azure.com/swagger/index.html | AKS |
+> ℹ️ **The shared event environment has been decommissioned.** The live URLs used on the day are no
+> longer up. To work through these exercises on your own time, deploy your **own** copy to a
+> **personal MSDN / Visual Studio / sandbox subscription — never a TfL subscription.**
 
-**Azure resources** (resource group `contoso-traders-rgct26`):
+**One-click deploy** (≈25–35 min, provisions everything below):
+
+1. **Fork** [contosotraders-cloudtesting](https://github.com/Gwayaboy/contosotraders-cloudtesting) to your own GitHub account.
+2. Add the repo secrets/variables for **your** Azure subscription (service principal + `DEPLOYMENTREGION=swedencentral`) — see the fork's **[README](https://github.com/Gwayaboy/contosotraders-cloudtesting/blob/main/README.md)** for the exact setup.
+3. Run the **`contoso-traders-cloud-testing.yml`** GitHub Actions workflow on `main`. When the **provision** job finishes, your UI / Carts / Products endpoints are printed in the run output.
+
+Because it's **your** subscription you already have full portal access — no guest invite needed. Sign
+in at [portal.azure.com](https://portal.azure.com) and you'll find everything in resource group `contoso-traders-rgct26`.
+
+**What gets deployed** (resource group `contoso-traders-rgct26`):
 
 | Purpose | Resource name |
 |---------|---------------|
+| UI (Storage + Front Door) | `contoso-traders-ui2ct26-…` |
+| Carts API (Azure Container Apps) | `contoso-traders-cartsct26` |
+| Products API (AKS) | `contoso-traders-productsct26` |
 | Load Testing service | `contoso-traders-loadtestct26` |
 | Application Insights | `contoso-traders-aict26` |
 | Key Vault (chaos target) | `contosotraderskvct26` |
 | Chaos experiment — Key Vault deny access | `contoso-traders-chaos-kv-experimentct26` |
 | Chaos experiment — AKS pod failures | `contoso-traders-chaos-aks-experimentct26` |
 
-- **Load-test target endpoint:** `GET {Carts API base}/v1/ShoppingCart/loadtest`
+- **Load-test target endpoint:** `GET {your Carts API base}/v1/ShoppingCart/loadtest`
 
-> **Need Azure portal access?** These exercises run in the Azure portal against the resource group
-> above. Ask an organizer to run the **[Grant participant access](https://github.com/Gwayaboy/contosotraders-cloudtesting/actions/workflows/grant-participant-access.yml)**
-> workflow with your email — it grants the **least-privilege** roles for Load Testing + Chaos Studio.
-> You'll get an Entra guest invitation to accept, then sign in at [portal.azure.com](https://portal.azure.com).
-
-> These endpoints are live now. If they stop responding (the environment may be torn down after the
-> event), it can be redeployed with a single GitHub Actions run against a **personal MSDN / sandbox**
-> subscription — never a TfL one.
+> 💷 **Tear it down when you're done** — `az group delete --name contoso-traders-rgct26 --yes` (and
+> its `contoso-traders-aks-nodes-rgct26` node group) so it doesn't keep costing you. It's your
+> subscription, so the spend is yours.
 
 ### Exercise 1 — Azure Load Testing (performance)
 
@@ -117,8 +123,7 @@ SUT as Tracks 1 & 2). This is the best place to *learn* the tool and practise re
 2. **(Optional) Take it to cloud scale** ([`azure-load-testing/`](./azure-load-testing)) — feed the
    same JMX to **Azure Load Testing** for real distributed load, *if* a sandbox/MSDN sub is available.
 3. **(Optional) Stand up your own richer target** ([`infra/`](./infra)) — Bicep to deploy a target to
-   a sandbox/MSDN sub (never a TfL sub). Most people should just use the live Contoso Traders app in
-   Section 1 instead.
+   a sandbox/MSDN sub (never a TfL sub), or deploy the full Contoso Traders app per Section 1.
 
 ### What's in this folder
 
